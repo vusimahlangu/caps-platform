@@ -3,104 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <title>Chapter 3: Calculus | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <header>
     <h1>Chapter 3: Calculus</h1>
-    <p>Grade 12 Mathematics | CAPS-aligned</p>
+    <p>Grade 12 Mathematics | CAPS Aligned</p>
     <nav>
-        <a href="index.html">← Back to Table of Contents</a>
+        <a href="../index.html">← Back to Table of Contents</a>
     </nav>
 </header>
 
-<main>
-    <div class="chapter-content">
+<main class="chapter-content">
 
-        <!-- Learning Material -->
-        <section>
-            <h2>Introduction to Calculus</h2>
-            <p>Calculus is the study of how things change. In Grade 12, we focus on differentiation and integration, with applications in graphs, rates of change, and areas under curves.</p>
-        </section>
+<!-- INTRODUCTION -->
+<section>
+    <h2>Introduction</h2>
+    <p>
+        Calculus is often feared because learners are rushed through steps.
+        This chapter slows everything down. You will see exactly where each
+        rule comes from and how it is applied in exams.
+    </p>
+</section>
 
-        <section>
-            <h2>Differentiation</h2>
-            <ul>
-                <li>Derivative of a function f(x) gives the rate of change</li>
-                <li>Basic rules: power rule, sum/difference rule, constant rule</li>
-                <li>Product rule: (uv)' = u'v + uv'</li>
-                <li>Quotient rule: (u/v)' = (u'v − uv')/v²</li>
-                <li>Chain rule: derivative of composite functions</li>
-                <li>Applications: maxima, minima, gradients of curves, rates of change</li>
-            </ul>
-        </section>
+<!-- DIFFERENTIATION -->
+<section>
+    <h2>Differentiation</h2>
+    <p>
+        Differentiation finds the <strong>rate of change</strong> or
+        <strong>gradient</strong> of a function.
+    </p>
 
-        <section>
-            <h2>Integration</h2>
-            <ul>
-                <li>Integral is the reverse of differentiation</li>
-                <li>Indefinite integrals: ∫f(x)dx = F(x) + C</li>
-                <li>Definite integrals: ∫[a,b] f(x)dx gives area under the curve</li>
-                <li>Basic rules: power rule, sum/difference, constant multiple</li>
-                <li>Applications: area between curves, displacement from velocity</li>
-            </ul>
-        </section>
+    <h3>Basic Rules</h3>
+    <ul>
+        <li>Constant rule: d/dx(c) = 0</li>
+        <li>Power rule: d/dx(xⁿ) = n·xⁿ⁻¹</li>
+        <li>Constant multiple: d/dx(kxⁿ) = k·n·xⁿ⁻¹</li>
+    </ul>
 
-        <!-- Examples -->
-        <section>
-            <h2>Worked Examples</h2>
-            <p><strong>Example 1:</strong> Differentiate f(x) = 3x² + 5x − 2</p>
-            <p><strong>Solution:</strong> f'(x) = 6x + 5</p>
+    <h3>Worked Example 1 (Very Slow)</h3>
+    <p><strong>Differentiate:</strong> f(x) = 3x² + 5x − 7</p>
 
-            <p><strong>Example 2:</strong> Integrate ∫(2x³ − 3x) dx</p>
-            <p><strong>Solution:</strong> ∫(2x³ − 3x) dx = (2/4)x⁴ − (3/2)x² + C = (1/2)x⁴ − (3/2)x² + C</p>
+    <p><strong>Step 1:</strong> Differentiate each term separately</p>
+    <p>d/dx(3x²) = 3 × 2x = 6x</p>
+    <p>d/dx(5x) = 5</p>
+    <p>d/dx(−7) = 0</p>
 
-            <p><strong>Example 3:</strong> Find maximum of f(x) = −x² + 4x + 1</p>
-            <p><strong>Solution:</strong> f'(x) = −2x + 4 → set f'(x)=0 → x = 2, maximum at x=2</p>
-        </section>
+    <p><strong>Step 2:</strong> Combine results</p>
+    <p><strong>f′(x) = 6x + 5</strong></p>
+</section>
 
-        <!-- Exercises -->
-        <section>
-            <h2>Practice Exercises</h2>
-            <ol>
-                <li>Differentiate f(x) = 5x³ − 2x² + 7</li>
-                <li>Find ∫(4x² − x + 6) dx</li>
-                <li>Find the gradient of f(x) = x² − 6x + 5 at x = 3</li>
-                <li>Find the area under y = x² from x = 0 to x = 2</li>
-            </ol>
-        </section>
+<!-- APPLICATIONS -->
+<section>
+    <h2>Applications of Differentiation</h2>
 
-        <!-- Summary -->
-        <section>
-            <h2>Summary / Key Formulas</h2>
-            <ul>
-                <li>Power rule: d/dx(xⁿ) = nxⁿ⁻¹</li>
-                <li>Sum/difference: d/dx(u ± v) = u' ± v'</li>
-                <li>Product rule: (uv)' = u'v + uv'</li>
-                <li>Quotient rule: (u/v)' = (u'v − uv')/v²</li>
-                <li>Chain rule: d/dx[f(g(x))] = f'(g(x))·g'(x)</li>
-                <li>Indefinite integral: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C</li>
-                <li>Definite integral: ∫[a,b] f(x) dx = F(b) − F(a)</li>
-            </ul>
-        </section>
+    <h3>Finding the Gradient at a Point</h3>
 
-        <!-- Mini-Test -->
-        <section>
-            <h2>Chapter 3 Mini-Test</h2>
-            <ol>
-                <li>Differentiate f(x) = 4x³ − 5x + 2</li>
-                <li>Integrate ∫(3x² + 2x − 1) dx</li>
-                <li>Find the x-value where f(x) = −2x² + 8x has maximum</li>
-            </ol>
-            <p><strong>Answers:</strong> 1) 12x² − 5; 2) x³ + x² − x + C; 3) x = 2</p>
-        </section>
+    <h3>Worked Example 2</h3>
+    <p><strong>Find the gradient of:</strong> f(x) = x² − 4x at x = 1</p>
 
-    </div>
+    <p>Step 1: Differentiate the function</p>
+    <p>f′(x) = 2x − 4</p>
+
+    <p>Step 2: Substitute x = 1</p>
+    <p>f′(1) = 2(1) − 4 = −2</p>
+
+    <p><strong>Answer:</strong> Gradient = −2</p>
+</section>
+
+<!-- MAX & MIN -->
+<section>
+    <h2>Maximum and Minimum Values</h2>
+
+    <p>
+        At maximum or minimum points, the gradient is zero.
+    </p>
+
+    <h3>Worked Example 3</h3>
+    <p><strong>Find the turning point of:</strong> f(x) = −x² + 4x + 1</p>
+
+    <p>Step 1: Differentiate</p>
+    <p>f′(x) = −2x + 4</p>
+
+    <p>Step 2: Set derivative equal to zero</p>
+    <p>−2x + 4 = 0</p>
+    <p>−2x = −4</p>
+    <p>x = 2</p>
+
+    <p>Step 3: Find y-value</p>
+    <p>f(2) = −(2)² + 4(2) + 1</p>
+    <p>f(2) = −4 + 8 + 1 = 5</p>
+
+    <p><strong>Turning point:</strong> (2 ; 5)</p>
+</section>
+
+<!-- INTEGRATION -->
+<section>
+    <h2>Integration</h2>
+    <p>
+        Integration is the reverse of differentiation.
+        It is used to find areas and original functions.
+    </p>
+
+    <h3>Basic Rule</h3>
+    <p>∫xⁿ dx = xⁿ⁺¹ / (n + 1) + C</p>
+
+    <h3>Worked Example 4</h3>
+    <p><strong>Find:</strong> ∫(4x³ − 2x) dx</p>
+
+    <p>Step 1: Integrate each term</p>
+    <p>∫4x³ dx = 4 × (x⁴ / 4) = x⁴</p>
+    <p>∫−2x dx = −2 × (x² / 2) = −x²</p>
+
+    <p>Step 2: Add constant</p>
+    <p><strong>Answer:</strong> x⁴ − x² + C</p>
+</section>
+
+<!-- AREA -->
+<section>
+    <h2>Area Under a Curve</h2>
+
+    <h3>Worked Example 5</h3>
+    <p><strong>Find the area under:</strong> y = x² from x = 0 to x = 2</p>
+
+    <p>Step 1: Integrate</p>
+    <p>∫x² dx = x³ / 3</p>
+
+    <p>Step 2: Substitute limits</p>
+    <p>(2³ / 3) − (0³ / 3)</p>
+    <p>= 8 / 3</p>
+
+    <p><strong>Area = 8/3 square units</strong></p>
+</section>
+
+<!-- PRACTICE -->
+<section>
+    <h2>Practice Exercises</h2>
+    <ol>
+        <li>Differentiate f(x) = 5x³ − 3x + 1</li>
+        <li>Find the gradient of f(x) = x² at x = 2</li>
+        <li>Find the turning point of f(x) = x² − 6x</li>
+        <li>Find ∫(2x² + 4) dx</li>
+    </ol>
+</section>
+
+<!-- SUMMARY -->
+<section>
+    <h2>Summary</h2>
+    <ul>
+        <li>Differentiation finds rate of change</li>
+        <li>Turning points occur where gradient = 0</li>
+        <li>Integration reverses differentiation</li>
+        <li>Always include + C for indefinite integrals</li>
+    </ul>
+</section>
+
+<!-- TEST -->
+<section>
+    <h2>Chapter 3 Test</h2>
+    <ol>
+        <li>Differentiate f(x) = x³ − 4x</li>
+        <li>Find the maximum value of f(x) = −x² + 6x</li>
+        <li>Find the area under y = x from 0 to 4</li>
+    </ol>
+</section>
+
 </main>
 
 <footer>
-    <p>CAPS Grade 12 Mathematics | Built for South African Learners</p>
+    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
 </footer>
 
 </body>
