@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper 2 Chapter 5: Statistics | Grade 12 Mathematics</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
+        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
+        header a:hover { color: #ffcc00; text-decoration: underline; }
+        main { padding: 1rem 2rem; }
+        h2 { margin-top: 2rem; color: #001F3F; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Paper 2 – Chapter 5: Statistics</h1>
+    <p>Grade 12 Mathematics | CAPS Aligned</p>
+    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+</header>
+
+<main class="chapter-content">
+
+<section>
+    <h2>Introduction</h2>
+    <p>
+        Statistics in Paper 2 focuses on **collecting, summarising, and interpreting data**, including **measures of central tendency, dispersion, and probability distributions**.  
+        Learners learn to represent data clearly and make conclusions.
+    </p>
+</section>
+
+<section>
+    <h2>Measures of Central Tendency</h2>
+    <ul>
+        <li><strong>Mean:</strong> sum of all values ÷ number of values</li>
+        <li><strong>Median:</strong> middle value when data is arranged in order</li>
+        <li><strong>Mode:</strong> most frequently occurring value</li>
+    </ul>
+
+    <h3>Worked Example 1 – Mean</h3>
+    <p>Data: 2, 4, 6, 8, 10</p>
+    <ol>
+        <li>Sum = 2 + 4 + 6 + 8 + 10 = 30</li>
+        <li>Number of values = 5</li>
+        <li>Mean = 30 ÷ 5 = 6</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Measures of Dispersion</h2>
+    <ul>
+        <li><strong>Range:</strong> largest − smallest</li>
+        <li><strong>Variance:</strong> average of squared deviations from the mean</li>
+        <li><strong>Standard deviation:</strong> √variance</li>
+    </ul>
+
+    <h3>Worked Example 2 – Standard Deviation</h3>
+    <p>Data: 2, 4, 6, 8, 10</p>
+    <ol>
+        <li>Mean = 6</li>
+        <li>Squared deviations: (2−6)²=16, (4−6)²=4, (6−6)²=0, (8−6)²=4, (10−6)²=16</li>
+        <li>Variance = (16+4+0+4+16)/5 = 40/5 = 8</li>
+        <li>Standard deviation = √8 ≈ 2.83</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Data Representation</h2>
+    <p>Common representations include:</p>
+    <ul>
+        <li>Frequency tables</li>
+        <li>Bar graphs and histograms</li>
+        <li>Pie charts</li>
+        <li>Box-and-whisker plots</li>
+    </ul>
+
+    <h3>Worked Example 3 – Histogram</h3>
+    <p>Data: Test scores of 10 students: 50, 55, 60, 60, 65, 70, 70, 75, 80, 85</p>
+    <ol>
+        <li>Group data in intervals (50–59, 60–69, 70–79, 80–89)</li>
+        <li>Count frequency: 50–59:2, 60–69:2, 70–79:3, 80–89:3</li>
+        <li>Draw bars proportional to frequency</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Probability Distributions</h2>
+    <p>Statistics often links with probability for predicting outcomes.</p>
+    <ul>
+        <li>Discrete distributions: e.g., rolling a die</li>
+        <li>Continuous distributions: e.g., heights of students</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Practice Exercises</h2>
+    <ol>
+        <li>Find mean, median, and mode of: 3, 7, 7, 9, 10</li>
+        <li>Calculate standard deviation for: 5, 10, 15, 20, 25</li>
+        <li>Draw a histogram for data: 2, 3, 5, 7, 7, 8, 10, 10</li>
+        <li>Determine range and variance for: 4, 6, 9, 12, 15</li>
+        <li>Interpret a box-and-whisker plot given data</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Summary</h2>
+    <ul>
+        <li>Central tendency summarises data</li>
+        <li>Dispersion shows spread of data</li>
+        <li>Graphs make data visual and interpretable</li>
+        <li>Probability links statistics to predictions</li>
+        <li>Always show all calculations clearly</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Chapter Test</h2>
+    <ol>
+        <li>Find mean, median, mode for a given dataset</li>
+        <li>Calculate variance and standard deviation</li>
+        <li>Draw histogram or bar graph from data</li>
+        <li>Interpret frequency table and box plot</li>
+        <li>Link data to probability predictions</li>
+    </ol>
+</section>
+
+</main>
+
+<footer>
+    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+</footer>
+
+</body>
+</html>
