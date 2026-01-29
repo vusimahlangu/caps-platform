@@ -13,18 +13,123 @@
     </style>
 </head>
 <body>
+
 <header>
     <h1>Paper 2 – Chapter 3: Calculus Applications</h1>
     <p>Grade 12 Mathematics | CAPS Aligned</p>
     <nav><a href="../index.html">← Back to Table of Contents</a></nav>
 </header>
-<main>
-    <section><h2>Introduction</h2><p>…placeholder…</p></section>
-    <section><h2>Worked Examples</h2><p>…placeholder…</p></section>
-    <section><h2>Practice Exercises</h2><p>…placeholder…</p></section>
-    <section><h2>Summary</h2><p>…placeholder…</p></section>
-    <section><h2>Chapter Test</h2><p>…placeholder…</p></section>
+
+<main class="chapter-content">
+
+<section>
+    <h2>Introduction</h2>
+    <p>
+        Calculus in Paper 2 focuses on **differentiation, integration, and applications**.  
+        Learners apply these concepts to solve real-world problems, including rates of change, motion, and areas under curves.
+    </p>
+</section>
+
+<section>
+    <h2>Differentiation</h2>
+    <p>Differentiation allows us to find the gradient of a curve at any point.</p>
+
+    <h3>Rules to Remember:</h3>
+    <ul>
+        <li>Power rule: d/dx[xⁿ] = n xⁿ⁻¹</li>
+        <li>Sum/difference: derivative term by term</li>
+        <li>Constant multiple: d/dx[c f(x)] = c f'(x)</li>
+    </ul>
+
+    <h3>Worked Example 1</h3>
+    <p>Find dy/dx for y = 3x³ − 5x² + 2x − 7</p>
+    <ol>
+        <li>Power rule term by term:</li>
+        <li>d/dx[3x³] = 9x²</li>
+        <li>d/dx[−5x²] = −10x</li>
+        <li>d/dx[2x] = 2</li>
+        <li>d/dx[−7] = 0</li>
+        <li>Answer: dy/dx = 9x² − 10x + 2</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Integration</h2>
+    <p>Integration is the reverse of differentiation. It allows us to find areas under curves.</p>
+
+    <h3>Rules to Remember:</h3>
+    <ul>
+        <li>∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C, n ≠ −1</li>
+        <li>∫ k f(x) dx = k ∫ f(x) dx</li>
+    </ul>
+
+    <h3>Worked Example 2</h3>
+    <p>Find ∫(6x² − 4x + 5) dx</p>
+    <ol>
+        <li>∫6x² dx = 2x³</li>
+        <li>∫−4x dx = −2x²</li>
+        <li>∫5 dx = 5x</li>
+        <li>Include constant: + C</li>
+        <li>Answer: 2x³ − 2x² + 5x + C</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Applications of Calculus</h2>
+    <h3>1. Gradient at a Point</h3>
+    <p>Find the slope of y = x² − 2x + 3 at x = 2</p>
+    <ol>
+        <li>Differentiate: dy/dx = 2x − 2</li>
+        <li>Substitute x = 2 → dy/dx = 2(2) − 2 = 2</li>
+        <li>Slope at point = 2</li>
+    </ol>
+
+    <h3>2. Area Under Curve</h3>
+    <p>Find area under y = x² from x = 0 to x = 3</p>
+    <ol>
+        <li>Integrate: ∫₀³ x² dx = [x³/3]₀³</li>
+        <li>Compute: (27/3) − (0/3) = 9</li>
+        <li>Area = 9 units²</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Practice Exercises</h2>
+    <ol>
+        <li>Differentiate y = 5x³ − 2x² + x − 1</li>
+        <li>Integrate ∫(4x³ − 3x² + 2x − 5) dx</li>
+        <li>Find slope of y = x² + 4x at x = 1</li>
+        <li>Find area under y = 2x from x = 0 to x = 5</li>
+        <li>Apply differentiation to a motion problem: s = t³ − 3t² + 2t</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Summary</h2>
+    <ul>
+        <li>Differentiation = gradient of curve</li>
+        <li>Integration = area under curve</li>
+        <li>Apply to real-world problems</li>
+        <li>Work step by step and show all calculations</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Chapter Test</h2>
+    <ol>
+        <li>Differentiate y = x³ − 4x² + 6x − 2</li>
+        <li>Integrate ∫(5x² − 4x + 3) dx</li>
+        <li>Find slope at x = 2 for y = 2x² − x + 1</li>
+        <li>Calculate area under y = x³ from x = 1 to x = 2</li>
+        <li>Apply derivative to a motion problem</li>
+    </ol>
+</section>
+
 </main>
-<footer><p>CAPS Grade 12 Mathematics | National Learning Platform</p></footer>
+
+<footer>
+    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+</footer>
+
 </body>
 </html>
