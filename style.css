@@ -79,14 +79,15 @@ a {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-/* Ensure Back to Contents links are visible */
+/* Back to Table of Contents link on navy background */
 nav a {
-    color: #0056b3;        /* Deep blue, visible on white */
-    text-decoration: none;  /* Remove underline if preferred */
+    color: #ffffff;        /* White text for contrast */
+    text-decoration: none;  /* Remove underline if you like */
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #ff6600;         /* Highlight on hover */
+    color: #ffcc00;         /* Optional: gold/yellow highlight on hover */
     text-decoration: underline;
 }
+
