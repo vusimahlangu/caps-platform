@@ -13,18 +13,138 @@
     </style>
 </head>
 <body>
+
 <header>
-    <h1>Paper 2 – Chapter 1: Functions & Graphs</h1>
+    <h1>Paper 2 – Chapter 1: Functions & Graphs (Advanced)</h1>
     <p>Grade 12 Mathematics | CAPS Aligned</p>
     <nav><a href="../index.html">← Back to Table of Contents</a></nav>
 </header>
-<main>
-    <section><h2>Introduction</h2><p>…placeholder…</p></section>
-    <section><h2>Worked Examples</h2><p>…placeholder…</p></section>
-    <section><h2>Practice Exercises</h2><p>…placeholder…</p></section>
-    <section><h2>Summary</h2><p>…placeholder…</p></section>
-    <section><h2>Chapter Test</h2><p>…placeholder…</p></section>
+
+<main class="chapter-content">
+
+<section>
+    <h2>Introduction</h2>
+    <p>
+        In Paper 2, functions become more complex. We focus on advanced graphs, inverses, transformations, and real-life applications. 
+        Understanding functions deeply allows learners to model and solve a variety of problems efficiently.
+    </p>
+</section>
+
+<section>
+    <h2>Types of Functions</h2>
+    <ul>
+        <li><strong>Linear:</strong> y = mx + c – straight line</li>
+        <li><strong>Quadratic:</strong> y = ax² + bx + c – parabola</li>
+        <li><strong>Exponential:</strong> y = abˣ – growth or decay</li>
+        <li><strong>Hyperbolic:</strong> y = a/x – asymptotic behaviour</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Advanced Graph Sketching</h2>
+    <p>Steps for accurate sketches:</p>
+    <ol>
+        <li>Identify the function type</li>
+        <li>Find x- and y-intercepts</li>
+        <li>Determine asymptotes (if any)</li>
+        <li>Plot key points (vertex, turning points)</li>
+        <li>Draw smooth curve following function type</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Worked Example 1 – Quadratic</h2>
+    <p>Sketch y = x² − 4x + 3</p>
+    <ol>
+        <li>Factorise: y = (x − 1)(x − 3)</li>
+        <li>X-intercepts: x = 1, 3</li>
+        <li>Y-intercept: y = 3 at x = 0</li>
+        <li>Vertex: x = −b/2a = 2 → y = −1 → Vertex = (2, −1)</li>
+        <li>Sketch parabola through intercepts and vertex</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Inverse Functions</h2>
+    <p>Steps to find the inverse of f(x):</p>
+    <ol>
+        <li>Replace f(x) with y</li>
+        <li>Swap x and y</li>
+        <li>Solve for y</li>
+    </ol>
+
+    <h3>Worked Example 2</h3>
+    <p>f(x) = 3x − 5 → Find f⁻¹(x)</p>
+    <ol>
+        <li>y = 3x − 5</li>
+        <li>Swap: x = 3y − 5</li>
+        <li>Solve: y = (x + 5)/3 → f⁻¹(x) = (x + 5)/3</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Transformations of Functions</h2>
+    <ul>
+        <li>Vertical shift: y = f(x) + k → shift up/down</li>
+        <li>Horizontal shift: y = f(x − k) → shift left/right</li>
+        <li>Reflection: y = −f(x) → over x-axis</li>
+        <li>Vertical stretch/compression: y = a f(x)</li>
+    </ul>
+
+    <h3>Worked Example 3</h3>
+    <p>y = x² → y = −2x² + 3</p>
+    <ul>
+        <li>Reflect over x-axis → −x²</li>
+        <li>Stretch by 2 → −2x²</li>
+        <li>Shift up 3 → −2x² + 3</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Real-life Applications</h2>
+    <p>
+        Functions model population growth, physics problems, and financial trends.  
+        Transformations and inverses allow learners to **read graphs and predict outcomes** in practical scenarios.
+    </p>
+</section>
+
+<section>
+    <h2>Practice Exercises</h2>
+    <ol>
+        <li>Sketch y = 2x − 4</li>
+        <li>Find the inverse of f(x) = 5x + 2</li>
+        <li>Describe transformations for y = −(x − 1)² + 4</li>
+        <li>Sketch y = 3ˣ</li>
+        <li>Find vertex and intercepts for y = x² + 2x − 3</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Summary</h2>
+    <ul>
+        <li>Graphs make equations visual</li>
+        <li>Inverse functions swap x and y</li>
+        <li>Transformations modify graph appearance</li>
+        <li>Applied interpretation links math to real-world problems</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Chapter Test</h2>
+    <ol>
+        <li>Sketch and analyse a quadratic function</li>
+        <li>Find an inverse function</li>
+        <li>Describe transformations from a given function</li>
+        <li>Interpret a function in a real-world context</li>
+        <li>Sketch an exponential growth function and describe key points</li>
+    </ol>
+</section>
+
 </main>
-<footer><p>CAPS Grade 12 Mathematics | National Learning Platform</p></footer>
+
+<footer>
+    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+</footer>
+
 </body>
 </html>
