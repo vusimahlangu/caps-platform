@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper 2 Chapter 8: Functions (Advanced) | Grade 12 Mathematics</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
+        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
+        header a:hover { color: #ffcc00; text-decoration: underline; }
+        main { padding: 1rem 2rem; }
+        h2 { margin-top: 2rem; color: #001F3F; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Paper 2 – Chapter 8: Functions (Advanced)</h1>
+    <p>Grade 12 Mathematics | CAPS Aligned</p>
+    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+</header>
+
+<main class="chapter-content">
+
+<section>
+    <h2>Introduction</h2>
+    <p>
+        Advanced functions focus on **transformations, inverses, and interpretation**.  
+        Learners learn to sketch and analyse linear, quadratic, exponential, and hyperbolic functions.
+    </p>
+</section>
+
+<section>
+    <h2>Inverse Functions</h2>
+    <p>
+        Inverse functions **swap x and y**. Use step-by-step algebra.
+    </p>
+
+    <h3>Worked Example 1</h3>
+    <p>Given f(x) = 3x − 5</p>
+    <ol>
+        <li>Replace f(x) with y: y = 3x − 5</li>
+        <li>Swap x and y: x = 3y − 5</li>
+        <li>Solve for y: y = (x + 5)/3</li>
+        <li>Answer: f⁻¹(x) = (x + 5)/3</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Transformations of Functions</h2>
+    <ul>
+        <li>Vertical shift: y = f(x) + k → up/down</li>
+        <li>Horizontal shift: y = f(x − k) → left/right</li>
+        <li>Reflection: y = −f(x) → over x-axis</li>
+        <li>Stretch/Compression: y = af(x) → vertical scaling</li>
+    </ul>
+
+    <h3>Worked Example 2</h3>
+    <p>y = x² + 4</p>
+    <p><strong>Transformation:</strong> Shifted up 4 units</p>
+</section>
+
+<section>
+    <h2>Linear Functions</h2>
+    <p>y = mx + c → straight lines</p>
+
+    <h3>Worked Example 3</h3>
+    <p>y = 2x − 3</p>
+    <ol>
+        <li>Gradient: m = 2</li>
+        <li>y-intercept: c = −3</li>
+        <li>Plot using points: x = 0 → y = −3, x = 1 → y = −1</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Quadratic Functions</h2>
+    <p>y = ax² + bx + c → parabolas</p>
+
+    <h3>Worked Example 4</h3>
+    <p>y = x² − 4x + 3</p>
+    <ol>
+        <li>Factorise: y = (x − 1)(x − 3)</li>
+        <li>x-intercepts: x = 1, x = 3</li>
+        <li>y-intercept: y = 3 (x = 0)</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Exponential Functions</h2>
+    <p>y = abˣ → rapid growth/decay</p>
+
+    <h3>Worked Example 5</h3>
+    <p>y = 2 × 3ˣ</p>
+    <ol>
+        <li>a = 2, b = 3</li>
+        <li>Calculate points: x = −1 → y = 2/3, x = 0 → y = 2, x = 1 → y = 6</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Hyperbolic Functions</h2>
+    <p>y = a/x → never touches axes, asymptotes x = 0, y = 0</p>
+
+    <h3>Worked Example 6</h3>
+    <p>y = 4/x</p>
+    <ol>
+        <li>Asymptotes: x = 0, y = 0</li>
+        <li>Plot points for x = −2, −1, 1, 2 → y = −2, −4, 4, 2</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Practice Exercises</h2>
+    <ol>
+        <li>Find inverse of f(x) = 5x + 2</li>
+        <li>Describe the transformation: y = −x² + 3</li>
+        <li>Sketch y = 3x + 1</li>
+        <li>Sketch y = 2ˣ</li>
+        <li>Sketch y = 6/x</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Summary</h2>
+    <ul>
+        <li>Functions describe relationships</li>
+        <li>Inverse functions swap x and y</li>
+        <li>Transformations modify graphs: shift, stretch, reflection</li>
+        <li>Step-by-step sketching aids interpretation</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Chapter Test</h2>
+    <ol>
+        <li>Find inverse of a linear function</li>
+        <li>Describe graph transformations</li>
+        <li>Sketch and analyse linear, quadratic, exponential, and hyperbolic graphs</li>
+    </ol>
+</section>
+
+</main>
+
+<footer>
+    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+</footer>
+
+</body>
+</html>
