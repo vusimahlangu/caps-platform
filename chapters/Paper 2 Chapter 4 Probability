@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper 2 Chapter 4: Probability | Grade 12 Mathematics</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
+        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
+        header a:hover { color: #ffcc00; text-decoration: underline; }
+        main { padding: 1rem 2rem; }
+        h2 { margin-top: 2rem; color: #001F3F; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Paper 2 – Chapter 4: Probability</h1>
+    <p>Grade 12 Mathematics | CAPS Aligned</p>
+    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+</header>
+
+<main class="chapter-content">
+
+<section>
+    <h2>Introduction</h2>
+    <p>
+        Probability measures the **likelihood of events** occurring.  
+        In Paper 2, learners focus on **both theoretical and experimental probability**, including **combined events, independent and dependent events**.
+    </p>
+</section>
+
+<section>
+    <h2>Basic Probability Rules</h2>
+    <ul>
+        <li>0 ≤ P(A) ≤ 1</li>
+        <li>P(S) = 1, where S is the sample space</li>
+        <li>P(A') = 1 − P(A), probability of complement</li>
+        <li>For mutually exclusive events: P(A or B) = P(A) + P(B)</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Combined Events</h2>
+    <p>Probability of two events occurring together (intersection):</p>
+    <ul>
+        <li>Independent events: P(A and B) = P(A) × P(B)</li>
+        <li>Dependent events: P(A and B) = P(A) × P(B|A)</li>
+    </ul>
+
+    <h3>Worked Example 1 – Independent Events</h3>
+    <p>Two dice are rolled. Find probability of both showing 6.</p>
+    <ol>
+        <li>P(6 on die 1) = 1/6, P(6 on die 2) = 1/6</li>
+        <li>P(both) = 1/6 × 1/6 = 1/36</li>
+    </ol>
+
+    <h3>Worked Example 2 – Dependent Events</h3>
+    <p>Two cards drawn without replacement. Find probability both are aces.</p>
+    <ol>
+        <li>P(first ace) = 4/52</li>
+        <li>P(second ace) = 3/51</li>
+        <li>P(both) = 4/52 × 3/51 = 12/2652 = 1/221</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Complementary Probability</h2>
+    <p>Probability that an event does not occur: P(A') = 1 − P(A)</p>
+
+    <h3>Worked Example 3</h3>
+    <p>A bag has 5 red and 3 blue balls. Find probability of not drawing a red ball.</p>
+    <ol>
+        <li>Total balls = 5 + 3 = 8</li>
+        <li>P(red) = 5/8</li>
+        <li>P(not red) = 1 − 5/8 = 3/8</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Conditional Probability</h2>
+    <p>P(A|B) = Probability of A given B has occurred</p>
+
+    <h3>Worked Example 4</h3>
+    <p>In a deck of 52 cards, find probability that a card is a king given it is a face card.</p>
+    <ol>
+        <li>Total face cards = 12</li>
+        <li>Number of kings = 4</li>
+        <li>P(King | Face card) = 4/12 = 1/3</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Practice Exercises</h2>
+    <ol>
+        <li>A coin is tossed twice. Find probability of two heads.</li>
+        <li>Find probability of drawing a red card from a standard deck.</li>
+        <li>Two balls drawn with replacement: probability both are white.</li>
+        <li>Find probability of not rolling a 4 on a die.</li>
+        <li>Conditional probability: probability that a student is female given that they are in Grade 12 (use hypothetical numbers).</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Summary</h2>
+    <ul>
+        <li>Probability ranges from 0 to 1</li>
+        <li>Complement: P(A') = 1 − P(A)</li>
+        <li>Independent vs dependent events differ in calculation</li>
+        <li>Conditional probability helps in dependent scenarios</li>
+        <li>Step-by-step reasoning avoids errors</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Chapter Test</h2>
+    <ol>
+        <li>Find probability of drawing two hearts from a deck without replacement</li>
+        <li>Compute probability of at least one head when tossing two coins</li>
+        <li>Conditional probability: P(A|B) given scenario</li>
+        <li>Independent events problem with dice or cards</li>
+        <li>Complementary probability calculation</li>
+    </ol>
+</section>
+
+</main>
+
+<footer>
+    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+</footer>
+
+</body>
+</html>
