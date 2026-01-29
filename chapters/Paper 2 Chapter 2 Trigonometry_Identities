@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper 2 Chapter 2: Trigonometry & Identities | Grade 12 Mathematics</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
+        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
+        header a:hover { color: #ffcc00; text-decoration: underline; }
+        main { padding: 1rem 2rem; }
+        h2 { margin-top: 2rem; color: #001F3F; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Paper 2 – Chapter 2: Trigonometry & Identities</h1>
+    <p>Grade 12 Mathematics | CAPS Aligned</p>
+    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+</header>
+<main>
+    <section><h2>Introduction</h2><p>…placeholder…</p></section>
+    <section><h2>Worked Examples</h2><p>…placeholder…</p></section>
+    <section><h2>Practice Exercises</h2><p>…placeholder…</p></section>
+    <section><h2>Summary</h2><p>…placeholder…</p></section>
+    <section><h2>Chapter Test</h2><p>…placeholder…</p></section>
+</main>
+<footer><p>CAPS Grade 12 Mathematics | National Learning Platform</p></footer>
+</body>
+</html>
