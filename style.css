@@ -79,3 +79,14 @@ a {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+/* Ensure Back to Contents links are visible */
+nav a {
+    color: #0056b3;        /* Deep blue, visible on white */
+    text-decoration: none;  /* Remove underline if preferred */
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff6600;         /* Highlight on hover */
+    text-decoration: underline;
+}
