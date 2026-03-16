@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam Prep | Grade 12 CAPS Math</title>
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <style>
+        :root { --exam-gold: #f39c12; --exam-dark: #2c3e50; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; padding: 40px; text-align: center; }
+        .prep-card { background: white; max-width: 700px; margin: 0 auto; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 10px solid var(--exam-gold); }
+        .question-box { min-height: 150px; margin: 30px 0; padding: 20px; border: 2px dashed #ddd; font-size: 1.2rem; }
+        .btn-gen { background: var(--exam-dark); color: white; padding: 15px 30px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .btn-gen:hover { transform: scale(1.05); background: var(--exam-gold); }
+        .paper-tag { display: inline-block; padding: 5px 15px; border-radius: 20px; color: white; font-size: 0.8rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="prep-card">
+    <h1>Final Exam Proactive Trainer</h1>
+    <p>Click below to generate a random high-yield exam challenge.</p>
+    
+    <div id="displayArea" class="question-box">
+        <em>Click "Generate Challenge" to begin...</em>
+    </div>
+
+    <button class="btn-gen" onclick="generateQuestion()">Generate Challenge</button>
+    
+    <div style="margin-top: 30px;">
+        <a href="index.html" style="color: #7f8c8d; text-decoration: none;">← Back to Dashboard</a>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        { paper: "Paper 1", tag: "#c0392b", text: "Solve for x: \\( 2^{x+1} - 2^x = 8 \\)" },
+        { paper: "Paper 2", tag: "#16a085", text: "Determine the gradient of the tangent to the circle \\( x^2 + y^2 = 25 \\) at point (3; 4)." },
+        { paper: "Paper 1", tag: "#c0392b", text: "Calculate the sum to infinity: \\( 12 + 6 + 3 + ... \\)" },
+        { paper: "Paper 2", tag: "#16a085", text: "Prove that \\( \\frac{\\sin 2\\theta}{1 + \\cos 2\\theta} = \\tan \\theta \\)" },
+        { paper: "Paper 1", tag: "#c0392b", text: "Find the derivative of \\( f(x) = 3x^2 \\) using first principles." }
+    ];
+
+    function generateQuestion() {
+        const q = questions[Math.floor(Math.random() * questions.length)];
+        const area = document.getElementById('displayArea');
+        area.innerHTML = `<span class="paper-tag" style="background:${q.tag}">${q.paper}</span><br>${q.text}`;
+        MathJax.typeset(); // Re-render LaTeX
+    }
+</script>
+
+</body>
+</html>
