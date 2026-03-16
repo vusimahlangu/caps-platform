@@ -2,145 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 10: Analytical Geometry | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10: Analytical Geometry | Grade 12 CAPS Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --geom-teal: #16a085; --geom-dark: #2c3e50; --bg: #fcfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--geom-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--geom-teal); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--geom-teal); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f1f9f7; border-left: 5px solid var(--geom-teal); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 450px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--geom-dark); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Chapter 10: Analytical Geometry</h1>
     <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <h1>Chapter 10: Analytical Geometry</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Analytical Geometry uses algebraic methods to solve geometric problems on the Cartesian plane. In Grade 12, the focus shifts to the <strong>Equation of a Circle</strong> and the relationship between circles and <strong>Tangents</strong>.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Analytical geometry connects algebra and geometry.
-        You can describe shapes with equations and solve geometric problems using coordinates.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Circle Equation (at Origin):</strong> \( x^2 + y^2 = r^2 \)</li>
+            <li><strong>General Circle Equation:</strong> \( (x - a)^2 + (y - b)^2 = r^2 \)
+                <ul>
+                    <li>Center: \( (a ; b) \)</li>
+                    <li>Radius: \( r \)</li>
+                </ul>
+            </li>
+            <li><strong>Distance Formula:</strong> \( d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \)</li>
+            <li><strong>Tangent Property:</strong> A tangent is perpendicular to the radius at the point of contact (\( m_{rad} \times m_{tan} = -1 \)).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Distance Between Two Points</h2>
-    <p>Given points P(x₁, y₁) and Q(x₂, y₂):</p>
-    <p><strong>Distance formula:</strong> d = √((x₂ − x₁)² + (y₂ − y₁)²)</p>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Finding the Equation</strong><br>
+            Find the equation of a circle with center \( M(2; -3) \) and radius 5.<br>
+            \( (x - 2)^2 + (y - (-3))^2 = 5^2 \)<br>
+            \( (x - 2)^2 + (y + 3)^2 = 25 \)
+        </div>
 
-    <h3>Worked Example 1</h3>
-    <p>Find distance between A(1, 2) and B(4, 6)</p>
-    <p>d = √((4−1)² + (6−2)²) = √(9 + 16) = √25 = 5</p>
-</section>
+        <div class="example-box">
+            <strong>Example 2: Symmetry & Completing the Square</strong><br>
+            Find the center of \( x^2 - 4x + y^2 + 6y = 3 \).<br>
+            1. \( (x^2 - 4x + 4) + (y^2 + 6y + 9) = 3 + 4 + 9 \)<br>
+            2. \( (x - 2)^2 + (y + 3)^2 = 16 \)<br>
+            3. Center is \( (2; -3) \), Radius is 4.
+        </div>
 
-<section>
-    <h2>Midpoint of a Line Segment</h2>
-    <p>Given points P(x₁, y₁) and Q(x₂, y₂):</p>
-    <p><strong>Midpoint formula:</strong> M = ((x₁ + x₂)/2 , (y₁ + y₂)/2)</p>
+        <div class="example-box">
+            <strong>Example 3: Equation of a Tangent</strong><br>
+            Radius gradient \( m = \frac{1}{2} \). Find tangent gradient.<br>
+            \( m_{tan} = -2 \) (since \( \frac{1}{2} \times -2 = -1 \)).
+        </div>
+    </section>
 
-    <h3>Worked Example 2</h3>
-    <p>Find midpoint of A(1, 2) and B(4, 6)</p>
-    <p>M = ((1+4)/2, (2+6)/2) = (5/2, 8/2) = (2.5, 4)</p>
-</section>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: The Dynamic Circle</h2>
+        <p>Drag the <strong>Center Point (M)</strong> to change the circle's position, or drag the <strong>Radius Point (P)</strong> to resize it. Watch how the equation updates below.</p>
+        <div id="circleBoard" class="jxgbox"></div>
+        <div id="equationOutput" style="font-weight: bold; color: var(--geom-teal); text-align: center; font-size: 1.2em; background:#eee; padding:10px; border-radius:5px;"></div>
 
-<section>
-    <h2>Gradient (Slope) of a Line</h2>
-    <p>m = (y₂ − y₁) / (x₂ − x₁)</p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('circleBoard', {boundingbox: [-10, 10, 10, -10], axis:true, showCopyright:false});
+            var m = b.create('point', [2, 1], {name:'M (Center)', color:'blue'});
+            var p = b.create('point', [5, 5], {name:'P (Radius)', color:'red'});
+            var circ = b.create('circle', [m, p], {strokeColor: '#16a085', strokeWidth: 3});
 
-    <h3>Worked Example 3</h3>
-    <p>Find slope of line through A(1, 2) and B(4, 6)</p>
-    <p>m = (6−2)/(4−1) = 4/3</p>
-</section>
+            b.on('update', function() {
+                var r2 = Math.pow(m.Dist(p), 2);
+                var a = m.X().toFixed(1);
+                var b_val = m.Y().toFixed(1);
+                document.getElementById('equationOutput').innerHTML = 
+                    "(x - " + a + ")² + (y - " + b_val + ")² = " + r2.toFixed(1);
+            });
+        </script>
+    </section>
 
-<section>
-    <h2>Equation of a Line</h2>
-    <p>Forms to know:</p>
-    <ul>
-        <li>Slope-intercept: y = mx + c</li>
-        <li>Point-slope: y − y₁ = m(x − x₁)</li>
-    </ul>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Determine the equation of the circle with center \( (-1; 4) \) passing through \( (2; 0) \).</li>
+            <li>Show that the point \( (3; 4) \) lies on the circle \( x^2 + y^2 = 25 \).</li>
+            <li>Find the equation of the tangent to the circle \( x^2 + y^2 = 10 \) at the point \( (3; 1) \).</li>
+        </ol>
+    </section>
 
-    <h3>Worked Example 4</h3>
-    <p>Equation of line through A(1, 2) with slope m = 4/3</p>
-    <p>y − 2 = 4/3(x − 1)</p>
-    <p>Simplify: y = 4/3 x + 2 − 4/3 = 4/3 x + 2/3</p>
-</section>
-
-<section>
-    <h2>Parallel and Perpendicular Lines</h2>
-    <ul>
-        <li>Parallel: same slope</li>
-        <li>Perpendicular: slopes multiply to −1</li>
-    </ul>
-
-    <h3>Worked Example 5</h3>
-    <p>Line parallel to y = 4/3 x + 2 passing through (0,0)</p>
-    <p>y = 4/3 x</p>
-
-    <p>Line perpendicular to y = 4/3 x + 2 passing through (0,0)</p>
-    <p>Slope m = −3/4 → y = −3/4 x</p>
-</section>
-
-<section>
-    <h2>Equation of a Circle</h2>
-    <p>Standard form: (x − h)² + (y − k)² = r²</p>
-    <p>Centre: (h, k), Radius: r</p>
-
-    <h3>Worked Example 6</h3>
-    <p>Circle with centre (2, −1) and radius 3</p>
-    <p>(x − 2)² + (y + 1)² = 9</p>
-</section>
-
-<section>
-    <h2>Intersection of Lines and Circles</h2>
-    <p>Substitute the line equation into the circle equation and solve the quadratic for x.</p>
-
-    <h3>Worked Example 7</h3>
-    <p>Line: y = x, Circle: x² + y² = 4</p>
-    <p>Substitute: x² + x² = 4 → 2x² = 4 → x² = 2 → x = ±√2</p>
-    <p>y = ±√2 → Intersection points: (√2, √2) and (−√2, −√2)</p>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find distance between (−1, 2) and (3, 4)</li>
-        <li>Find midpoint of (−2, 5) and (4, −1)</li>
-        <li>Equation of line through (1,1) with slope −2</li>
-        <li>Find slope of line perpendicular to y = 3x − 5</li>
-        <li>Circle with centre (0,0) and radius 5 → write equation</li>
-        <li>Find intersection points between y = x + 1 and x² + y² = 5</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Distance, midpoint, slope are basic tools</li>
-        <li>Line equations: slope-intercept & point-slope</li>
-        <li>Parallel & perpendicular lines have predictable slopes</li>
-        <li>Circle equation shows centre & radius</li>
-        <li>Intersections require substitution & solving quadratics</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter 10 Test</h2>
-    <ol>
-        <li>Find distance & midpoint between two points</li>
-        <li>Equation of a line given point & slope</li>
-        <li>Determine parallel/perpendicular lines</li>
-        <li>Circle equation problems</li>
-        <li>Intersection of line & circle</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li>The <strong>Radius</strong> is the distance from the center to any point on the circumference.</li>
+            <li>If the center is not given, use <strong>completing the square</strong> to find it.</li>
+            <li>Always remember: <strong>Radius \(\perp\) Tangent</strong>. This is the "key" to solving tangent equations.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="chapter9.html" class="btn" style="background:#7f8c8d;">← Previous: Vectors</a>
+    <div>
+        <p><strong>Course Complete</strong></p>
+        <p>Final Exam Revision</p>
+    </div>
+    <a href="index.html" class="btn">Return to Contents</a>
 </footer>
 
 </body>
