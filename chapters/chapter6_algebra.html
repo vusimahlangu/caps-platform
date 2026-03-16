@@ -2,209 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 6: Finance, Growth and Decay | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: Algebra | Grade 12 CAPS Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --alg-red: #c0392b; --alg-dark: #2c3e50; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--alg-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--alg-red); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--alg-red); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #fff5f5; border-left: 5px solid var(--alg-red); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 400px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--alg-red); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Chapter 6: Finance, Growth and Decay</h1>
     <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <h1>Chapter 6: Algebra</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Algebra in Grade 12 is about more than just solving for \( x \). It focuses on understanding the <strong>Nature of Roots</strong>, solving <strong>Simultaneous Equations</strong>, and mastering <strong>Quadratic Inequalities</strong>. These skills are essential for the Paper 1 examination.</p>
+    </section>
 
-<!-- INTRODUCTION -->
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Financial Mathematics deals with money over time.
-        Learners often struggle because they confuse formulas.
-        In this chapter, we slow everything down and focus on
-        understanding <strong>what the money is doing</strong>.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Quadratic Formula:</strong> \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)</li>
+            <li><strong>The Discriminant (\(\Delta\)):</strong> \( \Delta = b^2 - 4ac \)</li>
+            <li><strong>Nature of Roots:</strong>
+                <ul>
+                    <li>If \( \Delta > 0 \): Roots are Real and Unequal.</li>
+                    <li>If \( \Delta = 0 \): Roots are Real and Equal.</li>
+                    <li>If \( \Delta < 0 \): Roots are Non-real (Imaginary).</li>
+                    <li>If \( \Delta \) is a perfect square: Roots are Rational.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
 
-<!-- SIMPLE INTEREST -->
-<section>
-    <h2>Simple Interest</h2>
-    <p>
-        Simple interest is calculated on the original amount only.
-    </p>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Solving Quadratic Inequalities</strong><br>
+            Solve for \( x \): \( x^2 - 5x + 6 > 0 \)<br>
+            1. Factorise: \( (x-2)(x-3) > 0 \)<br>
+            2. Critical Values: \( x = 2 \) and \( x = 3 \)<br>
+            3. Answer: \( x < 2 \) or \( x > 3 \)
+        </div>
 
-    <p><strong>Formula:</strong></p>
-    <p>I = P × r × t</p>
+        <div class="example-box">
+            <strong>Example 2: Simultaneous Equations</strong><br>
+            Solve for \( x \) and \( y \):<br>
+            \( y + 2x = 3 \) (Eq 1) and \( y = x^2 - 3x + 3 \) (Eq 2)<br>
+            Substitute Eq 1 into Eq 2:<br>
+            \( (3 - 2x) = x^2 - 3x + 3 \)<br>
+            \( x^2 - x = 0 \Rightarrow x(x-1) = 0 \)<br>
+            \( x = 0 \) (then \( y = 3 \)) or \( x = 1 \) (then \( y = 1 \))
+        </div>
+    </section>
 
-    <ul>
-        <li><strong>P</strong> = Principal (starting amount)</li>
-        <li><strong>r</strong> = Interest rate (as a decimal)</li>
-        <li><strong>t</strong> = Time in years</li>
-    </ul>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: Nature of Roots</h2>
+        <p>Adjust the slider for <strong>q</strong> (the vertical shift) to see how the discriminant (\(\Delta\)) changes. Watch when the parabola touches, crosses, or misses the x-axis.</p>
+        <div id="algebraBoard" class="jxgbox"></div>
+        <div id="deltaOutput" style="font-weight: bold; color: var(--alg-red); text-align: center; font-size: 1.2em;"></div>
 
-    <h3>Worked Example 1 (Very Slow)</h3>
-    <p>
-        R5 000 is invested at 8% per annum simple interest for 3 years.
-        Calculate the interest earned.
-    </p>
+        <script>
+            var board = JXG.JSXGraph.initBoard('algebraBoard', {boundingbox: [-5, 10, 5, -5], axis:true, showCopyright:false});
+            var q = board.create('slider', [[-4, -4], [1, -4], [-5, 0, 5]], {name:'q'});
+            
+            // f(x) = x^2 + q
+            var f = board.create('functiongraph', [function(x){ return x*x + q.Value(); }], {strokeColor: '#c0392b', strokeWidth: 3});
+            
+            board.on('update', function() {
+                var delta = -4 * q.Value(); // For x^2 + 0x + q
+                var status = "";
+                if (delta > 0) status = "Δ > 0: Real & Unequal";
+                else if (delta == 0) status = "Δ = 0: Real & Equal";
+                else status = "Δ < 0: Non-Real";
+                
+                document.getElementById('deltaOutput').innerHTML = "Discriminant (Δ): " + delta.toFixed(2) + " — " + status;
+            });
+        </script>
+    </section>
 
-    <p>Step 1: Identify values</p>
-    <p>P = 5 000</p>
-    <p>r = 8% = 0.08</p>
-    <p>t = 3</p>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Solve for \( x \): \( 3x^2 - 2x - 5 = 0 \) (Leave in simplest surd form if necessary).</li>
+            <li>For which values of \( k \) will the equation \( x^2 + kx + 9 = 0 \) have equal roots?</li>
+            <li>Solve the following inequality: \( -x^2 + 4x + 5 \leq 0 \).</li>
+        </ol>
+    </section>
 
-    <p>Step 2: Substitute into formula</p>
-    <p>I = 5 000 × 0.08 × 3</p>
-
-    <p>Step 3: Calculate</p>
-    <p>I = 1 200</p>
-
-    <p><strong>Answer:</strong> Interest earned = R1 200</p>
-</section>
-
-<!-- COMPOUND INTEREST -->
-<section>
-    <h2>Compound Interest</h2>
-    <p>
-        Compound interest is calculated on the original amount
-        <strong>plus previously earned interest</strong>.
-    </p>
-
-    <p><strong>Formula:</strong></p>
-    <p>A = P(1 + r)<sup>t</sup></p>
-
-    <h3>Worked Example 2</h3>
-    <p>
-        R4 000 is invested at 10% per annum compound interest for 2 years.
-        Calculate the final amount.
-    </p>
-
-    <p>Step 1: Identify values</p>
-    <p>P = 4 000</p>
-    <p>r = 0.10</p>
-    <p>t = 2</p>
-
-    <p>Step 2: Substitute</p>
-    <p>A = 4 000(1 + 0.10)<sup>2</sup></p>
-
-    <p>Step 3: Calculate exponent first</p>
-    <p>(1.10)<sup>2</sup> = 1.21</p>
-
-    <p>Step 4: Multiply</p>
-    <p>A = 4 000 × 1.21 = 4 840</p>
-
-    <p><strong>Answer:</strong> Final amount = R4 840</p>
-</section>
-
-<!-- COMPARISON -->
-<section>
-    <h2>Comparing Simple and Compound Interest</h2>
-    <p>
-        CAPS exams often ask learners to compare the two methods.
-        Compound interest always gives more over time.
-    </p>
-</section>
-
-<!-- GROWTH -->
-<section>
-    <h2>Growth</h2>
-    <p>
-        Growth refers to quantities increasing over time
-        (population, bacteria, money).
-    </p>
-
-    <p><strong>Formula:</strong></p>
-    <p>A = P(1 + r)<sup>t</sup></p>
-
-    <h3>Worked Example 3</h3>
-    <p>
-        A population of 20 000 grows at 5% per year.
-        Find the population after 4 years.
-    </p>
-
-    <p>Step 1: Identify values</p>
-    <p>P = 20 000</p>
-    <p>r = 0.05</p>
-    <p>t = 4</p>
-
-    <p>Step 2: Substitute</p>
-    <p>A = 20 000(1.05)<sup>4</sup></p>
-
-    <p>Step 3: Calculate</p>
-    <p>A ≈ 24 310</p>
-
-    <p><strong>Answer:</strong> Population ≈ 24 310</p>
-</section>
-
-<!-- DECAY -->
-<section>
-    <h2>Decay</h2>
-    <p>
-        Decay refers to quantities decreasing over time
-        (depreciation, radioactive material).
-    </p>
-
-    <p><strong>Formula:</strong></p>
-    <p>A = P(1 − r)<sup>t</sup></p>
-
-    <h3>Worked Example 4</h3>
-    <p>
-        A car worth R180 000 depreciates at 15% per year.
-        Find its value after 3 years.
-    </p>
-
-    <p>Step 1: Identify values</p>
-    <p>P = 180 000</p>
-    <p>r = 0.15</p>
-    <p>t = 3</p>
-
-    <p>Step 2: Substitute</p>
-    <p>A = 180 000(0.85)<sup>3</sup></p>
-
-    <p>Step 3: Calculate</p>
-    <p>A ≈ 110 160</p>
-
-    <p><strong>Answer:</strong> Value ≈ R110 160</p>
-</section>
-
-<!-- PRACTICE -->
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Calculate simple interest on R6 000 at 7% for 5 years.</li>
-        <li>Find the final amount for R3 500 at 9% compound interest for 3 years.</li>
-        <li>A population grows at 4% per year. Find the formula.</li>
-        <li>A machine depreciates at 12% per year. Write the decay formula.</li>
-    </ol>
-</section>
-
-<!-- SUMMARY -->
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Simple interest grows linearly</li>
-        <li>Compound interest grows exponentially</li>
-        <li>Growth uses (1 + r)</li>
-        <li>Decay uses (1 − r)</li>
-    </ul>
-</section>
-
-<!-- TEST -->
-<section>
-    <h2>Chapter 6 Test</h2>
-    <ol>
-        <li>Compare simple and compound interest over 5 years.</li>
-        <li>Calculate compound interest earned on R8 000 at 11% for 2 years.</li>
-        <li>A car depreciates at 10% annually. Find its value after 4 years.</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li>The <strong>Discriminant</strong> is the key to predicting the behavior of quadratic graphs without sketching them.</li>
+            <li>In <strong>Simultaneous Equations</strong>, always isolate the simplest variable first.</li>
+            <li>Quadratic <strong>Inequalities</strong> are best solved by finding critical values and checking the regions on a number line.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="chapter5.html" class="btn" style="background:#7f8c8d;">← Previous: Statistics</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Chapter 7: Number Patterns & Sequences</p>
+    </div>
+    <a href="chapter7.html" class="btn">Start Patterns →</a>
 </footer>
 
 </body>
