@@ -2,62 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grade 12 Mathematics | CAPS Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 12 Math | Proactive Learning Platform</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --p1-blue: #2c3e50; --p2-green: #16a085; --accent: #e67e22; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; padding: 0; }
+        .hero { background: var(--p1-blue); color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; border-top: 8px solid; }
+        .card:hover { transform: translateY(-10px); }
+        .p1-card { border-top-color: var(--p1-blue); }
+        .p2-card { border-top-color: var(--p2-green); }
+        .btn-main { display: block; text-align: center; padding: 15px; margin-top: 20px; text-decoration: none; border-radius: 8px; font-weight: bold; color: white; }
+        .p1-btn { background: var(--p1-blue); }
+        .p2-btn { background: var(--p2-green); }
+        .chapter-list { list-style: none; padding: 0; font-size: 0.9rem; }
+        .chapter-list li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .chapter-list a { color: #555; text-decoration: none; }
+        .chapter-list a:hover { color: var(--accent); }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Grade 12 Mathematics</h1>
-    <p>CAPS-aligned, full syllabus, exam-focused</p>
-</header>
+<div class="hero">
+    <h1>Grade 12 Mathematics: CAPS Proactive Portal</h1>
+    <p>Interactive Illustrations • Exam Revision • Real-Time Math Jerky-Free Software</p>
+</div>
 
-<main>
-    <!-- Introduction -->
-    <section>
-        <h2>Introduction</h2>
-        <p>Welcome to the Grade 12 Mathematics online study platform. Navigate through each chapter to study theory, see examples, practice exercises, view summaries, and attempt chapter mini-tests. This platform is fully CAPS-aligned and designed for South African learners.</p>
-    </section>
+<div class="container">
+    <div class="grid">
+        <!-- PAPER 1 SIDE -->
+        <div class="card p1-card">
+            <h2>Paper 1: Algebra & Calculus</h2>
+            <p>Focus on functions, finance, number patterns, and differential calculus.</p>
+            <ul class="chapter-list">
+                <li><a href="chapters/chapter1.html">Chapter 1: Functions</a></li>
+                <li><a href="chapters/chapter2_trig.html">Chapter 2: Trigonometry</a></li>
+                <li><a href="chapters/chapter3_calculus.html">Chapter 3: Calculus</a></li>
+                <li><a href="chapters/chapter4_probability.html">Chapter 4: Probability</a></li>
+                <li><a href="chapters/chapter5_finance.html">Chapter 5: Finance</a></li>
+                <li><a href="chapters/chapter6_algebra.html">Chapter 6: Algebra</a></li>
+                <li><a href="chapters/chapter7_patterns.html">Chapter 7: Patterns</a></li>
+            </ul>
+            <a href="paper1_master_revision.html" class="btn-main p1-btn">Open Paper 1 Master Board</a>
+        </div>
 
-    <!-- Table of Contents -->
-    <section>
-        <h2>Table of Contents</h2>
-        <ul>
-             <li><a href="chapters/chapter1_functions.html">Chapter 1: Functions</a></li>
-             <li><a href="chapters/chapter2_trigonometry.html">Chapter 2: Trigonometry</a></li>
-             <li><a href="chapters/chapter3_calculus.html">Chapter 3: Calculus</a></li>
-             <li><a href="chapters/chapter4_probability.html">Chapter 4: Probability</a></li>
-             <li><a href="chapters/chapter5_statistics.html">Chapter 5: Statistics</a></li>
-             <li><a href="chapters/chapter6_algebra.html">Chapter 6: Algebra</a></li>
-             <li><a href="chapters/chapter7_sequences_series.html">Chapter 7: Sequences & Series</a></li>
-             <li><a href="chapters/chapter8_functions_advanced.html">Chapter 8: Functions (Advanced)</a></li>
-             <li><a href="chapters/chapter9_vectors.html">Chapter 9: Vectors</a></li>
-             <li><a href="chapters/chapter10_analytical_geometry.html">Chapter 10: Analytical Geometry</a></li>
-        </ul>
-    </section>
+        <!-- PAPER 2 SIDE -->
+        <div class="card p2-card">
+            <h2>Paper 2: Geometry & Stats</h2>
+            <p>Master analytical geometry, 2D/3D trigonometry, and statistics.</p>
+            <ul class="chapter-list">
+                <li><a href="chapters/p2_chapter1_functions.html">Chapter 1: Functions & Graphs</a></li>
+                <li><a href="chapters/p2_chapter2_trig_identities.html">Chapter 2: Trig Identities</a></li>
+                <li><a href="chapters/p2_chapter5_statistics.html">Chapter 5: Statistics</a></li>
+                <li><a href="chapters/p2_chapter7_analytical.html">Chapter 7: Analytical Geometry</a></li>
+                <li><a href="chapters/p2_chapter10_vectors.html">Chapter 10: Vectors</a></li>
+            </ul>
+            <a href="paper2_master_revision.html" class="btn-main p2-btn">Open Paper 2 Master Board</a>
+        </div>
+    </div>
 
-        <section>
-    <h2>Paper 2</h2>
-    <ul>
-        <li><a href="chapters/Paper 2 Chapter 1 Functions_Graphs.html">Chapter 1: Functions</a></li>
-        <li><a href="chapters/Paper 2 Chapter 2 Trigonometry_Identities.html">Chapter 2: Trigonometry</a></li>
-        <li><a href="chapters/Paper 2 Chapter 3 Calculus Applications.html">Chapter 3: Calculus</a></li>
-        <li><a href="chapters/Paper 2 Chapter 4 Probability.html">Chapter 4: Probability</a></li>
-        <li><a href="chapters/Paper 2 Chapter 5 Statistics.html">Chapter 5: Statistics</a></li>
-        <li><a href="chapters/Paper 2 Chapter 6 Algebra.html">Chapter 6: Algebra</a></li>
-        <li><a href="chapters/Paper 2 Chapter 7 Analytical Geometry.html">Chapter 7: Analytical Geometry</a></li>
-        <li><a href="chapters/Paper 2 Chapter 8 Functions Advanced">Chapter 8: Functions Advanced</a></li>
-        <li><a href="chapters/Paper 2 Chapter 9 Trigonometry.html">Chapter 9: Trigonometry</a></li>
-        <li><a href="chapters/Paper 2 Chapter 10 Vectors.html">Chapter 10: Vectors</a></li>
-    </ul>
-</section>
-
-
-</main>
-
-<footer>
-    <p>© CAPS Grade 12 Mathematics | National Learning Platform</p>
-</footer>
+    <!-- PHYSICAL SCIENCES LINK -->
+    <div style="margin-top: 40px; text-align: center;">
+        <a href="physics.html" style="color: #7f8c8d; text-decoration: none;">Explore Physical Sciences Content →</a>
+    </div>
+</div>
 
 </body>
 </html>
