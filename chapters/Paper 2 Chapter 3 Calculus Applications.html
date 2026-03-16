@@ -2,133 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paper 2 Chapter 3: Calculus Applications | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 2 | Chapter 3: Calculus Applications | Grade 12 Math</title>
+    
+    <!-- INTERACTIVE ENGINES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
-        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
-        header a:hover { color: #ffcc00; text-decoration: underline; }
-        main { padding: 1rem 2rem; }
-        h2 { margin-top: 2rem; color: #001F3F; }
+        :root { --calc-blue: #2980b9; --calc-dark: #34495e; --accent: #16a085; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: #fdfdfd; }
+        header { background: var(--calc-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--accent); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--calc-blue); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f4fbf9; border-left: 5px solid var(--accent); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 400px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--calc-blue); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Paper 2 – Chapter 3: Calculus Applications</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 3: Calculus Applications</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Calculus Applications in Paper 2 focus on <strong>Optimization</strong>. We use derivatives to find the dimensions of shapes that provide the maximum volume or minimum cost. It is about applying the rule: at a <strong>Maximum or Minimum point</strong>, the derivative is zero (\( f'(x) = 0 \)).</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Calculus in Paper 2 focuses on **differentiation, integration, and applications**.  
-        Learners apply these concepts to solve real-world problems, including rates of change, motion, and areas under curves.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Optimizing:</strong> To find a max/min value, find the first derivative and set it to 0.</li>
+            <li><strong>Volume of a Rectangular Prism:</strong> \( V = L \times W \times H \)</li>
+            <li><strong>Surface Area of a Cylinder:</strong> \( SA = 2\pi r^2 + 2\pi rh \)</li>
+            <li><strong>Rate of Change:</strong> The derivative represents the instantaneous rate at which one variable changes with respect to another (e.g., \( \frac{dV}{dt} \)).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Differentiation</h2>
-    <p>Differentiation allows us to find the gradient of a curve at any point.</p>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Maximizing Area</strong><br>
+            A farmer has 40m of fencing to make a rectangular pen against a wall. Find the max area.<br>
+            1. Let width be \( x \). Length is \( 40 - 2x \).<br>
+            2. Area \( A(x) = x(40 - 2x) = 40x - 2x^2 \).<br>
+            3. \( A'(x) = 40 - 4x = 0 \Rightarrow x = 10 \).<br>
+            4. Max Area: \( 10(20) = 200m^2 \).
+        </div>
 
-    <h3>Rules to Remember:</h3>
-    <ul>
-        <li>Power rule: d/dx[xⁿ] = n xⁿ⁻¹</li>
-        <li>Sum/difference: derivative term by term</li>
-        <li>Constant multiple: d/dx[c f(x)] = c f'(x)</li>
-    </ul>
+        <div class="example-box">
+            <strong>Example 2: Rate of Change</strong><br>
+            Water is being pumped into a tank such that \( V(t) = 5t^2 + 2t \). Find the rate after 3 seconds.<br>
+            1. \( V'(t) = 10t + 2 \).<br>
+            2. \( V'(3) = 10(3) + 2 = 32 \) liters/sec.
+        </div>
+    </section>
 
-    <h3>Worked Example 1</h3>
-    <p>Find dy/dx for y = 3x³ − 5x² + 2x − 7</p>
-    <ol>
-        <li>Power rule term by term:</li>
-        <li>d/dx[3x³] = 9x²</li>
-        <li>d/dx[−5x²] = −10x</li>
-        <li>d/dx[2x] = 2</li>
-        <li>d/dx[−7] = 0</li>
-        <li>Answer: dy/dx = 9x² − 10x + 2</li>
-    </ol>
-</section>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: The Optimization Curve</h2>
+        <p>Adjust the slider <strong>x</strong> (the cut-out size) to see how the Volume of the box changes. The Blue point on the graph shows the <strong>Maximum Volume</strong> where the gradient is zero.</p>
+        <div id="boxBoard" class="jxgbox"></div>
+        <div id="boxOutput" style="font-weight: bold; color: var(--accent); text-align: center; padding:10px;"></div>
 
-<section>
-    <h2>Integration</h2>
-    <p>Integration is the reverse of differentiation. It allows us to find areas under curves.</p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('boxBoard', {boundingbox: [-1, 150, 11, -20], axis:true, showCopyright:false});
+            
+            // Assume a sheet of 20x20. Volume = x(20-2x)^2
+            var x_slider = b.create('slider', [[1, -10], [5, -10], [0, 2, 10]], {name:'x (Height)'});
+            
+            var v_graph = b.create('functiongraph', [function(x){ 
+                if(x < 0 || x > 10) return 0;
+                return x * Math.pow(20 - 2*x, 2); 
+            }], {strokeColor:'#2980b9', strokeWidth:3});
+            
+            var p = b.create('point', [function(){return x_slider.Value();}, function(){
+                var val = x_slider.Value();
+                return val * Math.pow(20 - 2*val, 2);
+            }], {name:'Current Volume', color:'red'});
 
-    <h3>Rules to Remember:</h3>
-    <ul>
-        <li>∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C, n ≠ −1</li>
-        <li>∫ k f(x) dx = k ∫ f(x) dx</li>
-    </ul>
+            b.on('update', function() {
+                var vol = (x_slider.Value() * Math.pow(20 - 2*x_slider.Value(), 2)).toFixed(2);
+                document.getElementById('boxOutput').innerHTML = "Volume: " + vol + " units³";
+            });
+        </script>
+    </section>
 
-    <h3>Worked Example 2</h3>
-    <p>Find ∫(6x² − 4x + 5) dx</p>
-    <ol>
-        <li>∫6x² dx = 2x³</li>
-        <li>∫−4x dx = −2x²</li>
-        <li>∫5 dx = 5x</li>
-        <li>Include constant: + C</li>
-        <li>Answer: 2x³ − 2x² + 5x + C</li>
-    </ol>
-</section>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>A ball is thrown upward. Height is \( h(t) = 20t - 5t^2 \). Find the maximum height reached.</li>
+            <li>The total cost of producing \( q \) units is \( C(q) = 0.1q^2 + 50q + 1000 \). Find the marginal cost at \( q = 100 \).</li>
+            <li>Design a cylinder with a volume of \( 500cm^3 \) that uses the minimum surface area. (Find the radius \( r \)).</li>
+        </ol>
+    </section>
 
-<section>
-    <h2>Applications of Calculus</h2>
-    <h3>1. Gradient at a Point</h3>
-    <p>Find the slope of y = x² − 2x + 3 at x = 2</p>
-    <ol>
-        <li>Differentiate: dy/dx = 2x − 2</li>
-        <li>Substitute x = 2 → dy/dx = 2(2) − 2 = 2</li>
-        <li>Slope at point = 2</li>
-    </ol>
-
-    <h3>2. Area Under Curve</h3>
-    <p>Find area under y = x² from x = 0 to x = 3</p>
-    <ol>
-        <li>Integrate: ∫₀³ x² dx = [x³/3]₀³</li>
-        <li>Compute: (27/3) − (0/3) = 9</li>
-        <li>Area = 9 units²</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Differentiate y = 5x³ − 2x² + x − 1</li>
-        <li>Integrate ∫(4x³ − 3x² + 2x − 5) dx</li>
-        <li>Find slope of y = x² + 4x at x = 1</li>
-        <li>Find area under y = 2x from x = 0 to x = 5</li>
-        <li>Apply differentiation to a motion problem: s = t³ − 3t² + 2t</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Differentiation = gradient of curve</li>
-        <li>Integration = area under curve</li>
-        <li>Apply to real-world problems</li>
-        <li>Work step by step and show all calculations</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter Test</h2>
-    <ol>
-        <li>Differentiate y = x³ − 4x² + 6x − 2</li>
-        <li>Integrate ∫(5x² − 4x + 3) dx</li>
-        <li>Find slope at x = 2 for y = 2x² − x + 1</li>
-        <li>Calculate area under y = x³ from x = 1 to x = 2</li>
-        <li>Apply derivative to a motion problem</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li>Optimization always involves setting the <strong>derivative to zero</strong>.</li>
+            <li>Ensure you have a <strong>single variable</strong> in your formula before differentiating.</li>
+            <li>Physical constraints (like lengths being positive) determine the <strong>Domain</strong> of your application.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="p2_chapter2.html" class="btn" style="background:#7f8c8d;">← Previous: Trig Identities</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Paper 2 Chapter 4: Probability</p>
+    </div>
+    <a href="p2_chapter4.html" class="btn">Start Probability →</a>
 </footer>
 
 </body>
