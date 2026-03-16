@@ -2,131 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paper 2 Chapter 4: Probability | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 2 | Chapter 4: Probability | Grade 12 Math</title>
+    
+    <!-- INTERACTIVE ENGINES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
-        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
-        header a:hover { color: #ffcc00; text-decoration: underline; }
-        main { padding: 1rem 2rem; }
-        h2 { margin-top: 2rem; color: #001F3F; }
+        :root { --prob-purple: #8e44ad; --prob-dark: #2c3e50; --accent: #9b59b6; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: #fdfdfd; }
+        header { background: var(--prob-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--prob-purple); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--prob-purple); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f9f4fb; border-left: 5px solid var(--accent); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 400px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--prob-purple); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Paper 2 – Chapter 4: Probability</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 4: Probability & Counting</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Probability in Paper 2 focuses on <strong>Counting Principles</strong>. We calculate the number of ways objects can be arranged and use these totals to find the probability of specific events occurring. Mastery of factorials (\(n!\)) is the key to outsmarting these problems.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Probability measures the **likelihood of events** occurring.  
-        In Paper 2, learners focus on **both theoretical and experimental probability**, including **combined events, independent and dependent events**.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Fundamental Counting Principle:</strong> Total outcomes = \(n \times m \times p \dots\)</li>
+            <li><strong>Factorial Notation:</strong> \(n! = n \times (n-1) \times (n-2) \dots \times 1\)</li>
+            <li><strong>Arrangements (Distinct):</strong> \(n!\) ways to arrange \(n\) different items.</li>
+            <li><strong>Arrangements (Identical Items):</strong> \(\frac{n!}{p! \times q!}\) where \(p\) and \(q\) are counts of identical items.</li>
+            <li><strong>Probability:</strong> \(P(E) = \frac{n(E)}{n(S)}\) (favourable outcomes over total outcomes).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Basic Probability Rules</h2>
-    <ul>
-        <li>0 ≤ P(A) ≤ 1</li>
-        <li>P(S) = 1, where S is the sample space</li>
-        <li>P(A') = 1 − P(A), probability of complement</li>
-        <li>For mutually exclusive events: P(A or B) = P(A) + P(B)</li>
-    </ul>
-</section>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Seating Arrangements</strong><br>
+            7 people sit in a row. How many ways can they be seated if 2 specific people must sit together?<br>
+            1. Treat the 2 people as 1 "block": Now we have 6 items (5 people + 1 block).<br>
+            2. Ways to arrange items: \(6!\).<br>
+            3. Ways to arrange inside the block: \(2!\).<br>
+            4. Total: \(6! \times 2! = 720 \times 2 = 1440\) ways.
+        </div>
 
-<section>
-    <h2>Combined Events</h2>
-    <p>Probability of two events occurring together (intersection):</p>
-    <ul>
-        <li>Independent events: P(A and B) = P(A) × P(B)</li>
-        <li>Dependent events: P(A and B) = P(A) × P(B|A)</li>
-    </ul>
+        <div class="example-box">
+            <strong>Example 2: Identical Letters</strong><br>
+            How many unique words can be made from "BANANA"?<br>
+            Total letters: 6. Identical: 3 'A's, 2 'N's.<br>
+            Formula: \(\frac{6!}{3! \times 2!} = \frac{720}{6 \times 2} = 60\) ways.
+        </div>
+    </section>
 
-    <h3>Worked Example 1 – Independent Events</h3>
-    <p>Two dice are rolled. Find probability of both showing 6.</p>
-    <ol>
-        <li>P(6 on die 1) = 1/6, P(6 on die 2) = 1/6</li>
-        <li>P(both) = 1/6 × 1/6 = 1/36</li>
-    </ol>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: The Factorial Explosion</h2>
+        <p>Adjust the slider <strong>n</strong> to see how the number of possible arrangements (\(n!\)) grows. This shows why even small groups have massive probabilities!</p>
+        <div id="probBoard" class="jxgbox"></div>
+        <div id="probOutput" style="font-weight: bold; color: var(--prob-purple); text-align: center; padding:10px;"></div>
 
-    <h3>Worked Example 2 – Dependent Events</h3>
-    <p>Two cards drawn without replacement. Find probability both are aces.</p>
-    <ol>
-        <li>P(first ace) = 4/52</li>
-        <li>P(second ace) = 3/51</li>
-        <li>P(both) = 4/52 × 3/51 = 12/2652 = 1/221</li>
-    </ol>
-</section>
+        <script>
+            var b = JXG.JSXGraph.initBoard('probBoard', {boundingbox: [-1, 5100, 10, -500], axis:true, showCopyright:false});
+            
+            var n_slider = b.create('slider', [[1, -300], [5, -300], [1, 5, 7]], {name:'n (items)', snapWidth:1});
+            
+            function factorial(num) {
+                if (num === 0 || num === 1) return 1;
+                for (var i = num - 1; i >= 1; i--) { num *= i; }
+                return num;
+            }
 
-<section>
-    <h2>Complementary Probability</h2>
-    <p>Probability that an event does not occur: P(A') = 1 − P(A)</p>
+            var f_graph = b.create('chart', [function(){
+                var data = [];
+                for(var i=1; i<=7; i++) data.push(factorial(i));
+                return data;
+            }], {chartStyle:'bar', width:0.6, color: '#8e44ad'});
 
-    <h3>Worked Example 3</h3>
-    <p>A bag has 5 red and 3 blue balls. Find probability of not drawing a red ball.</p>
-    <ol>
-        <li>Total balls = 5 + 3 = 8</li>
-        <li>P(red) = 5/8</li>
-        <li>P(not red) = 1 − 5/8 = 3/8</li>
-    </ol>
-</section>
+            b.on('update', function() {
+                var val = Math.round(n_slider.Value());
+                document.getElementById('probOutput').innerHTML = val + "! = " + factorial(val) + " arrangements";
+            });
+        </script>
+    </section>
 
-<section>
-    <h2>Conditional Probability</h2>
-    <p>P(A|B) = Probability of A given B has occurred</p>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>How many 5-digit codes can be formed using digits 0-9 if digits cannot repeat?</li>
+            <li>In how many ways can 4 different Math books and 3 different Science books be arranged on a shelf if the Science books must stay together?</li>
+            <li>What is the probability that a random arrangement of the word "APPLE" starts with a vowel?</li>
+        </ol>
+    </section>
 
-    <h3>Worked Example 4</h3>
-    <p>In a deck of 52 cards, find probability that a card is a king given it is a face card.</p>
-    <ol>
-        <li>Total face cards = 12</li>
-        <li>Number of kings = 4</li>
-        <li>P(King | Face card) = 4/12 = 1/3</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>A coin is tossed twice. Find probability of two heads.</li>
-        <li>Find probability of drawing a red card from a standard deck.</li>
-        <li>Two balls drawn with replacement: probability both are white.</li>
-        <li>Find probability of not rolling a 4 on a die.</li>
-        <li>Conditional probability: probability that a student is female given that they are in Grade 12 (use hypothetical numbers).</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Probability ranges from 0 to 1</li>
-        <li>Complement: P(A') = 1 − P(A)</li>
-        <li>Independent vs dependent events differ in calculation</li>
-        <li>Conditional probability helps in dependent scenarios</li>
-        <li>Step-by-step reasoning avoids errors</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter Test</h2>
-    <ol>
-        <li>Find probability of drawing two hearts from a deck without replacement</li>
-        <li>Compute probability of at least one head when tossing two coins</li>
-        <li>Conditional probability: P(A|B) given scenario</li>
-        <li>Independent events problem with dice or cards</li>
-        <li>Complementary probability calculation</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li>Use <strong>Factorials</strong> for total arrangements.</li>
+            <li>When items must be <strong>together</strong>, treat them as one unit but multiply by their internal arrangements.</li>
+            <li>When items are <strong>identical</strong>, divide the total factorial by the factorials of the repeated groups.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="p2_chapter3.html" class="btn" style="background:#7f8c8d;">← Previous: Calculus Apps</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Paper 2 Chapter 5: Statistics</p>
+    </div>
+    <a href="p2_chapter5.html" class="btn">Start Statistics →</a>
 </footer>
 
 </body>
