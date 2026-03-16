@@ -2,181 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 8: Functions | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Advanced Functions | Grade 12 CAPS Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --adv-blue: #2980b9; --adv-dark: #2c3e50; --bg: #f9fbfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--adv-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--adv-blue); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--adv-blue); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f0f7ff; border-left: 5px solid var(--adv-blue); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 450px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--adv-blue); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Chapter 8: Functions (Advanced)</h1>
     <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <h1>Chapter 8: Advanced Functions & Logarithms</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Advanced functions focus on the relationship between exponential growth and logarithmic scales. In this chapter, we explore how to find the <strong>Inverse</strong> of an exponential function and how the <strong>Logarithmic Law</strong> allows us to solve for variables in the exponent.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Functions describe relationships between variables.
-        Learners often struggle because graphs feel abstract.
-        In this chapter, we link every equation to its graph step by step.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Exponential Form:</strong> \( y = b^x \) (where \( b > 0, b \neq 1 \))</li>
+            <li><strong>Logarithmic Form (The Inverse):</strong> \( x = \log_b y \)</li>
+            <li><strong>Log Laws for Equations:</strong>
+                <ul>
+                    <li>\( \log_b(A \times C) = \log_b A + \log_b C \)</li>
+                    <li>\( \log_b(A^n) = n \log_b A \)</li>
+                </ul>
+            </li>
+            <li><strong>Restriction:</strong> The argument of a log must be positive (\( y > 0 \)).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>What is a Function?</h2>
-    <p>
-        A function assigns exactly one output value to each input value.
-    </p>
-    <p><strong>Notation:</strong> y = f(x)</p>
-</section>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Finding the Inverse</strong><br>
+            Given \( f(x) = 3^x \). Find \( f^{-1}(x) \).<br>
+            1. Swap \( x \) and \( y \): \( x = 3^y \)<br>
+            2. Convert to log form: \( y = \log_3 x \)<br>
+            3. Answer: \( f^{-1}(x) = \log_3 x \)
+        </div>
 
-<section>
-    <h2>Types of Functions (CAPS)</h2>
-    <ul>
-        <li>Linear: y = mx + c</li>
-        <li>Quadratic: y = ax² + bx + c</li>
-        <li>Exponential: y = abˣ</li>
-        <li>Hyperbolic: y = a/x</li>
-    </ul>
-</section>
+        <div class="example-box">
+            <strong>Example 2: Solving for \( n \) (Finance Link)</strong><br>
+            Solve for \( n \): \( 2 = (1.05)^n \)<br>
+            1. Take logs of both sides: \( \log 2 = \log (1.05)^n \)<br>
+            2. Use power law: \( \log 2 = n \log 1.05 \)<br>
+            3. \( n = \frac{\log 2}{\log 1.05} \approx 14.21 \)
+        </div>
+    </section>
 
-<section>
-    <h2>Linear Functions</h2>
-    <p>
-        Linear functions form straight-line graphs.
-    </p>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: Exponential vs Logarithmic</h2>
+        <p>Adjust the <strong>Base (b)</strong> slider. Watch how the Exponential graph (Blue) and its Inverse Logarithmic graph (Red) reflect perfectly across the line \( y = x \).</p>
+        <div id="advBoard" class="jxgbox"></div>
+        <div id="advOutput" style="font-weight: bold; color: var(--adv-blue); text-align: center;"></div>
 
-    <h3>Worked Example 1</h3>
-    <p>Given y = 2x − 4</p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('advBoard', {boundingbox: [-2, 10, 10, -2], axis:true, showCopyright:false});
+            var base = b.create('slider', [[1, -1], [5, -1], [1.1, 2, 5]], {name:'Base (b)'});
+            
+            // Mirror line y = x
+            b.create('line', [[0,0], [1,1]], {dash:2, strokeColor:'#999', fixed:true});
 
-    <p>Step 1: Identify the gradient (m)</p>
-    <p>m = 2</p>
+            // Exponential f(x) = b^x
+            var exp = b.create('functiongraph', [function(x){ return Math.pow(base.Value(), x); }], {strokeColor:'blue', strokeWidth:3});
+            
+            // Logarithmic f-1(x) = log_b(x)
+            var log = b.create('functiongraph', [function(x){ return Math.log(x) / Math.log(base.Value()); }], {strokeColor:'red', strokeWidth:3});
 
-    <p>Step 2: Identify the y-intercept (c)</p>
-    <p>c = −4</p>
+            b.create('text', [0.5, 8, function(){ return "f(x) = " + base.Value().toFixed(1) + "^x"; }], {color:'blue'});
+            b.create('text', [6, 1, function(){ return "f⁻¹(x) = log_" + base.Value().toFixed(1) + "(x)"; }], {color:'red'});
+        </script>
+    </section>
 
-    <p>Step 3: Draw the graph using at least two points</p>
-</section>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Find the inverse of \( f(x) = (\frac{1}{2})^x \). Sketch both on the same set of axes.</li>
+            <li>Solve for \( x \) without a calculator: \( \log_2 x + \log_2(x-2) = 3 \).</li>
+            <li>The graph of \( f(x) = \log_a x \) passes through the point \( (9; 2) \). Calculate the value of \( a \).</li>
+        </ol>
+    </section>
 
-<section>
-    <h2>Quadratic Functions</h2>
-    <p>
-        Quadratic functions form parabolic graphs.
-    </p>
-
-    <h3>Worked Example 2</h3>
-    <p>Given y = x² − 4x + 3</p>
-
-    <p>Step 1: Factorise</p>
-    <p>y = (x − 1)(x − 3)</p>
-
-    <p>Step 2: Find x-intercepts</p>
-    <p>x = 1 and x = 3</p>
-
-    <p>Step 3: Find y-intercept</p>
-    <p>When x = 0, y = 3</p>
-</section>
-
-<section>
-    <h2>Exponential Functions</h2>
-    <p>
-        Exponential graphs show rapid growth or decay.
-    </p>
-
-    <h3>Worked Example 3</h3>
-    <p>Given y = 2 × 3ˣ</p>
-
-    <p>Step 1: Identify a and b</p>
-    <p>a = 2, b = 3</p>
-
-    <p>Step 2: Calculate values for x = −1, 0, 1</p>
-</section>
-
-<section>
-    <h2>Hyperbolic Functions</h2>
-    <p>
-        Hyperbolic functions never touch the axes.
-    </p>
-
-    <h3>Worked Example 4</h3>
-    <p>Given y = 4/x</p>
-
-    <p>Step 1: Identify asymptotes</p>
-    <p>x = 0 and y = 0</p>
-</section>
-
-<section>
-    <h2>Inverse Functions</h2>
-    <p>
-        Inverse functions reverse the role of x and y.
-    </p>
-
-    <h3>Worked Example 5</h3>
-    <p>Given f(x) = 2x + 1</p>
-
-    <p>Step 1: Replace f(x) with y</p>
-    <p>y = 2x + 1</p>
-
-    <p>Step 2: Swap x and y</p>
-    <p>x = 2y + 1</p>
-
-    <p>Step 3: Solve for y</p>
-    <p>y = (x − 1)/2</p>
-
-    <p><strong>Inverse:</strong> f⁻¹(x) = (x − 1)/2</p>
-</section>
-
-<section>
-    <h2>Transformations of Functions</h2>
-    <ul>
-        <li>Vertical shift: y = f(x) + k</li>
-        <li>Horizontal shift: y = f(x − k)</li>
-        <li>Reflection: y = −f(x)</li>
-        <li>Stretch: y = af(x)</li>
-    </ul>
-
-    <h3>Worked Example 6</h3>
-    <p>Describe the transformation from y = x² to y = x² + 3</p>
-    <p><strong>Answer:</strong> Shifted up by 3 units</p>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Sketch y = x + 2</li>
-        <li>Find the inverse of f(x) = 3x − 5</li>
-        <li>Describe the transformation: y = −x²</li>
-        <li>Sketch y = 2ˣ</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Functions describe relationships</li>
-        <li>Graphs help visualise equations</li>
-        <li>Inverse functions swap x and y</li>
-        <li>Transformations modify graphs</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter 8 Test</h2>
-    <ol>
-        <li>Sketch and analyse a given function</li>
-        <li>Find an inverse function</li>
-        <li>Describe graph transformations</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li>The <strong>y-intercept</strong> of \( y = b^x \) becomes the <strong>x-intercept</strong> of \( y = \log_b x \).</li>
+            <li>Exponential functions have a <strong>horizontal asymptote</strong>; Logarithmic functions have a <strong>vertical asymptote</strong>.</li>
+            <li>Logarithms are the primary tool for solving financial problems involving time (\( n \)).</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="chapter7.html" class="btn" style="background:#7f8c8d;">← Previous: Patterns</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Chapter 9: Analytical Geometry</p>
+    </div>
+    <a href="chapter9.html" class="btn">Start Analytical →</a>
 </footer>
 
 </body>
