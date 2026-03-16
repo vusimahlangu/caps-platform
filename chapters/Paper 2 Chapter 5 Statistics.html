@@ -2,134 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paper 2 Chapter 5: Statistics | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 2 | Chapter 5: Statistics | Grade 12 Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
-        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
-        header a:hover { color: #ffcc00; text-decoration: underline; }
-        main { padding: 1rem 2rem; }
-        h2 { margin-top: 2rem; color: #001F3F; }
+        :root { --stat-blue: #2980b9; --stat-dark: #2c3e50; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--stat-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--stat-blue); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--stat-blue); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f0f7fb; border-left: 5px solid var(--stat-blue); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 450px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--stat-blue); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Paper 2 – Chapter 5: Statistics</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 5: Statistics & Regression</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Paper 2 Statistics focuses on interpreting data relationships and distributions. We move from single-variable data (Mean, Standard Deviation) to <strong>Bivariate Data</strong>, where we analyze how one variable affects another using scatter plots and lines of best fit.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Statistics in Paper 2 focuses on **collecting, summarising, and interpreting data**, including **measures of central tendency, dispersion, and probability distributions**.  
-        Learners learn to represent data clearly and make conclusions.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Standard Deviation (\(\sigma\)):</strong> Measures data dispersion. A higher \(\sigma\) indicates more spread-out data.</li>
+            <li><strong>The Five-Number Summary:</strong> Min, \(Q_1\), Median (\(Q_2\)), \(Q_3\), and Max.</li>
+            <li><strong>Regression Line:</strong> \(\hat{y} = a + bx\), where \(b\) is the gradient and \(a\) is the y-intercept.</li>
+            <li><strong>Correlation Coefficient (\(r\)):</strong> Describes the strength and direction (\(-1 \leq r \leq 1\)).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Measures of Central Tendency</h2>
-    <ul>
-        <li><strong>Mean:</strong> sum of all values ÷ number of values</li>
-        <li><strong>Median:</strong> middle value when data is arranged in order</li>
-        <li><strong>Mode:</strong> most frequently occurring value</li>
-    </ul>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: The Ogive (Cumulative Frequency)</strong><br>
+            Plot the cumulative frequency at the <strong>upper class boundaries</strong>. The curve always starts at the lower boundary of the first class with a frequency of zero.
+        </div>
 
-    <h3>Worked Example 1 – Mean</h3>
-    <p>Data: 2, 4, 6, 8, 10</p>
-    <ol>
-        <li>Sum = 2 + 4 + 6 + 8 + 10 = 30</li>
-        <li>Number of values = 5</li>
-        <li>Mean = 30 ÷ 5 = 6</li>
-    </ol>
-</section>
+        <div class="example-box">
+            <strong>Example 2: Interpreting Skewness</strong><br>
+            If <strong>Mean > Median</strong>, the data is <strong>Positively Skewed</strong> (Skewed to the right). If <strong>Mean < Median</strong>, it is <strong>Negatively Skewed</strong>.
+        </div>
 
-<section>
-    <h2>Measures of Dispersion</h2>
-    <ul>
-        <li><strong>Range:</strong> largest − smallest</li>
-        <li><strong>Variance:</strong> average of squared deviations from the mean</li>
-        <li><strong>Standard deviation:</strong> √variance</li>
-    </ul>
+        <div class="example-box">
+            <strong>Example 3: Outlier Detection</strong><br>
+            An outlier is any value outside: \([Q_1 - 1.5 \times IQR]\) or \([Q_3 + 1.5 \times IQR]\).
+        </div>
+    </section>
 
-    <h3>Worked Example 2 – Standard Deviation</h3>
-    <p>Data: 2, 4, 6, 8, 10</p>
-    <ol>
-        <li>Mean = 6</li>
-        <li>Squared deviations: (2−6)²=16, (4−6)²=4, (6−6)²=0, (8−6)²=4, (10−6)²=16</li>
-        <li>Variance = (16+4+0+4+16)/5 = 40/5 = 8</li>
-        <li>Standard deviation = √8 ≈ 2.83</li>
-    </ol>
-</section>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: Scatter Plot & Regression</h2>
+        <p>Drag the data points to see how the <strong>Line of Best Fit</strong> adjusts. Notice how moving a single point far away (an outlier) pulls the entire line towards it.</p>
+        <div id="statBoard" class="jxgbox"></div>
+        <div id="statOutput" style="font-weight: bold; color: var(--stat-blue); text-align: center;"></div>
 
-<section>
-    <h2>Data Representation</h2>
-    <p>Common representations include:</p>
-    <ul>
-        <li>Frequency tables</li>
-        <li>Bar graphs and histograms</li>
-        <li>Pie charts</li>
-        <li>Box-and-whisker plots</li>
-    </ul>
+        <script>
+            var b = JXG.JSXGraph.initBoard('statBoard', {boundingbox: [-1, 10, 11, -1], axis:true, showCopyright:false});
+            var p1 = b.create('point', [1, 2], {name:''});
+            var p2 = b.create('point', [3, 4], {name:''});
+            var p3 = b.create('point', [5, 5], {name:''});
+            var p4 = b.create('point', [7, 8], {name:''});
+            var p5 = b.create('point', [9, 9], {name:''});
+            
+            var reg = b.create('regressionline', [[p1, p2, p3, p4, p5]], {strokeColor: 'blue', strokeWidth: 3});
+            
+            b.on('update', function() {
+                var pts = [p1, p2, p3, p4, p5];
+                var xSum = 0, ySum = 0;
+                pts.forEach(p => { xSum += p.X(); ySum += p.Y(); });
+                document.getElementById('statOutput').innerHTML = "Centroid (Mean X; Mean Y): (" + (xSum/5).toFixed(2) + " ; " + (ySum/5).toFixed(2) + ")";
+            });
+        </script>
+    </section>
 
-    <h3>Worked Example 3 – Histogram</h3>
-    <p>Data: Test scores of 10 students: 50, 55, 60, 60, 65, 70, 70, 75, 80, 85</p>
-    <ol>
-        <li>Group data in intervals (50–59, 60–69, 70–79, 80–89)</li>
-        <li>Count frequency: 50–59:2, 60–69:2, 70–79:3, 80–89:3</li>
-        <li>Draw bars proportional to frequency</li>
-    </ol>
-</section>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Draw a box-and-whisker plot for: 12, 15, 17, 22, 25, 28, 30.</li>
+            <li>Use your calculator to find the correlation coefficient \(r\) for the data: (1;10), (2;18), (3;25), (4;33).</li>
+            <li>Estimate the median from an ogive where the total frequency \(n = 80\).</li>
+        </ol>
+    </section>
 
-<section>
-    <h2>Probability Distributions</h2>
-    <p>Statistics often links with probability for predicting outcomes.</p>
-    <ul>
-        <li>Discrete distributions: e.g., rolling a die</li>
-        <li>Continuous distributions: e.g., heights of students</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find mean, median, and mode of: 3, 7, 7, 9, 10</li>
-        <li>Calculate standard deviation for: 5, 10, 15, 20, 25</li>
-        <li>Draw a histogram for data: 2, 3, 5, 7, 7, 8, 10, 10</li>
-        <li>Determine range and variance for: 4, 6, 9, 12, 15</li>
-        <li>Interpret a box-and-whisker plot given data</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Central tendency summarises data</li>
-        <li>Dispersion shows spread of data</li>
-        <li>Graphs make data visual and interpretable</li>
-        <li>Probability links statistics to predictions</li>
-        <li>Always show all calculations clearly</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter Test</h2>
-    <ol>
-        <li>Find mean, median, mode for a given dataset</li>
-        <li>Calculate variance and standard deviation</li>
-        <li>Draw histogram or bar graph from data</li>
-        <li>Interpret frequency table and box plot</li>
-        <li>Link data to probability predictions</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li><strong>Ogives</strong> are used to find medians and percentiles.</li>
+            <li><strong>Regression lines</strong> predict trends; \(r\) tells you if that prediction is reliable.</li>
+            <li>Always identify <strong>Outliers</strong> as they distort the mean and standard deviation.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="p2_chapter4.html" class="btn" style="background:#7f8c8d;">← Previous: Probability</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Paper 2 Chapter 6: Algebra</p>
+    </div>
+    <a href="p2_chapter6.html" class="btn">Start Algebra →</a>
 </footer>
 
 </body>
