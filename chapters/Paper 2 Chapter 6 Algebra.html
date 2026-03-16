@@ -2,131 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paper 2 Chapter 6: Algebra | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 2 | Chapter 6: Algebra | Grade 12 Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
-        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
-        header a:hover { color: #ffcc00; text-decoration: underline; }
-        main { padding: 1rem 2rem; }
-        h2 { margin-top: 2rem; color: #001F3F; }
+        :root { --alg-red: #c0392b; --alg-dark: #2c3e50; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--alg-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--alg-red); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--alg-red); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #fff5f5; border-left: 5px solid var(--alg-red); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 400px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--alg-red); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Paper 2 – Chapter 6: Algebra</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 6: Algebra & Nature of Roots</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>In Paper 2, Algebra is the engine behind geometry. We use the <strong>Discriminant</strong> (\(\Delta\)) to determine if a line is a tangent to a circle or if two graphs intersect. Mastering the <strong>Nature of Roots</strong> allows us to solve these spatial problems without always sketching them.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Algebra in Paper 2 focuses on **solving equations, factorisation, partial fractions, and inequalities**.  
-        Learners apply systematic methods to avoid guessing and ensure correct solutions.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>The Discriminant:</strong> \(\Delta = b^2 - 4ac\)</li>
+            <li><strong>Nature of Roots Classifications:</strong>
+                <ul>
+                    <li>\(\Delta < 0\): Non-real roots (Graph does not touch x-axis).</li>
+                    <li>\(\Delta = 0\): Real, Rational, and Equal roots (Graph touches x-axis at one point).</li>
+                    <li>\(\Delta > 0\): Real and Unequal roots (Graph crosses x-axis twice).</li>
+                    <li>If \(\Delta\) is a perfect square: Roots are Rational.</li>
+                </ul>
+            </li>
+            <li><strong>Quadratic Inequalities:</strong> Solve by finding critical values and using a sign table or a rough sketch.</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Solving Quadratic Equations</h2>
-    <ul>
-        <li>Factorisation method</li>
-        <li>Quadratic formula: x = [-b ± √(b² − 4ac)] / 2a</li>
-        <li>Completing the square</li>
-    </ul>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Analyzing Roots</strong><br>
+            For which values of \(k\) will \(x^2 - 4x + k = 0\) have non-real roots?<br>
+            1. Set \(\Delta < 0\): \((-4)^2 - 4(1)(k) < 0\)<br>
+            2. \(16 - 4k < 0 \Rightarrow 16 < 4k\)<br>
+            3. Answer: \(k > 4\).
+        </div>
 
-    <h3>Worked Example 1</h3>
-    <p>Solve x² − 5x + 6 = 0</p>
-    <ol>
-        <li>Factorise: (x − 2)(x − 3) = 0</li>
-        <li>Solutions: x = 2, x = 3</li>
-    </ol>
-</section>
+        <div class="example-box">
+            <strong>Example 2: Quadratic Inequality</strong><br>
+            Solve for \(x\): \(x^2 - 2x - 8 \leq 0\).<br>
+            1. Factorise: \((x-4)(x+2) \leq 0\).<br>
+            2. Critical values: \(x = 4\) and \(x = -2\).<br>
+            3. Answer: \(-2 \leq x \leq 4\).
+        </div>
+    </section>
 
-<section>
-    <h2>Simultaneous Equations</h2>
-    <p>Two equations with two variables solved by:</p>
-    <ul>
-        <li>Substitution method</li>
-        <li>Addition/elimination method</li>
-    </ul>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: Nature of Roots Visualiser</h2>
+        <p>Adjust the <strong>Vertical Shift (q)</strong>. Watch how moving the parabola up or down changes the <strong>Discriminant (\(\Delta\))</strong> and the type of roots produced.</p>
+        <div id="algBoard" class="jxgbox"></div>
+        <div id="algOutput" style="font-weight: bold; color: var(--alg-red); text-align: center; font-size: 1.2em;"></div>
 
-    <h3>Worked Example 2</h3>
-    <p>Solve: 2x + y = 7 and x − y = 1</p>
-    <ol>
-        <li>From second equation: x − y = 1 → y = x − 1</li>
-        <li>Substitute in first: 2x + (x − 1) = 7 → 3x − 1 = 7 → 3x = 8 → x = 8/3</li>
-        <li>Then y = 8/3 − 1 = 5/3</li>
-    </ol>
-</section>
+        <script>
+            var b = JXG.JSXGraph.initBoard('algBoard', {boundingbox: [-5, 10, 5, -5], axis:true, showCopyright:false});
+            var q = b.create('slider', [[-4, -4], [1, -4], [-5, 0, 5]], {name:'q'});
+            
+            // f(x) = x^2 + q
+            var f = b.create('functiongraph', [function(x){ return x*x + q.Value(); }], {strokeColor: '#c0392b', strokeWidth: 3});
+            
+            b.on('update', function() {
+                var delta = -4 * q.Value(); 
+                var status = "";
+                if (delta > 0) status = "Δ > 0: Real & Unequal";
+                else if (delta == 0) status = "Δ = 0: Real & Equal";
+                else status = "Δ < 0: Non-Real";
+                
+                document.getElementById('algOutput').innerHTML = "Discriminant (Δ): " + delta.toFixed(2) + " — " + status;
+            });
+        </script>
+    </section>
 
-<section>
-    <h2>Partial Fractions</h2>
-    <p>Used to simplify rational expressions for integration or solving.</p>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Find the nature of the roots for \(2x^2 + 5x - 3 = 0\).</li>
+            <li>For what values of \(p\) does \(x^2 + px + p = 0\) have equal roots?</li>
+            <li>Solve the inequality: \(x^2 > 9\).</li>
+        </ol>
+    </section>
 
-    <h3>Worked Example 3</h3>
-    <p>Express 3x + 5 / (x² − x − 2) as partial fractions</p>
-    <ol>
-        <li>Factor denominator: x² − x − 2 = (x − 2)(x + 1)</li>
-        <li>Assume: 3x + 5 / (x − 2)(x + 1) = A / (x − 2) + B / (x + 1)</li>
-        <li>Multiply through: 3x + 5 = A(x + 1) + B(x − 2)</li>
-        <li>Equate coefficients: A + B = 3, A − 2B = 5 → A = 4, B = −1</li>
-        <li>Answer: 4 / (x − 2) − 1 / (x + 1)</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Inequalities</h2>
-    <p>Solving algebraic inequalities requires careful sign consideration.</p>
-
-    <h3>Worked Example 4</h3>
-    <p>Solve 2x − 5 > 1</p>
-    <ol>
-        <li>2x − 5 > 1 → 2x > 6 → x > 3</li>
-        <li>Solution: x > 3</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Solve x² + 3x − 10 = 0</li>
-        <li>Solve simultaneous equations: x + y = 5, 2x − y = 4</li>
-        <li>Express (2x + 3)/(x² − x − 6) as partial fractions</li>
-        <li>Solve inequality: 3x + 7 ≤ 16</li>
-        <li>Factorise and solve: x² − 9x + 20 = 0</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Quadratic equations: factorisation, formula, completing square</li>
-        <li>Simultaneous equations: substitution or elimination</li>
-        <li>Partial fractions simplify rational expressions</li>
-        <li>Inequalities require careful sign consideration</li>
-        <li>Always work step by step and show all workings</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter Test</h2>
-    <ol>
-        <li>Solve x² − 7x + 12 = 0</li>
-        <li>Solve: 3x + 2y = 12, x − y = 1</li>
-        <li>Partial fractions: 5x + 2 / (x² − x − 6)</li>
-        <li>Solve inequality: 4x − 9 < 7</li>
-        <li>Factorise and solve: x² − 6x + 8 = 0</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li>The <strong>Discriminant</strong> identifies the number of intercepts without needing a graph.</li>
+            <li>In <strong>Paper 2</strong>, use this to prove if a line is a tangent to a circle (where \(\Delta = 0\)).</li>
+            <li>Always check if your final inequality answer matches the <strong>direction</strong> of the parabola (concave up or down).</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="p2_chapter5.html" class="btn" style="background:#7f8c8d;">← Previous: Statistics</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Paper 2 Chapter 7: Analytical Geometry</p>
+    </div>
+    <a href="p2_chapter7.html" class="btn">Start Analytical →</a>
 </footer>
 
 </body>
