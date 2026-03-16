@@ -2,157 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 1: Functions | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Interactive Functions | Grade 12 CAPS</title>
+    
+    <!-- 1. MATH RENDERING (MathJax) -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    
+    <!-- 2. INTERACTIVE GRAPHING (JSXGraph) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --success: #27ae60; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--primary); max-width: 900px; margin: 0 auto; padding: 20px; background: #f4f7f6; }
+        header { background: var(--primary); color: white; padding: 2rem; border-radius: 10px; margin-bottom: 30px; text-align: center; }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .jxgbox { width: 100%; max-width: 500px; height: 400px; margin: 20px auto; border-radius: 8px; border: 1px solid #ddd; }
+        .interactive-note { background: #e8f4fd; border-left: 5px solid var(--accent); padding: 10px; margin: 10px 0; font-size: 0.9em; }
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #fff; border-radius: 10px; }
+        .btn { background: var(--accent); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: var(--accent); }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Chapter 1: Functions</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <h1>Chapter 1: Functions & Inverses</h1>
+    <p>Grade 12 Mathematics | Interactive CAPS Edition</p>
 </header>
 
-<main class="chapter-content">
-
-<!-- INTRODUCTION -->
+<!-- CONCEPT 1: LINEAR FUNCTIONS -->
 <section>
-    <h2>Introduction</h2>
-    <p>
-        Functions describe how one quantity depends on another. In Grade 12,
-        learners must understand how to analyse, interpret, and sketch different
-        types of functions. This chapter builds understanding step by step.
-    </p>
+    <h2>1. Understanding the Gradient \( m \) and Intercept \( c \)</h2>
+    <p>A linear function is defined as \( f(x) = mx + c \). Use the sliders below to see how changing these values tilts and shifts the line.</p>
+    
+    <div id="board1" class="jxgbox"></div>
+    <div class="interactive-note"><strong>Interaction:</strong> Drag slider <strong>m</strong> to rotate the line and <strong>c</strong> to move it up or down.</div>
+
+    <script type="text/javascript">
+        var b1 = JXG.JSXGraph.initBoard('board1', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false});
+        var m = b1.create('slider', [[-4, -3], [-1, -3], [-5, 1, 5]], {name:'m'});
+        var c = b1.create('slider', [[1, -3], [4, -3], [-4, 0, 4]], {name:'c'});
+        var line = b1.create('line', [function(){return -c.Value();}, function(){return -m.Value();}, 1], {strokeColor:'#3498db', strokeWidth:3});
+    </script>
 </section>
 
-<!-- TYPES OF FUNCTIONS -->
+<!-- CONCEPT 2: QUADRATIC TRANSFORMATIONS -->
 <section>
-    <h2>Types of Functions</h2>
-    <ul>
-        <li>Linear functions: <strong>y = mx + c</strong></li>
-        <li>Quadratic functions: <strong>y = ax² + bx + c</strong></li>
-        <li>Hyperbolic functions: <strong>y = a/x</strong></li>
-        <li>Exponential functions: <strong>y = abˣ</strong></li>
-        <li>Inverse functions</li>
-    </ul>
+    <h2>2. Quadratic Functions: \( f(x) = a(x-p)^2 + q \)</h2>
+    <p>Quadratic functions form a parabola. The vertex is located at \( (p ; q) \).</p>
+    
+    <div id="board2" class="jxgbox"></div>
+    <div class="interactive-note"><strong>Interaction:</strong> Move <strong>p</strong> and <strong>q</strong> to shift the vertex. Change <strong>a</strong> to flip the graph.</div>
+
+    <script type="text/javascript">
+        var b2 = JXG.JSXGraph.initBoard('board2', {boundingbox: [-7, 7, 7, -7], axis:true, showCopyright:false});
+        var a = b2.create('slider', [[-6, -5], [-3, -5], [-2, 1, 2]], {name:'a'});
+        var p = b2.create('slider', [[-2, -5], [1, -5], [-4, 0, 4]], {name:'p'});
+        var q = b2.create('slider', [[2, -5], [5, -5], [-4, 0, 4]], {name:'q'});
+        var parabola = b2.create('functiongraph', [function(x){ 
+            return a.Value()*Math.pow(x-p.Value(), 2) + q.Value(); 
+        }], {strokeColor:'#27ae60', strokeWidth:3});
+        var vertex = b2.create('point', [function(){return p.Value()}, function(){return q.Value()}], {name:'Vertex', color:'red'});
+    </script>
 </section>
 
-<!-- DOMAIN AND RANGE -->
+<!-- CONCEPT 3: INVERSE FUNCTIONS (THE REFLECTION) -->
 <section>
-    <h2>Domain and Range</h2>
-    <p>
-        <strong>Domain</strong> is the set of all possible x-values.  
-        <strong>Range</strong> is the set of all possible y-values.
-    </p>
+    <h2>3. The Inverse Reflection</h2>
+    <p>The inverse function \( f^{-1}(x) \) is a reflection of \( f(x) \) across the line \( y = x \). This means coordinates swap: \( (a;b) \rightarrow (b;a) \).</p>
+    
+    <div id="board3" class="jxgbox"></div>
+    <div class="interactive-note"><strong>Interaction:</strong> Drag the blue point on the curve. Watch how the red point (the inverse) mirrors it across the dotted line \( y = x \).</div>
 
-    <h3>Worked Example 1</h3>
-    <p><strong>Find the domain of:</strong> f(x) = 1 / (x − 3)</p>
-    <p><strong>Step 1:</strong> The denominator may not be zero.</p>
-    <p><strong>Step 2:</strong> x − 3 ≠ 0</p>
-    <p><strong>Step 3:</strong> x ≠ 3</p>
-    <p><strong>Answer:</strong> Domain: all real numbers except x = 3</p>
+    <script type="text/javascript">
+        var b3 = JXG.JSXGraph.initBoard('board3', {boundingbox: [-2, 8, 8, -2], axis:true, showCopyright:false});
+        b3.create('line', [[0,0], [1,1]], {dash:2, strokeColor:'#999'}); // y=x line
+        
+        // Original Function: f(x) = 2x + 1
+        var f = b3.create('functiongraph', [function(x){ return 2*x + 1; }], {strokeColor:'#3498db', strokeWidth:2});
+        var p1 = b3.create('glider', [1, 3, f], {name:'(x; y)', color:'#3498db'});
+        
+        // Inverse Point: (y; x)
+        var pInv = b3.create('point', [function(){return p1.Y();}, function(){return p1.X();}], {name:'(y; x)', color:'red'});
+        
+        // Inverse Function Line
+        var fInv = b3.create('functiongraph', [function(x){ return (x-1)/2; }], {strokeColor:'red', dash:1});
+    </script>
 </section>
 
-<!-- INTERCEPTS -->
-<section>
-    <h2>Intercepts</h2>
-
-    <h3>Worked Example 2: Finding Intercepts</h3>
-    <p><strong>Given:</strong> f(x) = 2x − 4</p>
-
-    <p><strong>Y-intercept:</strong></p>
-    <p>Step 1: Set x = 0</p>
-    <p>y = 2(0) − 4 = −4</p>
-    <p>Y-intercept: (0 ; −4)</p>
-
-    <p><strong>X-intercept:</strong></p>
-    <p>Step 1: Set y = 0</p>
-    <p>0 = 2x − 4</p>
-    <p>2x = 4</p>
-    <p>x = 2</p>
-    <p>X-intercept: (2 ; 0)</p>
-</section>
-
-<!-- SKETCHING GRAPHS -->
-<section>
-    <h2>Sketching Graphs</h2>
-
-    <h3>Worked Example 3: Quadratic Function</h3>
-    <p><strong>Sketch:</strong> y = x² − 4</p>
-
-    <p><strong>Step 1:</strong> Find y-intercept</p>
-    <p>x = 0 → y = −4</p>
-
-    <p><strong>Step 2:</strong> Find x-intercepts</p>
-    <p>0 = x² − 4</p>
-    <p>x² = 4</p>
-    <p>x = ±2</p>
-
-    <p><strong>Step 3:</strong> Determine shape</p>
-    <p>Coefficient of x² is positive → graph opens upward</p>
-</section>
-
-<!-- INVERSE FUNCTIONS -->
-<section>
-    <h2>Inverse Functions</h2>
-    <p>
-        An inverse function swaps x and y.
-    </p>
-
-    <h3>Worked Example 4</h3>
-    <p><strong>Find the inverse of:</strong> f(x) = 2x + 1</p>
-
-    <p>Step 1: Replace f(x) with y</p>
-    <p>y = 2x + 1</p>
-
-    <p>Step 2: Swap x and y</p>
-    <p>x = 2y + 1</p>
-
-    <p>Step 3: Solve for y</p>
-    <p>2y = x − 1</p>
-    <p>y = (x − 1)/2</p>
-
-    <p><strong>Inverse:</strong> f⁻¹(x) = (x − 1)/2</p>
-</section>
-
-<!-- PRACTICE -->
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find the domain of f(x) = 3/(x + 2)</li>
-        <li>Determine the intercepts of y = −x + 5</li>
-        <li>Sketch y = x² − 1</li>
-        <li>Find the inverse of f(x) = 3x − 7</li>
-    </ol>
-</section>
-
-<!-- SUMMARY -->
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Functions model relationships</li>
-        <li>Always check domain restrictions</li>
-        <li>Intercepts help sketch graphs</li>
-        <li>Inverse functions reverse mappings</li>
-    </ul>
-</section>
-
-<!-- MINI TEST -->
-<section>
-    <h2>Chapter 1 Test</h2>
-    <ol>
-        <li>Find the domain and range of f(x) = x²</li>
-        <li>Sketch y = −2x + 4</li>
-        <li>Find f⁻¹(x) if f(x) = x − 3</li>
-    </ol>
-</section>
-
-</main>
-
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<!-- NAVIGATION TO NEXT CHAPTER -->
+<footer class="nav-footer">
+    <div>
+        <p><strong>Up Next:</strong></p>
+        <p>Chapter 2: Differential Calculus</p>
+    </div>
+    <a href="chapter2.html" class="btn">Start Calculus →</a>
 </footer>
 
 </body>
