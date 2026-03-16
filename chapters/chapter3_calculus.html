@@ -2,177 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 3: Calculus | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Differential Calculus | Grade 12 CAPS</title>
+    
+    <!-- MATH & GRAPHING ENGINES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --calc-orange: #e67e22; --calc-dark: #2c3e50; --calc-thin: #bdc317; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: #fdfcfb; }
+        header { background: var(--calc-orange); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 20px; }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        .jxgbox { width: 100%; max-width: 600px; height: 450px; margin: 20px auto; border-radius: 8px; }
+        .formula-box { background: #fff5eb; border-left: 5px solid var(--calc-orange); padding: 15px; margin: 15px 0; font-style: italic; }
+        .next-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px; }
+        .btn { background: var(--calc-dark); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Chapter 3: Calculus</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <p>Grade 12 Mathematics</p>
+    <h1>Chapter 3: Differential Calculus</h1>
+    <nav><a href="chapter2.html" style="color: white; opacity: 0.8;">← Back to Trigonometry</a></nav>
 </header>
 
-<main class="chapter-content">
-
-<!-- INTRODUCTION -->
+<!-- SECTION 1: FIRST PRINCIPLES -->
 <section>
-    <h2>Introduction</h2>
-    <p>
-        Calculus is often feared because learners are rushed through steps.
-        This chapter slows everything down. You will see exactly where each
-        rule comes from and how it is applied in exams.
-    </p>
+    <h2>1. Limits and First Principles</h2>
+    <p>Calculus is the study of change. We find the gradient of a curve by making the distance between two points (\( h \)) approach zero.</p>
+    
+    <div class="formula-box">
+        \[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+    </div>
+
+    <div id="limitBoard" class="jxgbox"></div>
+    <div style="background: #f0f0f0; padding: 10px; border-radius: 5px;">
+        <strong>Interactive:</strong> Drag the slider <strong>h</strong> to the left. Watch how the secant line (blue) eventually becomes the tangent line at point A as \( h \to 0 \).
+    </div>
+
+    <script type="text/javascript">
+        var b1 = JXG.JSXGraph.initBoard('limitBoard', {boundingbox: [-1, 10, 6, -2], axis:true, showCopyright:false});
+        var f = b1.create('functiongraph', [function(x){ return 0.5*x*x; }], {strokeColor:'#2c3e50', strokeWidth:2});
+        
+        var x_val = 2;
+        var h = b1.create('slider', [[3, 8], [5, 8], [0.01, 2, 3]], {name:'h'});
+        
+        var p1 = b1.create('point', [x_val, function(){return 0.5*x_val*x_val;}], {name:'A', fixed:true, color:'red'});
+        var p2 = b1.create('point', [function(){return x_val + h.Value();}, function(){return 0.5*Math.pow(x_val + h.Value(), 2);}], {name:'B', color:'blue'});
+        
+        var secant = b1.create('line', [p1, p2], {strokeColor:'#3498db', dash:2});
+    </script>
 </section>
 
-<!-- DIFFERENTIATION -->
+<!-- SECTION 2: THE DERIVATIVE AT A POINT -->
 <section>
-    <h2>Differentiation</h2>
-    <p>
-        Differentiation finds the <strong>rate of change</strong> or
-        <strong>gradient</strong> of a function.
-    </p>
+    <h2>2. The Tangent Crawler</h2>
+    <p>The derivative \( f'(x) \) gives us the **gradient** of the tangent at any point \( x \). For \( f(x) = x^2 \), the derivative is \( f'(x) = 2x \).</p>
+    
+    <div id="tangentBoard" class="jxgbox"></div>
+    <div style="background: #f0f0f0; padding: 10px; border-radius: 5px;">
+        <strong>Interactive:</strong> Drag the point <strong>T</strong> along the curve. Notice how the steepness (gradient) changes depending on your position.
+    </div>
 
-    <h3>Basic Rules</h3>
+    <script type="text/javascript">
+        var b2 = JXG.JSXGraph.initBoard('tangentBoard', {boundingbox: [-4, 10, 4, -2], axis:true, showCopyright:false});
+        var curve = b2.create('functiongraph', [function(x){ return x*x; }], {strokeColor:'#e67e22', strokeWidth:3});
+        var t = b2.create('glider', [1, 1, curve], {name:'T', color:'red'});
+        
+        // Calculate tangent line
+        var tangent = b2.create('tangent', [t], {strokeColor:'#27ae60', strokeWidth:2});
+        
+        // Display gradient value dynamically
+        b2.create('text', [1, 8, function(){ 
+            return "Gradient at T: " + (2 * t.X()).toFixed(2); 
+        }], {fontSize: 16, color: '#27ae60'});
+    </script>
+</section>
+
+<!-- SECTION 3: RULES OF DIFFERENTIATION -->
+<section>
+    <h2>3. Rules of Differentiation</h2>
+    <p>Instead of First Principles, we use rules for efficiency:</p>
     <ul>
-        <li>Constant rule: d/dx(c) = 0</li>
-        <li>Power rule: d/dx(xⁿ) = n·xⁿ⁻¹</li>
-        <li>Constant multiple: d/dx(kxⁿ) = k·n·xⁿ⁻¹</li>
-    </ul>
-
-    <h3>Worked Example 1 (Very Slow)</h3>
-    <p><strong>Differentiate:</strong> f(x) = 3x² + 5x − 7</p>
-
-    <p><strong>Step 1:</strong> Differentiate each term separately</p>
-    <p>d/dx(3x²) = 3 × 2x = 6x</p>
-    <p>d/dx(5x) = 5</p>
-    <p>d/dx(−7) = 0</p>
-
-    <p><strong>Step 2:</strong> Combine results</p>
-    <p><strong>f′(x) = 6x + 5</strong></p>
-</section>
-
-<!-- APPLICATIONS -->
-<section>
-    <h2>Applications of Differentiation</h2>
-
-    <h3>Finding the Gradient at a Point</h3>
-
-    <h3>Worked Example 2</h3>
-    <p><strong>Find the gradient of:</strong> f(x) = x² − 4x at x = 1</p>
-
-    <p>Step 1: Differentiate the function</p>
-    <p>f′(x) = 2x − 4</p>
-
-    <p>Step 2: Substitute x = 1</p>
-    <p>f′(1) = 2(1) − 4 = −2</p>
-
-    <p><strong>Answer:</strong> Gradient = −2</p>
-</section>
-
-<!-- MAX & MIN -->
-<section>
-    <h2>Maximum and Minimum Values</h2>
-
-    <p>
-        At maximum or minimum points, the gradient is zero.
-    </p>
-
-    <h3>Worked Example 3</h3>
-    <p><strong>Find the turning point of:</strong> f(x) = −x² + 4x + 1</p>
-
-    <p>Step 1: Differentiate</p>
-    <p>f′(x) = −2x + 4</p>
-
-    <p>Step 2: Set derivative equal to zero</p>
-    <p>−2x + 4 = 0</p>
-    <p>−2x = −4</p>
-    <p>x = 2</p>
-
-    <p>Step 3: Find y-value</p>
-    <p>f(2) = −(2)² + 4(2) + 1</p>
-    <p>f(2) = −4 + 8 + 1 = 5</p>
-
-    <p><strong>Turning point:</strong> (2 ; 5)</p>
-</section>
-
-<!-- INTEGRATION -->
-<section>
-    <h2>Integration</h2>
-    <p>
-        Integration is the reverse of differentiation.
-        It is used to find areas and original functions.
-    </p>
-
-    <h3>Basic Rule</h3>
-    <p>∫xⁿ dx = xⁿ⁺¹ / (n + 1) + C</p>
-
-    <h3>Worked Example 4</h3>
-    <p><strong>Find:</strong> ∫(4x³ − 2x) dx</p>
-
-    <p>Step 1: Integrate each term</p>
-    <p>∫4x³ dx = 4 × (x⁴ / 4) = x⁴</p>
-    <p>∫−2x dx = −2 × (x² / 2) = −x²</p>
-
-    <p>Step 2: Add constant</p>
-    <p><strong>Answer:</strong> x⁴ − x² + C</p>
-</section>
-
-<!-- AREA -->
-<section>
-    <h2>Area Under a Curve</h2>
-
-    <h3>Worked Example 5</h3>
-    <p><strong>Find the area under:</strong> y = x² from x = 0 to x = 2</p>
-
-    <p>Step 1: Integrate</p>
-    <p>∫x² dx = x³ / 3</p>
-
-    <p>Step 2: Substitute limits</p>
-    <p>(2³ / 3) − (0³ / 3)</p>
-    <p>= 8 / 3</p>
-
-    <p><strong>Area = 8/3 square units</strong></p>
-</section>
-
-<!-- PRACTICE -->
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Differentiate f(x) = 5x³ − 3x + 1</li>
-        <li>Find the gradient of f(x) = x² at x = 2</li>
-        <li>Find the turning point of f(x) = x² − 6x</li>
-        <li>Find ∫(2x² + 4) dx</li>
-    </ol>
-</section>
-
-<!-- SUMMARY -->
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Differentiation finds rate of change</li>
-        <li>Turning points occur where gradient = 0</li>
-        <li>Integration reverses differentiation</li>
-        <li>Always include + C for indefinite integrals</li>
+        <li><strong>Power Rule:</strong> If \( f(x) = x^n \), then \( f'(x) = nx^{n-1} \)</li>
+        <li><strong>Constant Rule:</strong> If \( f(x) = c \), then \( f'(x) = 0 \)</li>
+        <li><strong>Sum Rule:</strong> \( [f(x) + g(x)]' = f'(x) + g'(x) \)</li>
     </ul>
 </section>
 
-<!-- TEST -->
-<section>
-    <h2>Chapter 3 Test</h2>
-    <ol>
-        <li>Differentiate f(x) = x³ − 4x</li>
-        <li>Find the maximum value of f(x) = −x² + 6x</li>
-        <li>Find the area under y = x from 0 to 4</li>
-    </ol>
-</section>
-
-</main>
-
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="next-nav">
+    <a href="chapter2.html" class="btn" style="background:#7f8c8d;">← Previous: Trigonometry</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Chapter 4: Number Patterns & Sequences</p>
+    </div>
+    <a href="chapter4.html" class="btn">Start Patterns →</a>
 </footer>
 
 </body>
