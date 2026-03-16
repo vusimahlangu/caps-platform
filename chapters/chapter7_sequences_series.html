@@ -2,219 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 7: Sequences and Series | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Number Patterns | Grade 12 CAPS Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --pattern-green: #27ae60; --pattern-dark: #2c3e50; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: #fcfdfc; }
+        header { background: var(--pattern-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--pattern-green); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--pattern-green); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f0f9f4; border-left: 5px solid var(--pattern-green); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 400px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--pattern-green); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Chapter 7: Sequences and Series</h1>
     <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <h1>Chapter 7: Number Patterns, Sequences & Series</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Number patterns allow us to predict the future behavior of a sequence. In Grade 12, we study <strong>Arithmetic</strong> (constant difference), <strong>Quadratic</strong> (constant second difference), and <strong>Geometric</strong> (constant ratio) patterns, as well as their sums (Series).</p>
+    </section>
 
-<!-- INTRODUCTION -->
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Sequences and series deal with patterns in numbers.
-        Many learners struggle because they try to memorise formulas
-        without understanding the pattern first.
-        In this chapter, we identify the pattern slowly before calculating anything.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Arithmetic:</strong> \( T_n = a + (n-1)d \) | \( S_n = \frac{n}{2}[2a + (n-1)d] \)</li>
+            <li><strong>Geometric:</strong> \( T_n = ar^{n-1} \) | \( S_n = \frac{a(r^n - 1)}{r-1} \)</li>
+            <li><strong>Quadratic:</strong> \( T_n = an^2 + bn + c \)
+                <ul>
+                    <li>\( 2a = \text{Second Difference} \)</li>
+                    <li>\( 3a + b = \text{First Difference} (T_2 - T_1) \)</li>
+                    <li>\( a + b + c = T_1 \)</li>
+                </ul>
+            </li>
+            <li><strong>Convergent Series:</strong> \( S_\infty = \frac{a}{1-r} \) (if \( -1 < r < 1 \))</li>
+        </ul>
+    </section>
 
-<!-- DEFINITIONS -->
-<section>
-    <h2>Basic Definitions</h2>
-    <ul>
-        <li><strong>Sequence:</strong> A list of numbers following a rule</li>
-        <li><strong>Term:</strong> Each number in the sequence</li>
-        <li><strong>Series:</strong> The sum of the terms of a sequence</li>
-        <li><strong>nᵗʰ term:</strong> A formula to find any term</li>
-    </ul>
-</section>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Quadratic General Term</strong><br>
+            Sequence: 4; 7; 12; 19...<br>
+            1st differences: 3; 5; 7. 2nd difference: 2.<br>
+            \( 2a = 2 \Rightarrow a = 1 \).<br>
+            \( 3(1) + b = 3 \Rightarrow b = 0 \).<br>
+            \( 1 + 0 + c = 4 \Rightarrow c = 3 \).<br>
+            \( T_n = n^2 + 3 \)
+        </div>
 
-<!-- ARITHMETIC SEQUENCES -->
-<section>
-    <h2>Arithmetic Sequences</h2>
-    <p>
-        An arithmetic sequence has a constant difference between terms.
-    </p>
+        <div class="example-box">
+            <strong>Example 2: Sum to Infinity</strong><br>
+            Given: \( 8 + 4 + 2 + 1 + ... \)<br>
+            \( a = 8 \), \( r = 0.5 \). Since \( -1 < 0.5 < 1 \), it converges.<br>
+            \( S_\infty = \frac{8}{1 - 0.5} = \frac{8}{0.5} = 16 \).
+        </div>
 
-    <p><strong>General form:</strong></p>
-    <p>T<sub>n</sub> = a + (n − 1)d</p>
+        <div class="example-box">
+            <strong>Example 3: Sigma Notation</strong><br>
+            Evaluate: \( \sum_{k=1}^{5} (2k + 1) \)<br>
+            Terms: \( 3 + 5 + 7 + 9 + 11 = 35 \).
+        </div>
+    </section>
 
-    <ul>
-        <li><strong>a</strong> = first term</li>
-        <li><strong>d</strong> = common difference</li>
-    </ul>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: Convergent Geometric Series</h2>
+        <p>Adjust the ratio <strong>r</strong>. Notice how when \( r \) is between -1 and 1, the terms get smaller and the sum approaches a limit (\( S_\infty \)). If \( r > 1 \), the sequence explodes!</p>
+        <div id="patternBoard" class="jxgbox"></div>
+        <div id="sumOutput" style="font-weight: bold; color: var(--pattern-green); text-align: center; font-size: 1.2em;"></div>
 
-    <h3>Worked Example 1 (Very Detailed)</h3>
-    <p>
-        Given the sequence: 5, 8, 11, 14, …
-        Find the 10ᵗʰ term.
-    </p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('patternBoard', {boundingbox: [-1, 10, 10, -1], axis:true, showCopyright:false});
+            var r = b.create('slider', [[1, 8], [5, 8], [0, 0.5, 1.5]], {name:'r (Ratio)'});
+            var a = 4;
 
-    <p>Step 1: Identify the first term</p>
-    <p>a = 5</p>
+            b.create('chart', [function(){
+                var data = [];
+                for(var i=0; i<10; i++) data.push(a * Math.pow(r.Value(), i));
+                return data;
+            }], {chartStyle:'bar', width:0.6, color: '#27ae60'});
 
-    <p>Step 2: Find the common difference</p>
-    <p>8 − 5 = 3, so d = 3</p>
+            b.on('update', function() {
+                var ratio = r.Value();
+                var output = "";
+                if (ratio < 1) {
+                    var sinf = (a / (1 - ratio)).toFixed(2);
+                    output = "Series Converges. Sum to Infinity ≈ " + sinf;
+                } else {
+                    output = "Series Diverges (No Sum to Infinity)";
+                }
+                document.getElementById('sumOutput').innerHTML = output;
+            });
+        </script>
+    </section>
 
-    <p>Step 3: Write the formula</p>
-    <p>T<sub>n</sub> = 5 + (n − 1)3</p>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Find the 10th term of the sequence: \( 5; 2; -1; -4 ... \)</li>
+            <li>Determine \( n \) if \( \sum_{i=1}^{n} (3i - 2) = 155 \).</li>
+            <li>In a geometric sequence, \( T_3 = 18 \) and \( T_6 = 486 \). Find \( a \) and \( r \).</li>
+        </ol>
+    </section>
 
-    <p>Step 4: Substitute n = 10</p>
-    <p>T<sub>10</sub> = 5 + 9×3</p>
-
-    <p>Step 5: Calculate</p>
-    <p>T<sub>10</sub> = 5 + 27 = 32</p>
-
-    <p><strong>Answer:</strong> The 10ᵗʰ term is 32</p>
-</section>
-
-<!-- ARITHMETIC SERIES -->
-<section>
-    <h2>Arithmetic Series</h2>
-    <p>
-        An arithmetic series is the sum of terms of an arithmetic sequence.
-    </p>
-
-    <p><strong>Formula:</strong></p>
-    <p>S<sub>n</sub> = ½n[2a + (n − 1)d]</p>
-
-    <h3>Worked Example 2</h3>
-    <p>
-        Find the sum of the first 20 terms of the sequence:
-        3, 7, 11, …
-    </p>
-
-    <p>Step 1: Identify values</p>
-    <p>a = 3</p>
-    <p>d = 4</p>
-    <p>n = 20</p>
-
-    <p>Step 2: Substitute into formula</p>
-    <p>S<sub>20</sub> = ½(20)[2(3) + 19×4]</p>
-
-    <p>Step 3: Simplify</p>
-    <p>S<sub>20</sub> = 10(6 + 76)</p>
-
-    <p>Step 4: Calculate</p>
-    <p>S<sub>20</sub> = 10 × 82 = 820</p>
-
-    <p><strong>Answer:</strong> Sum = 820</p>
-</section>
-
-<!-- GEOMETRIC SEQUENCES -->
-<section>
-    <h2>Geometric Sequences</h2>
-    <p>
-        A geometric sequence has a constant ratio between terms.
-    </p>
-
-    <p><strong>General term:</strong></p>
-    <p>T<sub>n</sub> = ar<sup>n−1</sup></p>
-
-    <ul>
-        <li><strong>a</strong> = first term</li>
-        <li><strong>r</strong> = common ratio</li>
-    </ul>
-
-    <h3>Worked Example 3</h3>
-    <p>
-        Given the sequence: 2, 6, 18, …
-        Find the 8ᵗʰ term.
-    </p>
-
-    <p>Step 1: Identify values</p>
-    <p>a = 2</p>
-    <p>r = 3</p>
-
-    <p>Step 2: Substitute</p>
-    <p>T<sub>8</sub> = 2 × 3<sup>7</sup></p>
-
-    <p>Step 3: Calculate</p>
-    <p>T<sub>8</sub> = 2 × 2187 = 4374</p>
-
-    <p><strong>Answer:</strong> The 8ᵗʰ term is 4374</p>
-</section>
-
-<!-- GEOMETRIC SERIES -->
-<section>
-    <h2>Geometric Series</h2>
-    <p>
-        A geometric series is the sum of a geometric sequence.
-    </p>
-
-    <p><strong>Formula:</strong></p>
-    <p>S<sub>n</sub> = a(1 − r<sup>n</sup>) ÷ (1 − r)</p>
-
-    <h3>Worked Example 4</h3>
-    <p>
-        Find the sum of the first 6 terms of:
-        5 + 10 + 20 + …
-    </p>
-
-    <p>Step 1: Identify values</p>
-    <p>a = 5</p>
-    <p>r = 2</p>
-    <p>n = 6</p>
-
-    <p>Step 2: Substitute</p>
-    <p>S<sub>6</sub> = 5(1 − 2<sup>6</sup>) ÷ (1 − 2)</p>
-
-    <p>Step 3: Calculate</p>
-    <p>S<sub>6</sub> = 5(1 − 64) ÷ (−1)</p>
-
-    <p>Step 4: Simplify</p>
-    <p>S<sub>6</sub> = 315</p>
-
-    <p><strong>Answer:</strong> Sum = 315</p>
-</section>
-
-<!-- PRACTICE -->
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find the 15ᵗʰ term of: 4, 9, 14, …</li>
-        <li>Calculate the sum of the first 12 terms of: 7, 10, 13, …</li>
-        <li>Find the 6ᵗʰ term of: 3, 6, 12, …</li>
-        <li>Calculate the sum of the first 5 terms of: 2 + 4 + 8 + …</li>
-    </ol>
-</section>
-
-<!-- SUMMARY -->
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Arithmetic: constant difference</li>
-        <li>Geometric: constant ratio</li>
-        <li>Identify pattern before formula</li>
-        <li>Use correct formula carefully</li>
-    </ul>
-</section>
-
-<!-- TEST -->
-<section>
-    <h2>Chapter 7 Test</h2>
-    <ol>
-        <li>Determine the 20ᵗʰ term of an arithmetic sequence.</li>
-        <li>Calculate the sum of a given arithmetic series.</li>
-        <li>Find the nᵗʰ term of a geometric sequence.</li>
-        <li>Calculate the sum of a geometric series.</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li><strong>Linear</strong> patterns have a constant difference. <strong>Geometric</strong> have a constant ratio.</li>
+            <li>A <strong>Series</strong> is simply the addition of terms in a sequence.</li>
+            <li>The <strong>Sigma (\(\Sigma\))</strong> notation is a shorthand way to write a series.</li>
+            <li>Only geometric series with \( |r| < 1 \) have a <strong>Sum to Infinity</strong>.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="chapter6.html" class="btn" style="background:#7f8c8d;">← Previous: Algebra</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Chapter 8: Euclidean Geometry</p>
+    </div>
+    <a href="chapter8.html" class="btn">Start Geometry →</a>
 </footer>
 
 </body>
