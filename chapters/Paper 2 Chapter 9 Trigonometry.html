@@ -2,179 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paper 2 Chapter 9: Trigonometry | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 2 | Chapter 9: Trigonometry (2D/3D) | Grade 12 Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        header {
-            background-color: #001F3F;
-            color: #ffffff;
-            padding: 1rem;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ffcc00;
-            text-decoration: underline;
-        }
-        main {
-            padding: 1rem 2rem;
-        }
-        h2 {
-            margin-top: 2rem;
-            color: #001F3F;
-        }
+        :root { --trig-gold: #f39c12; --trig-dark: #2c3e50; --bg: #fcfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--trig-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--trig-gold); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--trig-gold); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #fffcf5; border-left: 5px solid var(--trig-gold); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 450px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--trig-gold); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Paper 2 – Chapter 9: Trigonometry (Advanced & Identities)</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 9: Trigonometry (2D & 3D)</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>In Paper 2, Trigonometry extends into the real world. We use the <strong>Sine</strong>, <strong>Cosine</strong>, and <strong>Area</strong> rules to solve for distances and heights in two and three dimensions, often involving shadows, towers, or ships at sea.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Paper 2 Trigonometry focuses on identities, equations, CAST, special angles,
-        and double-angle formulae.  
-        The goal is logical manipulation — not memorisation.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>The Sine Rule:</strong> \(\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}\) (Used for AAS or SSA).</li>
+            <li><strong>The Cosine Rule:</strong> \(a^2 = b^2 + c^2 - 2bc \cos A\) (Used for SAS or SSS).</li>
+            <li><strong>The Area Rule:</strong> \(Area = \frac{1}{2}ab \sin C\) (Used when two sides and an included angle are known).</li>
+            <li><strong>Angle of Elevation:</strong> The angle measured <em>upwards</em> from the horizontal.</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Revision of Basic Ratios</h2>
-    <p>In a right-angled triangle:</p>
-    <ul>
-        <li>sin θ = opposite ÷ hypotenuse</li>
-        <li>cos θ = adjacent ÷ hypotenuse</li>
-        <li>tan θ = opposite ÷ adjacent</li>
-    </ul>
-</section>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Using the Sine Rule</strong><br>
+            In \(\triangle ABC\), \(\hat{A} = 40^\circ\), \(\hat{B} = 60^\circ\), and side \(b = 12\)cm. Find side \(a\).<br>
+            <strong>Step:</strong> \(\frac{a}{\sin 40^\circ} = \frac{12}{\sin 60^\circ}\)<br>
+            <strong>Result:</strong> \(a = \frac{12 \sin 40^\circ}{\sin 60^\circ} \approx 8.91\)cm.
+        </div>
 
-<section>
-    <h2>The CAST Diagram</h2>
-    <p>
-        CAST helps determine which trigonometric ratios are positive
-        in each quadrant.
-    </p>
-    <ul>
-        <li><strong>Quadrant I:</strong> All</li>
-        <li><strong>Quadrant II:</strong> Sine</li>
-        <li><strong>Quadrant III:</strong> Tangent</li>
-        <li><strong>Quadrant IV:</strong> Cosine</li>
-    </ul>
-</section>
+        <div class="example-box">
+            <strong>Example 2: The Cosine Rule (3D Context)</strong><br>
+            Two points on the ground are 50m apart. A tower top has angles of elevation from these points. Use the Cosine Rule to find the distance between point A and the base of the tower.
+        </div>
+    </section>
 
-<section>
-    <h2>Special Angles</h2>
-    <p>
-        Exact values must be known for:
-        0°, 30°, 45°, 60°, 90°
-    </p>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: The Cosine Rule Visualiser</h2>
+        <p>Drag point <strong>C</strong> to change the triangle's shape. Watch how the length of side <strong>c</strong> updates dynamically according to the <strong>Cosine Rule</strong> based on the angle \(\hat{C}\).</p>
+        <div id="trig2dBoard" class="jxgbox"></div>
+        <div id="trig2dOutput" style="font-weight: bold; color: var(--trig-gold); text-align: center; padding: 10px; background:#eee; border-radius:5px;"></div>
 
-    <h3>Worked Example 1</h3>
-    <p>Find the exact value of cos 60°</p>
-    <p><strong>Answer:</strong> cos 60° = 1/2</p>
-</section>
+        <script>
+            var b = JXG.JSXGraph.initBoard('trig2dBoard', {boundingbox: [-1, 10, 10, -1], axis:true, showCopyright:false});
+            var pA = b.create('point', [1, 1], {name:'A', fixed:true});
+            var pB = b.create('point', [6, 1], {name:'B', fixed:true});
+            var pC = b.create('point', [4, 5], {name:'C', color:'red'});
+            
+            var poly = b.create('polygon', [pA, pB, pC], {fillColor:'#f39c12', fillOpacity:0.2});
+            var angleC = b.create('angle', [pA, pC, pB], {name:'&gamma;', radius:0.8});
 
-<section>
-    <h2>Trigonometric Identities</h2>
-    <p>
-        Identities are equations that are always true.
-        You may only manipulate <strong>one side at a time</strong>.
-    </p>
+            b.on('update', function() {
+                var sideA = pB.Dist(pC);
+                var sideB = pA.Dist(pC);
+                var gamma = angleC.Value() * (180/Math.PI);
+                var sideC = Math.sqrt(sideA*sideA + sideB*sideB - 2*sideA*sideB*Math.cos(angleC.Value()));
+                
+                document.getElementById('trig2dOutput').innerHTML = 
+                    "Angle C: " + gamma.toFixed(1) + "° | Side c (Result): " + sideC.toFixed(2) + " units";
+            });
+        </script>
+    </section>
 
-    <ul>
-        <li>sin²θ + cos²θ = 1</li>
-        <li>tan θ = sin θ ÷ cos θ</li>
-        <li>1 + tan²θ = sec²θ</li>
-    </ul>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>In \(\triangle PQR\), \(p = 8\), \(q = 10\), and \(\hat{R} = 120^\circ\). Calculate the length of \(r\).</li>
+            <li>A flagstaff is \(h\) meters tall. From a point \(A\), the angle of elevation is \(\alpha\). Prove that the distance from \(A\) to the base is \(h \cot \alpha\).</li>
+            <li>Find the area of \(\triangle XYZ\) if \(x = 7\), \(y = 9\), and \(\hat{Z} = 45^\circ\).</li>
+        </ol>
+    </section>
 
-    <h3>Worked Example 2</h3>
-    <p>Prove: (1 − sin²θ) / cos²θ = 1</p>
-    <ol>
-        <li>Start with LHS only</li>
-        <li>1 − sin²θ = cos²θ</li>
-        <li>cos²θ ÷ cos²θ = 1</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Solving Trigonometric Equations</h2>
-    <ol>
-        <li>Solve the basic equation</li>
-        <li>Use CAST to find all solutions</li>
-        <li>State answers in the given interval</li>
-    </ol>
-
-    <h3>Worked Example 3</h3>
-    <p>Solve: sin θ = 0.5, for 0° ≤ θ ≤ 360°</p>
-    <ol>
-        <li>Reference angle = 30°</li>
-        <li>Sine positive in Quadrants I and II</li>
-        <li>θ = 30°, 150°</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Double-Angle Formulae</h2>
-    <ul>
-        <li>sin 2θ = 2 sin θ cos θ</li>
-        <li>cos 2θ = cos²θ − sin²θ</li>
-        <li>tan 2θ = 2 tan θ ÷ (1 − tan²θ)</li>
-    </ul>
-
-    <h3>Worked Example 4</h3>
-    <p>
-        Given sin θ = 1/2 and θ is acute, find sin 2θ.
-    </p>
-    <ol>
-        <li>cos θ = √(1 − sin²θ) = √(3/4) = √3/2</li>
-        <li>sin 2θ = 2 × (1/2) × (√3/2) = √3/2</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find the exact value of sin 45°</li>
-        <li>Prove an identity using sin²θ + cos²θ = 1</li>
-        <li>Solve: tan θ = 1 for 0° ≤ θ ≤ 360°</li>
-        <li>Find sin 2θ if cos θ = 1/2 and θ is acute</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Understand ratios before applying identities</li>
-        <li>Use CAST for correct signs</li>
-        <li>Manipulate one side only when proving identities</li>
-        <li>Always give solutions in the correct interval</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter Test</h2>
-    <ol>
-        <li>Prove a trigonometric identity</li>
-        <li>Solve a trigonometric equation</li>
-        <li>Apply double-angle formulae</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li>Use the <strong>Sine Rule</strong> when you have a matching "Angle and Opposite Side" pair.</li>
+            <li>Use the <strong>Cosine Rule</strong> when you are "boxed in" by two sides and an included angle.</li>
+            <li>In <strong>3D problems</strong>, always identify the common side between the horizontal and vertical triangles.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="p2_chapter8.html" class="btn" style="background:#7f8c8d;">← Previous: Adv. Functions</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Paper 2 Chapter 10: Vectors</p>
+    </div>
+    <a href="p2_chapter10.html" class="btn">Start Vectors →</a>
 </footer>
 
 </body>
