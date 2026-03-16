@@ -2,167 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chapter 2: Trigonometry | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Trigonometry | Grade 12 CAPS</title>
+    
+    <!-- MATH & GRAPHING ENGINES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --tri-red: #e74c3c; --tri-blue: #3498db; --tri-purple: #9b59b6; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #2c3e50; max-width: 900px; margin: 0 auto; padding: 20px; background: #fdfefe; }
+        header { background: #2c3e50; color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 20px; }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        .jxgbox { width: 100%; max-width: 600px; height: 450px; margin: 20px auto; border-radius: 8px; }
+        .controls { background: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 0.9em; border-left: 4px solid var(--tri-blue); }
+        .next-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px; }
+        .btn { background: var(--tri-purple); color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { opacity: 0.8; }
+    </style>
 </head>
 <body>
 
 <header>
+    <p>Grade 12 Mathematics</p>
     <h1>Chapter 2: Trigonometry</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav>
-        <a href="../index.html">← Back to Table of Contents</a>
-    </nav>
+    <nav><a href="chapter1.html" style="color: #bdc3c7;">← Back to Functions</a></nav>
 </header>
 
-<main class="chapter-content">
-
-<!-- INTRODUCTION -->
+<!-- SECTION 1: THE UNIT CIRCLE -->
 <section>
-    <h2>Introduction</h2>
-    <p>
-        Trigonometry studies the relationship between angles and sides of triangles.
-        Many learners struggle because steps are skipped. This chapter explains
-        every step clearly and slowly.
-    </p>
+    <h2>1. The Unit Circle & Identities</h2>
+    <p>Every point on the unit circle is defined by \( (\cos \theta ; \sin \theta) \). This is the foundation of the identity \( \sin^2 \theta + \cos^2 \theta = 1 \).</p>
+    
+    <div id="unitCircleBoard" class="jxgbox"></div>
+    <div class="controls">
+        <strong>Interactive:</strong> Drag the point <strong>P</strong> around the circle. Watch the height (\( \sin \theta \)) and width (\( \cos \theta \)) change.
+    </div>
+
+    <script type="text/javascript">
+        var b1 = JXG.JSXGraph.initBoard('unitCircleBoard', {boundingbox: [-1.5, 1.5, 1.5, -1.5], axis:true, showCopyright:false});
+        var circle = b1.create('circle', [[0,0], 1], {strokeColor:'#95a5a6', dash:2});
+        var p = b1.create('glider', [0.8, 0.6, circle], {name:'P', color: 'red'});
+        var line = b1.create('segment', [[0,0], p], {color: 'black'});
+        var xLine = b1.create('segment', [[0,0], [function(){return p.X();}, 0]], {strokeColor: 'blue', strokeWidth: 3, name:'cos'});
+        var yLine = b1.create('segment', [p, [function(){return p.X();}, 0]], {strokeColor: 'green', strokeWidth: 3, name:'sin'});
+    </script>
 </section>
 
-<!-- BASIC DEFINITIONS -->
+<!-- SECTION 2: TRANSFORMATIONS -->
 <section>
-    <h2>Trigonometric Ratios</h2>
-    <p>For a right-angled triangle:</p>
+    <h2>2. Sketching \( y = a \sin(k(x - p)) + q \)</h2>
+    <p>In Grade 12, we shift and stretch trigonometric graphs. Use the sliders to manipulate the wave.</p>
+    
+    <div id="trigGraphBoard" class="jxgbox"></div>
+    <div class="controls">
+        <strong>a (Amplitude):</strong> Height of the wave.<br>
+        <strong>k (Period):</strong> Frequency of the cycles.<br>
+        <strong>p (Phase Shift):</strong> Horizontal movement.<br>
+        <strong>q (Vertical Shift):</strong> Up/Down movement.
+    </div>
+
+    <script type="text/javascript">
+        var b2 = JXG.JSXGraph.initBoard('trigGraphBoard', {boundingbox: [-10, 5, 370, -5], axis:true, showCopyright:false});
+        // Sliders
+        var a = b2.create('slider', [[20, 4], [120, 4], [-3, 1, 3]], {name:'a'});
+        var k = b2.create('slider', [[200, 4], [300, 4], [0.5, 1, 3]], {name:'k'});
+        var p = b2.create('slider', [[20, -4], [120, -4], [-90, 0, 90]], {name:'p'});
+        var q = b2.create('slider', [[200, -4], [300, -4], [-2, 0, 2]], {name:'q'});
+
+        var plot = b2.create('functiongraph', [function(x){ 
+            // Conversion to radians for Math.sin
+            var radX = (k.Value() * (x - p.Value())) * (Math.PI / 180);
+            return a.Value() * Math.sin(radX) + q.Value(); 
+        }, 0, 360], {strokeColor: '#3498db', strokeWidth: 4});
+    </script>
+</section>
+
+<!-- SECTION 3: COMPOUND ANGLES -->
+<section>
+    <h2>3. Compound & Double Angle Formulas</h2>
+    <p>The Grade 12 "outsmarting" tool is the use of identities to simplify complex expressions:</p>
     <ul>
-        <li><strong>sin θ</strong> = opposite / hypotenuse</li>
-        <li><strong>cos θ</strong> = adjacent / hypotenuse</li>
-        <li><strong>tan θ</strong> = opposite / adjacent</li>
+        <li>\( \cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta \)</li>
+        <li>\( \sin(2\alpha) = 2\sin\alpha\cos\alpha \)</li>
     </ul>
+    <div class="controls" style="border-left-color: var(--tri-red);">
+        <strong>Note:</strong> These are essential for solving 2D and 3D problems in the final exam.
+    </div>
 </section>
 
-<!-- EXTENDED RATIOS -->
-<section>
-    <h2>Extended Trigonometric Ratios</h2>
-    <ul>
-        <li>cosec θ = 1 / sin θ</li>
-        <li>sec θ = 1 / cos θ</li>
-        <li>cot θ = 1 / tan θ</li>
-    </ul>
-</section>
-
-<!-- SPECIAL ANGLES -->
-<section>
-    <h2>Special Angles</h2>
-    <p>
-        Learners must know the exact values of trigonometric ratios for
-        0°, 30°, 45°, 60°, and 90°.
-    </p>
-
-    <h3>Worked Example 1</h3>
-    <p><strong>Find:</strong> sin 30°</p>
-    <p>Step 1: Use known values</p>
-    <p>sin 30° = 1/2</p>
-</section>
-
-<!-- IDENTITIES -->
-<section>
-    <h2>Trigonometric Identities</h2>
-    <p>Identities are equations that are always true.</p>
-
-    <ul>
-        <li>sin²θ + cos²θ = 1</li>
-        <li>1 + tan²θ = sec²θ</li>
-        <li>1 + cot²θ = cosec²θ</li>
-    </ul>
-
-    <h3>Worked Example 2: Proving an Identity</h3>
-    <p><strong>Prove:</strong> 1 + tan²θ = sec²θ</p>
-
-    <p>Step 1: Start with the identity sin²θ + cos²θ = 1</p>
-    <p>Step 2: Divide all terms by cos²θ</p>
-    <p>Step 3: sin²θ / cos²θ + cos²θ / cos²θ = 1 / cos²θ</p>
-    <p>Step 4: tan²θ + 1 = sec²θ</p>
-    <p><strong>Identity proven.</strong></p>
-</section>
-
-<!-- SOLVING EQUATIONS -->
-<section>
-    <h2>Solving Trigonometric Equations</h2>
-
-    <h3>Worked Example 3</h3>
-    <p><strong>Solve:</strong> sin θ = 1/2 for 0° ≤ θ ≤ 360°</p>
-
-    <p>Step 1: Identify the reference angle</p>
-    <p>sin 30° = 1/2</p>
-
-    <p>Step 2: Identify quadrants where sine is positive</p>
-    <p>Quadrant I and II</p>
-
-    <p>Step 3: Write solutions</p>
-    <p>θ = 30° and θ = 150°</p>
-</section>
-
-<!-- GRAPHS -->
-<section>
-    <h2>Graphs of Trigonometric Functions</h2>
-
-    <p>
-        Trigonometric graphs repeat in cycles.
-    </p>
-
-    <ul>
-        <li>Amplitude</li>
-        <li>Period</li>
-        <li>Intercepts</li>
-    </ul>
-
-    <h3>Worked Example 4</h3>
-    <p><strong>Sketch:</strong> y = sin x for 0° ≤ x ≤ 360°</p>
-
-    <p>Key points:</p>
-    <ul>
-        <li>(0°, 0)</li>
-        <li>(90°, 1)</li>
-        <li>(180°, 0)</li>
-        <li>(270°, −1)</li>
-        <li>(360°, 0)</li>
-    </ul>
-</section>
-
-<!-- PRACTICE -->
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find cos 60°</li>
-        <li>Prove: sin²θ = 1 − cos²θ</li>
-        <li>Solve cos θ = −1/2 for 0° ≤ θ ≤ 360°</li>
-        <li>Sketch y = cos x for 0° ≤ x ≤ 360°</li>
-    </ol>
-</section>
-
-<!-- SUMMARY -->
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Know definitions clearly</li>
-        <li>Memorise special angle values</li>
-        <li>Follow identity steps carefully</li>
-        <li>Always consider quadrants</li>
-    </ul>
-</section>
-
-<!-- TEST -->
-<section>
-    <h2>Chapter 2 Test</h2>
-    <ol>
-        <li>Find tan 45°</li>
-        <li>Prove: 1 − sin²θ = cos²θ</li>
-        <li>Solve sin θ = √3/2 for 0° ≤ θ ≤ 360°</li>
-    </ol>
-</section>
-
-</main>
-
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="next-nav">
+    <a href="chapter1.html" class="btn" style="background:#7f8c8d;">← Previous: Functions</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Chapter 3: Number Patterns & Sequences</p>
+    </div>
+    <a href="chapter3.html" class="btn">Start Patterns →</a>
 </footer>
 
 </body>
