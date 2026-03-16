@@ -2,133 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paper 2 Chapter 7: Analytical Geometry | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 2 | Chapter 7: Analytical Geometry | Grade 12 Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
-        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
-        header a:hover { color: #ffcc00; text-decoration: underline; }
-        main { padding: 1rem 2rem; }
-        h2 { margin-top: 2rem; color: #001F3F; }
+        :root { --geom-teal: #16a085; --geom-dark: #2c3e50; --bg: #f9fbfb; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--geom-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--geom-teal); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--geom-teal); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f1f9f7; border-left: 5px solid var(--geom-teal); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 450px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--geom-teal); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Paper 2 – Chapter 7: Analytical Geometry</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 7: Analytical Geometry (Circles)</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Analytical Geometry in Grade 12 extends the coordinate geometry of lines to <strong>Circles</strong>. We analyze circles centered at the origin and those shifted to any point \((a; b)\). The critical skill is understanding the relationship between the circle's radius and its <strong>Tangent</strong>.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Analytical Geometry links algebra and geometry to study points, lines, and shapes in the coordinate plane.  
-        In Paper 2, learners focus on **distance, midpoint, gradient, line equations, and circle equations**.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Circle Equation:</strong> \((x - a)^2 + (y - b)^2 = r^2\) (Center at \(a;b\)).</li>
+            <li><strong>Distance Formula:</strong> \(d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\) (Used to find the radius).</li>
+            <li><strong>Midpoint Formula:</strong> \(M\left(\frac{x_1+x_2}{2} ; \frac{y_1+y_2}{2}\right)\) (Used to find the center).</li>
+            <li><strong>Tangent-Radius Theorem:</strong> Radius is perpendicular to the tangent line (\(m_{radius} \times m_{tangent} = -1\)).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Distance Between Two Points</h2>
-    <p>Use the distance formula:</p>
-    <p>d = √[(x₂ − x₁)² + (y₂ − y₁)²]</p>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: Equation of a Circle</strong><br>
+            Find the equation of a circle with center \(C(-3; 1)\) and radius 4.<br>
+            <strong>Step:</strong> Substitute into general form.<br>
+            <strong>Result:</strong> \((x + 3)^2 + (y - 1)^2 = 16\).
+        </div>
 
-    <h3>Worked Example 1</h3>
-    <p>Find distance between A(2, 3) and B(5, 7)</p>
-    <ol>
-        <li>d = √[(5 − 2)² + (7 − 3)²] = √[3² + 4²] = √[9 + 16] = √25 = 5</li>
-    </ol>
-</section>
+        <div class="example-box">
+            <strong>Example 2: Finding Gradient of Tangent</strong><br>
+            A circle has center \((0; 0)\) and a point \(P(3; 4)\) on the circumference. Find the gradient of the tangent at \(P\).<br>
+            1. \(m_{radius} = \frac{4-0}{3-0} = \frac{4}{3}\).<br>
+            2. \(m_{tangent} = -\frac{3}{4}\) (Perpendicular).
+        </div>
 
-<section>
-    <h2>Midpoint of a Line Segment</h2>
-    <p>Use the midpoint formula:</p>
-    <p>M = ((x₁ + x₂)/2 , (y₁ + y₂)/2)</p>
+        <div class="example-box">
+            <strong>Example 3: Completing the Square</strong><br>
+            Find the center of \(x^2 - 6x + y^2 + 4y = 12\).<br>
+            1. Group terms: \((x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4\).<br>
+            2. Result: \((x - 3)^2 + (y + 2)^2 = 25\). Center: \((3; -2)\).
+        </div>
+    </section>
 
-    <h3>Worked Example 2</h3>
-    <p>Find midpoint of A(2, 3) and B(5, 7)</p>
-    <ol>
-        <li>M = ((2+5)/2 , (3+7)/2) = (7/2 , 10/2) = (3.5 , 5)</li>
-    </ol>
-</section>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: The Tangent-Radius Property</h2>
+        <p>Drag the point <strong>P</strong> around the circle. Notice how the <strong>Tangent line (red)</strong> always remains perpendicular (\(90^\circ\)) to the <strong>Radius (blue)</strong>.</p>
+        <div id="circleBoard" class="jxgbox"></div>
+        <div id="circleOutput" style="font-weight: bold; color: var(--geom-teal); text-align: center; padding: 10px;"></div>
 
-<section>
-    <h2>Gradient of a Line</h2>
-    <p>m = (y₂ − y₁)/(x₂ − x₁)</p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('circleBoard', {boundingbox: [-7, 7, 7, -7], axis:true, showCopyright:false});
+            var center = b.create('point', [0,0], {name:'C (Center)', fixed:true});
+            var circ = b.create('circle', [center, 4], {strokeColor: '#34495e', dash:2});
+            var p = b.create('glider', [4, 0, circ], {name:'P (Point)', color:'blue'});
+            
+            var radius = b.create('segment', [center, p], {strokeColor:'blue', strokeWidth:2});
+            var tan = b.create('tangent', [p], {strokeColor:'red', strokeWidth:2});
 
-    <h3>Worked Example 3</h3>
-    <p>Find gradient of line through A(2, 3) and B(5, 7)</p>
-    <ol>
-        <li>m = (7 − 3)/(5 − 2) = 4/3</li>
-    </ol>
-</section>
+            b.on('update', function() {
+                var mr = (p.Y() / p.X()).toFixed(2);
+                var mt = (-1 / mr).toFixed(2);
+                document.getElementById('circleOutput').innerHTML = 
+                    "Radius Gradient: " + mr + " | Tangent Gradient: " + mt;
+            });
+        </script>
+    </section>
 
-<section>
-    <h2>Equation of a Line</h2>
-    <p>Forms to use:</p>
-    <ul>
-        <li>Slope-intercept: y = mx + c</li>
-        <li>Point-slope: y − y₁ = m(x − x₁)</li>
-    </ul>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Find the center and radius of \(x^2 + y^2 + 10x - 2y + 10 = 0\).</li>
+            <li>Determine the equation of the tangent to \(x^2 + y^2 = 25\) at the point \((4; -3)\).</li>
+            <li>Calculate the length of the tangent from point \(A(8; 6)\) to the circle \(x^2 + y^2 = 25\).</li>
+        </ol>
+    </section>
 
-    <h3>Worked Example 4</h3>
-    <p>Find equation of line through A(2, 3) with gradient 4/3</p>
-    <ol>
-        <li>y − 3 = 4/3(x − 2)</li>
-        <li>y − 3 = 4/3x − 8/3 → y = 4/3x − 8/3 + 9/3 → y = 4/3x + 1/3</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Equation of a Circle</h2>
-    <p>Standard form: (x − h)² + (y − k)² = r², where (h, k) is the centre and r is the radius</p>
-
-    <h3>Worked Example 5</h3>
-    <p>Circle with centre (2, −1) and radius 3</p>
-    <ol>
-        <li>Equation: (x − 2)² + (y + 1)² = 9</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find distance between P(1, 2) and Q(4, 6)</li>
-        <li>Find midpoint of P(1, 2) and Q(4, 6)</li>
-        <li>Calculate gradient of line through P(3, 5) and Q(6, 11)</li>
-        <li>Find equation of line through (1,2) with slope 3</li>
-        <li>Write equation of a circle with centre (0,0) and radius 5</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Distance = √[(x₂−x₁)² + (y₂−y₁)²]</li>
-        <li>Midpoint = ((x₁+x₂)/2 , (y₁+y₂)/2)</li>
-        <li>Gradient = (y₂−y₁)/(x₂−x₁)</li>
-        <li>Equation of line: point-slope or slope-intercept form</li>
-        <li>Circle: (x−h)² + (y−k)² = r²</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter Test</h2>
-    <ol>
-        <li>Distance between (−2,1) and (3,5)</li>
-        <li>Midpoint of (−1,4) and (5,8)</li>
-        <li>Gradient of line through (2,3) and (6,7)</li>
-        <li>Equation of line through (1,1) with gradient 2</li>
-        <li>Equation of circle with centre (1,−2) and radius 4</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li><strong>Completing the square</strong> is the primary method for finding circle centers in exams.</li>
+            <li>The <strong>product of gradients</strong> (\(m_1 \times m_2 = -1\)) is your best tool for tangent equations.</li>
+            <li>Check if a point is <strong>inside, on, or outside</strong> a circle by comparing its distance from the center to the radius.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="p2_chapter6.html" class="btn" style="background:#7f8c8d;">← Previous: Algebra</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Paper 2 Chapter 8: Advanced Functions</p>
+    </div>
+    <a href="p2_chapter8.html" class="btn">Start Adv. Functions →</a>
 </footer>
 
 </body>
