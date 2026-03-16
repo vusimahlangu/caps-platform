@@ -2,148 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paper 2 Chapter 8: Functions (Advanced) | Grade 12 Mathematics</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 2 | Chapter 8: Advanced Functions | Grade 12 Math</title>
+    
+    <!-- LIBRARIES -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        header { background-color: #001F3F; color: #ffffff; padding: 1rem; }
-        header a { color: #ffffff; text-decoration: none; font-weight: bold; }
-        header a:hover { color: #ffcc00; text-decoration: underline; }
-        main { padding: 1rem 2rem; }
-        h2 { margin-top: 2rem; color: #001F3F; }
+        :root { --adv-purple: #9b59b6; --adv-dark: #2c3e50; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
+        header { background: var(--adv-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--adv-purple); }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
+        h2 { color: var(--adv-purple); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f9f4fb; border-left: 5px solid var(--adv-purple); padding: 15px; margin: 20px 0; }
+        .jxgbox { width: 100%; height: 450px; border-radius: 8px; margin: 20px 0; }
+        .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
+        .btn { background: var(--adv-purple); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Paper 2 – Chapter 8: Functions (Advanced)</h1>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <nav><a href="../index.html">← Back to Table of Contents</a></nav>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 8: Advanced Functions & Inverses</h1>
 </header>
 
-<main class="chapter-content">
+<main>
+    <!-- INTRODUCTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Advanced functions require a deep understanding of <strong>One-to-One</strong> versus <strong>Many-to-One</strong> relationships. In Paper 2, we frequently reflect graphs across the line \( y = x \) and must determine if the result is still a function or merely a relation.</p>
+    </section>
 
-<section>
-    <h2>Introduction</h2>
-    <p>
-        Advanced functions focus on **transformations, inverses, and interpretation**.  
-        Learners learn to sketch and analyse linear, quadratic, exponential, and hyperbolic functions.
-    </p>
-</section>
+    <!-- RULES & FORMULAS -->
+    <section>
+        <h2>Core Rules & Formulas</h2>
+        <ul>
+            <li><strong>Inverse Reflection:</strong> Swap \( x \) and \( y \). The line of symmetry is \( y = x \).</li>
+            <li><strong>Function Test:</strong> A relation is a function if every \( x \)-value has only one \( y \)-value (Vertical Line Test).</li>
+            <li><strong>The Logarithm:</strong> The inverse of \( y = a^x \) is \( y = \log_a x \).</li>
+            <li><strong>Quadratic Restriction:</strong> For \( f(x) = ax^2 \), the inverse is a function only if the domain is restricted to \( x \geq 0 \) or \( x \leq 0 \).</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Inverse Functions</h2>
-    <p>
-        Inverse functions **swap x and y**. Use step-by-step algebra.
-    </p>
+    <!-- WORKED EXAMPLES -->
+    <section>
+        <h2>Worked Examples</h2>
+        
+        <div class="example-box">
+            <strong>Example 1: The Exponential Inverse</strong><br>
+            Find the inverse of \( f(x) = \left(\frac{1}{2}\right)^x \).<br>
+            <strong>Step:</strong> \( x = \left(\frac{1}{2}\right)^y \)<br>
+            <strong>Result:</strong> \( f^{-1}(x) = \log_{1/2} x \).
+        </div>
 
-    <h3>Worked Example 1</h3>
-    <p>Given f(x) = 3x − 5</p>
-    <ol>
-        <li>Replace f(x) with y: y = 3x − 5</li>
-        <li>Swap x and y: x = 3y − 5</li>
-        <li>Solve for y: y = (x + 5)/3</li>
-        <li>Answer: f⁻¹(x) = (x + 5)/3</li>
-    </ol>
-</section>
+        <div class="example-box">
+            <strong>Example 2: Parabola Restriction</strong><br>
+            Given \( f(x) = -x^2 \). Find the equation of the inverse for \( x \leq 0 \).<br>
+            1. \( x = -y^2 \)<br>
+            2. \( y^2 = -x \)<br>
+            3. \( y = -\sqrt{-x} \) (Negative root chosen due to domain restriction).
+        </div>
 
-<section>
-    <h2>Transformations of Functions</h2>
-    <ul>
-        <li>Vertical shift: y = f(x) + k → up/down</li>
-        <li>Horizontal shift: y = f(x − k) → left/right</li>
-        <li>Reflection: y = −f(x) → over x-axis</li>
-        <li>Stretch/Compression: y = af(x) → vertical scaling</li>
-    </ul>
+        <div class="example-box">
+            <strong>Example 3: Point Reflection</strong><br>
+            If \( f \) contains point \( (3 ; 9) \), then \( f^{-1} \) must contain point \( (9 ; 3) \).
+        </div>
+    </section>
 
-    <h3>Worked Example 2</h3>
-    <p>y = x² + 4</p>
-    <p><strong>Transformation:</strong> Shifted up 4 units</p>
-</section>
+    <!-- ILLUSTRATION -->
+    <section>
+        <h2>Illustration: Quadratic Domain Restriction</h2>
+        <p>Use the <strong>Cut-off</strong> slider to restrict the domain of the parabola (blue). Notice how the inverse (red) becomes a single "arm" (a function) only when you cut the parabola at its turning point.</p>
+        <div id="advFuncBoard" class="jxgbox"></div>
+        <div id="advOutput" style="font-weight: bold; color: var(--adv-purple); text-align: center; padding: 10px;"></div>
 
-<section>
-    <h2>Linear Functions</h2>
-    <p>y = mx + c → straight lines</p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('advFuncBoard', {boundingbox: [-5, 10, 10, -5], axis:true, showCopyright:false});
+            b.create('line', [,], {dash:2, strokeColor:'#999', fixed:true}); // y=x
+            
+            var cut = b.create('slider', [[1, -3], [6, -3], [0, 0, 5]], {name:'Restrict x &ge;'});
+            
+            var f = b.create('functiongraph', [function(x){ 
+                return (x >= cut.Value()) ? x*x : NaN; 
+            }], {strokeColor:'blue', strokeWidth:3});
 
-    <h3>Worked Example 3</h3>
-    <p>y = 2x − 3</p>
-    <ol>
-        <li>Gradient: m = 2</li>
-        <li>y-intercept: c = −3</li>
-        <li>Plot using points: x = 0 → y = −3, x = 1 → y = −1</li>
-    </ol>
-</section>
+            var inv = b.create('functiongraph', [function(x){ 
+                return (x >= Math.pow(cut.Value(),2)) ? Math.sqrt(x) : NaN; 
+            }], {strokeColor:'red', strokeWidth:3});
 
-<section>
-    <h2>Quadratic Functions</h2>
-    <p>y = ax² + bx + c → parabolas</p>
+            b.create('text', [-4, 8, "Blue: f(x) = x²"], {color:'blue'});
+            b.create('text', [-4, 7, "Red: f⁻¹(x) = √x"], {color:'red'});
+        </script>
+    </section>
 
-    <h3>Worked Example 4</h3>
-    <p>y = x² − 4x + 3</p>
-    <ol>
-        <li>Factorise: y = (x − 1)(x − 3)</li>
-        <li>x-intercepts: x = 1, x = 3</li>
-        <li>y-intercept: y = 3 (x = 0)</li>
-    </ol>
-</section>
+    <!-- PRACTICE EXERCISES -->
+    <section>
+        <h2>Chapter Exercises</h2>
+        <ol>
+            <li>Given \( f(x) = 4^x \). Calculate \( f^{-1}(16) \).</li>
+            <li>Sketch \( f(x) = x^2 \) and \( f^{-1}(x) \) on the same axes for \( x \leq 0 \).</li>
+            <li>Determine the values of \( a \) if \( f(x) = \log_a x \) passes through \( (8 ; 3) \).</li>
+        </ol>
+    </section>
 
-<section>
-    <h2>Exponential Functions</h2>
-    <p>y = abˣ → rapid growth/decay</p>
-
-    <h3>Worked Example 5</h3>
-    <p>y = 2 × 3ˣ</p>
-    <ol>
-        <li>a = 2, b = 3</li>
-        <li>Calculate points: x = −1 → y = 2/3, x = 0 → y = 2, x = 1 → y = 6</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Hyperbolic Functions</h2>
-    <p>y = a/x → never touches axes, asymptotes x = 0, y = 0</p>
-
-    <h3>Worked Example 6</h3>
-    <p>y = 4/x</p>
-    <ol>
-        <li>Asymptotes: x = 0, y = 0</li>
-        <li>Plot points for x = −2, −1, 1, 2 → y = −2, −4, 4, 2</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Practice Exercises</h2>
-    <ol>
-        <li>Find inverse of f(x) = 5x + 2</li>
-        <li>Describe the transformation: y = −x² + 3</li>
-        <li>Sketch y = 3x + 1</li>
-        <li>Sketch y = 2ˣ</li>
-        <li>Sketch y = 6/x</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Summary</h2>
-    <ul>
-        <li>Functions describe relationships</li>
-        <li>Inverse functions swap x and y</li>
-        <li>Transformations modify graphs: shift, stretch, reflection</li>
-        <li>Step-by-step sketching aids interpretation</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Chapter Test</h2>
-    <ol>
-        <li>Find inverse of a linear function</li>
-        <li>Describe graph transformations</li>
-        <li>Sketch and analyse linear, quadratic, exponential, and hyperbolic graphs</li>
-    </ol>
-</section>
-
+    <!-- SUMMARY -->
+    <section>
+        <h2>Summary & Conclusions</h2>
+        <ul>
+            <li><strong>Inverses</strong> reverse the roles of inputs and outputs.</li>
+            <li>The <strong>Logarithm</strong> is used to find the exponent when the base is known.</li>
+            <li>Always check the <strong>Vertical Line Test</strong> to see if your inverse is a function.</li>
+        </ul>
+    </section>
 </main>
 
-<footer>
-    <p>CAPS Grade 12 Mathematics | National Learning Platform</p>
+<footer class="footer-nav">
+    <a href="p2_chapter7.html" class="btn" style="background:#7f8c8d;">← Previous: Analytical</a>
+    <div>
+        <p><strong>Next Up:</strong></p>
+        <p>Paper 2 Chapter 9: Trigonometry</p>
+    </div>
+    <a href="p2_chapter9.html" class="btn">Start Trigonometry →</a>
 </footer>
 
 </body>
