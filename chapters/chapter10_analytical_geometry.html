@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 10: Analytical Geometry | Grade 12 CAPS Math</title>
+    <title>Paper 2 | Chapter 10: Vectors | Grade 12 Math</title>
     
     <!-- LIBRARIES -->
     <script src="https://polyfill.io"></script>
@@ -12,44 +12,40 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
 
     <style>
-        :root { --geom-teal: #16a085; --geom-dark: #2c3e50; --bg: #fcfdfd; }
+        :root { --vec-blue: #2c3e50; --vec-cyan: #16a085; --bg: #fdfdfd; }
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background: var(--bg); }
-        header { background: var(--geom-dark); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--geom-teal); }
+        header { background: var(--vec-blue); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 30px; border-bottom: 5px solid var(--vec-cyan); }
         section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eee; }
-        h2 { color: var(--geom-teal); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
-        .example-box { background: #f1f9f7; border-left: 5px solid var(--geom-teal); padding: 15px; margin: 20px 0; }
+        h2 { color: var(--vec-cyan); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .example-box { background: #f1f9f8; border-left: 5px solid var(--vec-cyan); padding: 15px; margin: 20px 0; }
         .jxgbox { width: 100%; height: 450px; border-radius: 8px; margin: 20px 0; }
         .footer-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 2px solid #eee; }
-        .btn { background: var(--geom-dark); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn { background: var(--vec-blue); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <p>Grade 12 Mathematics | CAPS Aligned</p>
-    <h1>Chapter 10: Analytical Geometry</h1>
+    <p>Grade 12 Mathematics | Paper 2 Proactive Practice</p>
+    <h1>Chapter 10: Vectors</h1>
 </header>
 
 <main>
     <!-- INTRODUCTION -->
     <section>
         <h2>Introduction</h2>
-        <p>Analytical Geometry uses algebraic methods to solve geometric problems on the Cartesian plane. In Grade 12, the focus shifts to the <strong>Equation of a Circle</strong> and the relationship between circles and <strong>Tangents</strong>.</p>
+        <p>Vectors represent quantities that have both <strong>magnitude</strong> and <strong>direction</strong>. In Paper 2, we use vectors to describe points in space and find the inclination between two lines using algebraic components rather than traditional geometric proofs.</p>
     </section>
 
     <!-- RULES & FORMULAS -->
     <section>
         <h2>Core Rules & Formulas</h2>
         <ul>
-            <li><strong>Circle Equation (at Origin):</strong> \( x^2 + y^2 = r^2 \)</li>
-            <li><strong>General Circle Equation:</strong> \( (x - a)^2 + (y - b)^2 = r^2 \)
-                <ul>
-                    <li>Center: \( (a ; b) \)</li>
-                    <li>Radius: \( r \)</li>
-                </ul>
-            </li>
-            <li><strong>Distance Formula:</strong> \( d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \)</li>
-            <li><strong>Tangent Property:</strong> A tangent is perpendicular to the radius at the point of contact (\( m_{rad} \times m_{tan} = -1 \)).</li>
+            <li><strong>Component Form:</strong> \(\vec{v} = x\mathbf{i} + y\mathbf{j}\) or \(\vec{v} = (x; y)\).</li>
+            <li><strong>Magnitude:</strong> \(|\vec{v}| = \sqrt{x^2 + y^2}\).</li>
+            <li><strong>Scalar (Dot) Product:</strong> \(\vec{u} \cdot \vec{v} = x_1x_2 + y_1y_2\).</li>
+            <li><strong>The Angle Theorem:</strong> \(\vec{u} \cdot \vec{v} = |\vec{u}| |\vec{v}| \cos \theta\).</li>
+            <li><strong>Orthogonality:</strong> If \(\vec{u} \cdot \vec{v} = 0\), the vectors are perpendicular.</li>
         </ul>
     </section>
 
@@ -58,46 +54,43 @@
         <h2>Worked Examples</h2>
         
         <div class="example-box">
-            <strong>Example 1: Finding the Equation</strong><br>
-            Find the equation of a circle with center \( M(2; -3) \) and radius 5.<br>
-            \( (x - 2)^2 + (y - (-3))^2 = 5^2 \)<br>
-            \( (x - 2)^2 + (y + 3)^2 = 25 \)
+            <strong>Example 1: Magnitude Calculation</strong><br>
+            Given \(\vec{u} = (5; -12)\). Find the magnitude.<br>
+            <strong>Step:</strong> \(|\vec{u}| = \sqrt{5^2 + (-12)^2} = \sqrt{25 + 144} = 13\).
         </div>
 
         <div class="example-box">
-            <strong>Example 2: Symmetry & Completing the Square</strong><br>
-            Find the center of \( x^2 - 4x + y^2 + 6y = 3 \).<br>
-            1. \( (x^2 - 4x + 4) + (y^2 + 6y + 9) = 3 + 4 + 9 \)<br>
-            2. \( (x - 2)^2 + (y + 3)^2 = 16 \)<br>
-            3. Center is \( (2; -3) \), Radius is 4.
-        </div>
-
-        <div class="example-box">
-            <strong>Example 3: Equation of a Tangent</strong><br>
-            Radius gradient \( m = \frac{1}{2} \). Find tangent gradient.<br>
-            \( m_{tan} = -2 \) (since \( \frac{1}{2} \times -2 = -1 \)).
+            <strong>Example 2: Finding the Angle</strong><br>
+            Calculate the angle between \(\vec{a} = (3; 4)\) and \(\vec{b} = (4; 3)\).<br>
+            1. \(\vec{a} \cdot \vec{b} = (3)(4) + (4)(3) = 24\).<br>
+            2. \(|\vec{a}| = 5\) and \(|\vec{b}| = 5\).<br>
+            3. \(\cos \theta = \frac{24}{5 \times 5} = 0.96 \Rightarrow \theta \approx 16.26^\circ\).
         </div>
     </section>
 
     <!-- ILLUSTRATION -->
     <section>
-        <h2>Illustration: The Dynamic Circle</h2>
-        <p>Drag the <strong>Center Point (M)</strong> to change the circle's position, or drag the <strong>Radius Point (P)</strong> to resize it. Watch how the equation updates below.</p>
-        <div id="circleBoard" class="jxgbox"></div>
-        <div id="equationOutput" style="font-weight: bold; color: var(--geom-teal); text-align: center; font-size: 1.2em; background:#eee; padding:10px; border-radius:5px;"></div>
+        <h2>Illustration: The Dot Product Engine</h2>
+        <p>Drag the vectors <strong>u</strong> (blue) and <strong>v</strong> (red). Notice how the angle between them and the resulting Dot Product change. When they are perpendicular, the Dot Product becomes exactly zero.</p>
+        <div id="vectorBoard" class="jxgbox"></div>
+        <div id="vectorOutput" style="font-weight: bold; color: var(--vec-cyan); text-align: center; padding: 10px; background:#eee; border-radius:5px;"></div>
 
         <script>
-            var b = JXG.JSXGraph.initBoard('circleBoard', {boundingbox: [-10, 10, 10, -10], axis:true, showCopyright:false});
-            var m = b.create('point', [2, 1], {name:'M (Center)', color:'blue'});
-            var p = b.create('point', [5, 5], {name:'P (Radius)', color:'red'});
-            var circ = b.create('circle', [m, p], {strokeColor: '#16a085', strokeWidth: 3});
+            var b = JXG.JSXGraph.initBoard('vectorBoard', {boundingbox: [-1, 10, 10, -1], axis:true, showCopyright:false});
+            var origin = b.create('point', [0,0], {fixed:true, visible:false});
+            
+            var p1 = b.create('point', [4,0], {name:'u', color:'blue'});
+            var p2 = b.create('point', [0,4], {name:'v', color:'red'});
+            
+            b.create('arrow', [origin, p1], {strokeColor:'blue', strokeWidth:3});
+            b.create('arrow', [origin, p2], {strokeColor:'red', strokeWidth:3});
+            var angle = b.create('angle', [p1, origin, p2], {radius:1, name:'&theta;'});
 
             b.on('update', function() {
-                var r2 = Math.pow(m.Dist(p), 2);
-                var a = m.X().toFixed(1);
-                var b_val = m.Y().toFixed(1);
-                document.getElementById('equationOutput').innerHTML = 
-                    "(x - " + a + ")² + (y - " + b_val + ")² = " + r2.toFixed(1);
+                var dot = (p1.X()*p2.X() + p1.Y()*p2.Y()).toFixed(2);
+                var deg = (angle.Value() * 180 / Math.PI).toFixed(1);
+                document.getElementById('vectorOutput').innerHTML = 
+                    "Dot Product: " + dot + " | Angle: " + deg + "°";
             });
         </script>
     </section>
@@ -106,9 +99,9 @@
     <section>
         <h2>Chapter Exercises</h2>
         <ol>
-            <li>Determine the equation of the circle with center \( (-1; 4) \) passing through \( (2; 0) \).</li>
-            <li>Show that the point \( (3; 4) \) lies on the circle \( x^2 + y^2 = 25 \).</li>
-            <li>Find the equation of the tangent to the circle \( x^2 + y^2 = 10 \) at the point \( (3; 1) \).</li>
+            <li>Find the value of \(k\) if \(\vec{a} = (k; 3)\) and \(\vec{b} = (4; -2)\) are perpendicular.</li>
+            <li>Given \(\vec{u} = (-3; 4)\), find the unit vector in the direction of \(\vec{u}\).</li>
+            <li>Calculate the angle between \(\vec{p} = (2; 1)\) and \(\vec{q} = (1; 2)\).</li>
         </ol>
     </section>
 
@@ -116,18 +109,18 @@
     <section>
         <h2>Summary & Conclusions</h2>
         <ul>
-            <li>The <strong>Radius</strong> is the distance from the center to any point on the circumference.</li>
-            <li>If the center is not given, use <strong>completing the square</strong> to find it.</li>
-            <li>Always remember: <strong>Radius \(\perp\) Tangent</strong>. This is the "key" to solving tangent equations.</li>
+            <li><strong>Magnitude</strong> is essentially the Pythagorean theorem applied to coordinate pairs.</li>
+            <li>The <strong>Dot Product</strong> allows us to solve for angles in Paper 2 without complex geometry.</li>
+            <li>A dot product of <strong>zero</strong> is the most common test for perpendicularity in exams.</li>
         </ul>
     </section>
 </main>
 
 <footer class="footer-nav">
-    <a href="chapter9.html" class="btn" style="background:#7f8c8d;">← Previous: Vectors</a>
+    <a href="p2_chapter9.html" class="btn" style="background:#7f8c8d;">← Previous: Trig 2D/3D</a>
     <div>
-        <p><strong>Course Complete</strong></p>
-        <p>Final Exam Revision</p>
+        <p><strong>Paper 2 Complete!</strong></p>
+        <p>Proceed to Revision</p>
     </div>
     <a href="index.html" class="btn">Return to Contents</a>
 </footer>
