@@ -1,43 +1,34 @@
-# 🇿🇦 Grade 12 Mathematics: Complete 20-Unit CAPS Portal (2026)
+# 🇿🇦 Grade 12 Mathematics: CAPS Interactive Portal (2026)
 
-This platform provides 100% syllabus coverage for the National Senior Certificate.
 *Status: 🟢 Live | 🟡 Updating | ⚪ Planned*
 
 ---
 
-### **Section 1: Algebra & Number Systems**
-*   [🟢 Unit 1: Quadratic Equations & Inequalities](./chapter-01.html)
-*   [⚪ Unit 2: Simultaneous Equations (Algebraic & Graphical)](./chapter-02.html)
-*   [⚪ Unit 3: Nature of Roots & The Discriminant](./chapter-03.html)
-*   [⚪ Unit 4: Surds and Non-Real Numbers](./chapter-04.html)
+### **Term 1: Algebra & Patterns**
+*   [🟢 Chapter 1: Equations & Inequalities](./chapters/chapter1_algebra.html)
+*   [⚪ Chapter 2: Simultaneous Equations](./chapters/chapter2_simultaneous.html)
+*   [⚪ Chapter 3: Nature of Roots](./chapters/chapter3_roots.html)
+*   [⚪ Chapter 4: Surds & Exponents](./chapters/chapter4_surds.html)
+*   [⚪ Chapter 5: Number Patterns (Arithmetic)](./chapters/chapter5_arithmetic.html)
+*   [⚪ Chapter 6: Number Patterns (Geometric)](./chapters/chapter6_geometric.html)
+*   [⚪ Chapter 7: Quadratic Patterns](./chapters/chapter7_quadratic.html)
+*   [⚪ Chapter 8: Sigma Notation & Series](./chapters/chapter8_series.html)
 
-### **Section 2: Patterns & Functions**
-*   [⚪ Unit 5: Number Patterns (Arithmetic & Geometric)](./chapter-05.html)
-*   [⚪ Unit 6: Quadratic Number Patterns](./chapter-06.html)
-*   [⚪ Unit 7: Series & Sigma Notation](./chapter-07.html)
-*   [⚪ Unit 8: Sum to Infinity (Convergent Series)](./chapter-08.html)
-*   [⚪ Unit 9: Inverse Functions (Linear & Quadratic)](./chapter-09.html)
-*   [⚪ Unit 10: Exponential & Logarithmic Functions](./chapter-10.html)
+### **Term 2: Functions & Finance**
+*   [⚪ Chapter 9: Functions: Linear & Quadratic](./chapters/chapter9_functions_basic.html)
+*   [⚪ Chapter 10: Functions: Hyperbola & Exponential](./chapters/chapter10_functions_adv.html)
+*   [⚪ Chapter 11: Inverse Functions](./chapters/chapter11_inverses.html)
+*   [⚪ Chapter 12: Logarithmic Functions](./chapters/chapter12_logs.html)
+*   [⚪ Chapter 13: Finance: Annuities](./chapters/chapter13_finance_annuities.html)
+*   [⚪ Chapter 14: Finance: Sinking Funds](./chapters/chapter14_finance_funds.html)
 
-### **Section 3: Calculus & Finance**
-*   [⚪ Unit 11: Finance: Future & Present Value Annuities](./chapter-11.html)
-*   [⚪ Unit 12: Finance: Sinking Funds & Depreciation](./chapter-12.html)
-*   [⚪ Unit 13: Calculus: Limits & First Principles](./chapter-13.html)
-*   [⚪ Unit 14: Calculus: Rules of Differentiation](./chapter-14.html)
-*   [⚪ Unit 15: Calculus: Cubic Graphs & Optimization](./chapter-15.html)
-
-### **Section 4: Geometry, Trig & Stats**
-*   [⚪ Unit 16: Trigonometry: Compound & Double Angles](./chapter-16.html)
-*   [⚪ Unit 17: Trigonometry: 2D & 3D Problem Solving](./chapter-17.html)
-*   [⚪ Unit 18: Analytical Geometry: Circles & Tangents](./chapter-18.html)
-*   [⚪ Unit 19: Euclidean Geometry: Similarity & Proportionality](./chapter-19.html)
-*   [⚪ Unit 20: Statistics: Regression & Probability](./chapter-20.html)
+### **Term 3 & 4: Calculus, Geometry & Stats**
+*   [⚪ Chapter 15: Calculus: First Principles](./chapters/chapter15_calculus_intro.html)
+*   [⚪ Chapter 16: Calculus: Rules & Cubic Graphs](./chapters/chapter16_calculus_graphs.html)
+*   [⚪ Chapter 17: Calculus: Optimization](./chapters/chapter17_calculus_opti.html)
+*   [⚪ Chapter 18: Trigonometry: Compound Angles](./chapters/chapter18_trig_identities.html)
+*   [⚪ Chapter 19: Analytical Geometry: Circles](./chapters/chapter19_analytical_geometry.html)
+*   [⚪ Chapter 20: Euclidean Geometry & Statistics](./chapters/chapter20_geometry_stats.html)
 
 ---
-### **Instructor Dashboard**
-The sidebar within each unit tracks the learner's performance:
-- 🟢 **Green:** Proficient (Exam-ready)
-- 🟡 **Yellow:** Reviewing (Practice required)
-- 🔴 **Red:** At Risk (Intervention needed)
-
-[🏠 Return to Repository Home](./README.md)
+**Note:** Navigation uses the sidebar indicator lights (🟢 🟡 🔴) to signal learner progress to the instructor.
