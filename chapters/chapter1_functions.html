@@ -3,103 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 1: Interactive Functions | Grade 12 CAPS</title>
+    <title>Chapter 1: Algebra | Grade 12 CAPS</title>
     
-    <!-- 1. MATH RENDERING (MathJax) -->
-    <script src="https://polyfill.io"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <!-- 1. MATH RENDERING (MathJax 3) -->
+    <script src="https://cdn.jsdelivr.net"></script>
     
     <!-- 2. INTERACTIVE GRAPHING (JSXGraph) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
 
     <style>
-        :root { --primary: #2c3e50; --accent: #3498db; --success: #27ae60; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--primary); max-width: 900px; margin: 0 auto; padding: 20px; background: #f4f7f6; }
-        header { background: var(--primary); color: white; padding: 2rem; border-radius: 10px; margin-bottom: 30px; text-align: center; }
+        :root { --primary: #2c3e50; --accent: #e67e22; --success: #27ae60; --warning: #f1c40f; --danger: #e74c3c; --sidebar-width: 250px; }
+        body { font-family: 'Segoe UI', sans-serif; display: flex; margin: 0; background: #f4f7f6; }
+        
+        /* SIDEBAR WITH PROGRESS LIGHTS */
+        #sidebar { width: var(--sidebar-width); background: var(--primary); color: white; height: 100vh; position: fixed; padding: 20px; }
+        .progress-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 0.9em; }
+        .light { width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; border: 1px solid #fff; }
+        .light.green { background: var(--success); }
+        .light.yellow { background: var(--warning); }
+        .light.red { background: var(--danger); }
+
+        /* MAIN CONTENT */
+        main { margin-left: calc(var(--sidebar-width) + 40px); padding: 40px; max-width: 900px; width: 100%; }
+        header { background: white; padding: 2rem; border-radius: 10px; margin-bottom: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .jxgbox { width: 100%; max-width: 500px; height: 400px; margin: 20px auto; border-radius: 8px; border: 1px solid #ddd; }
-        .interactive-note { background: #e8f4fd; border-left: 5px solid var(--accent); padding: 10px; margin: 10px 0; font-size: 0.9em; }
-        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #fff; border-radius: 10px; }
+        .jxgbox { width: 100%; height: 300px; border-radius: 8px; margin: 20px 0; }
+        
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #fff; border-radius: 10px; margin-top: 50px; }
         .btn { background: var(--accent); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: var(--accent); }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Chapter 1: Functions & Inverses</h1>
-    <p>Grade 12 Mathematics | Interactive CAPS Edition</p>
-</header>
+<nav id="sidebar">
+    <h3>Learning Progress</h3>
+    <div class="progress-item"><span class="light green"></span> Chapter 1: Algebra</div>
+    <div class="progress-item"><span class="light yellow"></span> Chapter 2: Patterns</div>
+    <div class="progress-item"><span class="light red"></span> Chapter 3: Finance</div>
+    <hr>
+    <p style="font-size: 0.8em; opacity: 0.7;">Red indicates instructor attention needed.</p>
+</nav>
 
-<!-- CONCEPT 1: LINEAR FUNCTIONS -->
-<section>
-    <h2>1. Understanding the Gradient \( m \) and Intercept \( c \)</h2>
-    <p>A linear function is defined as \( f(x) = mx + c \). Use the sliders below to see how changing these values tilts and shifts the line.</p>
-    
-    <div id="board1" class="jxgbox"></div>
-    <div class="interactive-note"><strong>Interaction:</strong> Drag slider <strong>m</strong> to rotate the line and <strong>c</strong> to move it up or down.</div>
+<main>
+    <header>
+        <h1>Chapter 1: Algebra</h1>
+        <p>Equations, Inequalities & Nature of Roots (Paper 1)</p>
+    </header>
 
-    <script type="text/javascript">
-        var b1 = JXG.JSXGraph.initBoard('board1', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false});
-        var m = b1.create('slider', [[-4, -3], [-1, -3], [-5, 1, 5]], {name:'m'});
-        var c = b1.create('slider', [[1, -3], [4, -3], [-4, 0, 4]], {name:'c'});
-        var line = b1.create('line', [function(){return -c.Value();}, function(){return -m.Value();}, 1], {strokeColor:'#3498db', strokeWidth:3});
-    </script>
-</section>
+    <!-- 1. INTRODUCTION -->
+    <section>
+        <h2>1. Introduction</h2>
+        <p>This chapter revisits quadratic equations and expands into complex inequalities and the <strong>Nature of Roots</strong>. Algebra is roughly 25 marks of Paper 1.</p>
+    </section>
 
-<!-- CONCEPT 2: QUADRATIC TRANSFORMATIONS -->
-<section>
-    <h2>2. Quadratic Functions: \( f(x) = a(x-p)^2 + q \)</h2>
-    <p>Quadratic functions form a parabola. The vertex is located at \( (p ; q) \).</p>
-    
-    <div id="board2" class="jxgbox"></div>
-    <div class="interactive-note"><strong>Interaction:</strong> Move <strong>p</strong> and <strong>q</strong> to shift the vertex. Change <strong>a</strong> to flip the graph.</div>
+    <!-- 2. RULES -->
+    <section>
+        <h2>2. Rules & Formulae</h2>
+        <p><strong>Quadratic Formula:</strong> When \( ax^2 + bx + c = 0 \):</p>
+        \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+        <p><strong>Nature of Roots (Discriminant \(\Delta\)):</strong></p>
+        <ul>
+            <li>\(\Delta > 0\): Real, unequal roots.</li>
+            <li>\(\Delta = 0\): Real, equal roots.</li>
+            <li>\(\Delta < 0\): Non-real roots.</li>
+        </ul>
+    </section>
 
-    <script type="text/javascript">
-        var b2 = JXG.JSXGraph.initBoard('board2', {boundingbox: [-7, 7, 7, -7], axis:true, showCopyright:false});
-        var a = b2.create('slider', [[-6, -5], [-3, -5], [-2, 1, 2]], {name:'a'});
-        var p = b2.create('slider', [[-2, -5], [1, -5], [-4, 0, 4]], {name:'p'});
-        var q = b2.create('slider', [[2, -5], [5, -5], [-4, 0, 4]], {name:'q'});
-        var parabola = b2.create('functiongraph', [function(x){ 
-            return a.Value()*Math.pow(x-p.Value(), 2) + q.Value(); 
-        }], {strokeColor:'#27ae60', strokeWidth:3});
-        var vertex = b2.create('point', [function(){return p.Value()}, function(){return q.Value()}], {name:'Vertex', color:'red'});
-    </script>
-</section>
+    <!-- 3. EXAMPLES -->
+    <section>
+        <h2>3. Five Core Examples</h2>
+        <ol>
+            <li>Solve for \(x\): \(x^2 - 5x - 6 = 0\) (Factorisation)</li>
+            <li>Solve for \(x\): \(3x^2 - 2x - 4 = 0\) (Quadratic Formula)</li>
+            <li>Inequality: \(x^2 - 4 \leq 0\) (Critical Values)</li>
+            <li>Simultaneous: \(y + 2x = 2\) and \(x^2 + y = 8\)</li>
+            <li>Surds: \(\sqrt{x-1} + 3 = x\) (Squaring both sides)</li>
+        </ol>
+    </section>
 
-<!-- CONCEPT 3: INVERSE FUNCTIONS (THE REFLECTION) -->
-<section>
-    <h2>3. The Inverse Reflection</h2>
-    <p>The inverse function \( f^{-1}(x) \) is a reflection of \( f(x) \) across the line \( y = x \). This means coordinates swap: \( (a;b) \rightarrow (b;a) \).</p>
-    
-    <div id="board3" class="jxgbox"></div>
-    <div class="interactive-note"><strong>Interaction:</strong> Drag the blue point on the curve. Watch how the red point (the inverse) mirrors it across the dotted line \( y = x \).</div>
+    <!-- 4. ILLUSTRATIONS -->
+    <section>
+        <h2>4. Visual Illustrations</h2>
+        <div id="box1" class="jxgbox"></div>
+        <script>
+            var b1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-5, 10, 5, -5], axis:true, showCopyright:false});
+            var a = b1.create('slider', [[-4,-3], [-1,-3], [-2,1,2]], {name:'a'});
+            var parabola = b1.create('functiongraph', [function(x){ return a.Value()*x*x; }], {strokeWidth:3});
+        </script>
+        <p><em>Interaction: Drag 'a' to see how the parabola flips between a minimum and maximum.</em></p>
+    </section>
 
-    <script type="text/javascript">
-        var b3 = JXG.JSXGraph.initBoard('board3', {boundingbox: [-2, 8, 8, -2], axis:true, showCopyright:false});
-        b3.create('line', [[0,0], [1,1]], {dash:2, strokeColor:'#999'}); // y=x line
-        
-        // Original Function: f(x) = 2x + 1
-        var f = b3.create('functiongraph', [function(x){ return 2*x + 1; }], {strokeColor:'#3498db', strokeWidth:2});
-        var p1 = b3.create('glider', [1, 3, f], {name:'(x; y)', color:'#3498db'});
-        
-        // Inverse Point: (y; x)
-        var pInv = b3.create('point', [function(){return p1.Y();}, function(){return p1.X();}], {name:'(y; x)', color:'red'});
-        
-        // Inverse Function Line
-        var fInv = b3.create('functiongraph', [function(x){ return (x-1)/2; }], {strokeColor:'red', dash:1});
-    </script>
-</section>
+    <!-- 5. EXERCISES -->
+    <section>
+        <h2>5. Chapter Exercise</h2>
+        <p>Solve the following and check your progress in the sidebar:</p>
+        <ol>
+            <li>Solve for \(x\): \((2x - 1)(x + 4) = 0\)</li>
+            <li>Solve for \(x\) and \(y\): \(x + y = 3\) and \(x^2 + y^2 = 5\)</li>
+        </ol>
+    </section>
 
-<!-- NAVIGATION TO NEXT CHAPTER -->
-<footer class="nav-footer">
-    <div>
-        <p><strong>Up Next:</strong></p>
-        <p>Chapter 2: Differential Calculus</p>
-    </div>
-    <a href="chapter2.html" class="btn">Start Calculus →</a>
-</footer>
+    <!-- 6. SUMMARY -->
+    <section>
+        <h2>6. Summary & Perception</h2>
+        <p>Algebra ensures systems are balanced. In real life, quadratic equations model trajectories (like a ball being thrown) and profit optimisation in business.</p>
+    </section>
+
+    <footer class="nav-footer">
+        <a href="index.html" class="btn">🏠 Table of Contents</a>
+        <a href="chapter2.html" class="btn">Next: Number Patterns →</a>
+    </footer>
+</main>
 
 </body>
 </html>
