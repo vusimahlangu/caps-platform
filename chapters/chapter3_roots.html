@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Nature of Roots | Grade 12 CAPS</title>
+    
+    <!-- MATH RENDERING -->
+    <script src="https://cdn.jsdelivr.net"></script>
+    
+    <!-- INTERACTIVE GRAPHING -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --primary: #2c3e50; --accent: #e67e22; --success: #27ae60; --warning: #f1c40f; --danger: #e74c3c; --sidebar-width: 250px; }
+        body { font-family: 'Segoe UI', sans-serif; display: flex; margin: 0; background: #f4f7f6; }
+        
+        #sidebar { width: var(--sidebar-width); background: var(--primary); color: white; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
+        .progress-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.8em; }
+        .light { width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; border: 1px solid #fff; }
+        .light.green { background: var(--success); }
+        .light.yellow { background: var(--warning); }
+        .light.red { background: var(--danger); }
+
+        main { margin-left: var(--sidebar-width); padding: 40px; max-width: 900px; width: 100%; box-sizing: border-box; }
+        header { background: white; padding: 2rem; border-radius: 10px; margin-bottom: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .jxgbox { width: 100%; height: 350px; border-radius: 8px; margin: 20px 0; }
+        
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #fff; border-radius: 10px; margin-top: 50px; }
+        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn-secondary { background: var(--primary); }
+    </style>
+</head>
+<body>
+
+<nav id="sidebar">
+    <h3>Progress Tracker</h3>
+    <div class="progress-item"><span class="light green"></span> Ch 1: Algebra</div>
+    <div class="progress-item"><span class="light green"></span> Ch 2: Simultaneous</div>
+    <div class="progress-item"><span class="light yellow"></span> Ch 3: Nature of Roots</div>
+    <hr style="opacity: 0.2;">
+    <p style="font-size: 0.7em;">Focus: Determining \(\Delta\)</p>
+</nav>
+
+<main>
+    <header>
+        <h1>Chapter 3: Nature of Roots</h1>
+        <p>Predicting the types of solutions using the Discriminant (\(\Delta\)).</p>
+    </header>
+
+    <section>
+        <h2>1. Introduction</h2>
+        <p>The "Nature" of roots describes what kind of numbers the x-intercepts are (Real, Non-real, Equal, or Rational) without solving the full equation.</p>
+    </section>
+
+    <section>
+        <h2>2. Rules: The Discriminant (\(\Delta\))</h2>
+        <p>From the quadratic formula \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \), the part under the square root is the discriminant:</p>
+        \[ \Delta = b^2 - 4ac \]
+        <ul>
+            <li><strong>\(\Delta < 0\):</strong> Non-real / Imaginary roots.</li>
+            <li><strong>\(\Delta \geq 0\):</strong> Real roots.</li>
+            <li><strong>\(\Delta = 0\):</strong> Real and Equal roots (one x-intercept).</li>
+            <li><strong>\(\Delta > 0\):</strong> Real and Unequal roots (two x-intercepts).</li>
+            <li><strong>\(\Delta\) is a Perfect Square:</strong> Rational roots.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Examples</h2>
+        <ol>
+            <li><strong>Determine Nature:</strong> For \(x^2 - 4x + 4 = 0\). <br> \(\Delta = (-4)^2 - 4(1)(4) = 0\). Nature: Real and Equal.</li>
+            <li><strong>Unknown Variable:</strong> For what values of \(k\) will \(x^2 + kx + 9 = 0\) have equal roots? <br> Set \(\Delta = 0 \implies k^2 - 4(1)(9) = 0 \implies k = \pm 6\).</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>4. Illustration: Touching vs Crossing</h2>
+        <div id="box3" class="jxgbox"></div>
+        <p><em>Interaction: Drag the 'q' slider. Notice how the graph "lifts" off the x-axis. When it doesn't touch the axis, \(\Delta < 0\) (Non-real).</em></p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('box3', {boundingbox: [-5, 7, 5, -3], axis:true, showCopyright:false});
+            var q = b.create('slider', [[-4, -2], [-1, -2], [-2, 0, 5]], {name:'q'});
+            b.create('functiongraph', [function(x){ return x*x + q.Value(); }], {strokeColor:'#e67e22', strokeWidth:3});
+            b.create('text', [-4, 6, function(){ 
+                var d = -4 * q.Value();
+                return "Delta (Δ) = " + d.toFixed(2);
+            }], {fontSize:16, color:'#2c3e50'});
+        </script>
+    </section>
+
+    <section>
+        <h2>5. Chapter Exercise</h2>
+        <ol>
+            <li>Show that the roots of \(x^2 - (k+1)x + k = 0\) are always real for all real values of \(k\).</li>
+            <li>Discuss the nature of roots for \(3x^2 - 2x + 1 = 0\).</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>6. Summary & Perception</h2>
+        <p><strong>Finding:</strong> \(\Delta\) is the "DNA" of a quadratic equation.</p>
+        <p><strong>Perception:</strong> In computer graphics (like video games), the nature of roots determines if a projectile (like a ball) will hit a target or miss it entirely.</p>
+    </section>
+
+    <footer class="nav-footer">
+        <a href="chapter2_simultaneous.html" class="btn btn-secondary">← Back: Simultaneous</a>
+        <a href="chapter4_surds.html" class="btn">Next: Surds & Exponents →</a>
+    </footer>
+</main>
+
+</body>
+</html>
