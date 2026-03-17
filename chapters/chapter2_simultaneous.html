@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Simultaneous Equations | Grade 12 CAPS</title>
+    
+    <!-- MATH RENDERING -->
+    <script src="https://cdn.jsdelivr.net"></script>
+    
+    <!-- INTERACTIVE GRAPHING -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
+    <style>
+        :root { --primary: #2c3e50; --accent: #e67e22; --success: #27ae60; --warning: #f1c40f; --danger: #e74c3c; --sidebar-width: 250px; }
+        body { font-family: 'Segoe UI', sans-serif; display: flex; margin: 0; background: #f4f7f6; }
+        
+        #sidebar { width: var(--sidebar-width); background: var(--primary); color: white; height: 100vh; position: fixed; padding: 20px; box-sizing: border-box; }
+        .progress-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.8em; }
+        .light { width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; border: 1px solid #fff; }
+        .light.green { background: var(--success); }
+        .light.yellow { background: var(--warning); }
+        .light.red { background: var(--danger); }
+
+        main { margin-left: var(--sidebar-width); padding: 40px; max-width: 900px; width: 100%; box-sizing: border-box; }
+        header { background: white; padding: 2rem; border-radius: 10px; margin-bottom: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .jxgbox { width: 100%; height: 350px; border-radius: 8px; margin: 20px 0; }
+        
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #fff; border-radius: 10px; margin-top: 50px; }
+        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn-secondary { background: var(--primary); }
+    </style>
+</head>
+<body>
+
+<nav id="sidebar">
+    <h3>Progress Tracker</h3>
+    <div class="progress-item"><span class="light green"></span> Ch 1: Algebra</div>
+    <div class="progress-item"><span class="light yellow"></span> Ch 2: Simultaneous</div>
+    <div class="progress-item"><span class="light red"></span> Ch 3: Nature of Roots</div>
+    <hr style="opacity: 0.2;">
+    <p style="font-size: 0.7em;">Note: Ch 2 is current focus.</p>
+</nav>
+
+<main>
+    <header>
+        <h1>Chapter 2: Simultaneous Equations</h1>
+        <p>Solving for two variables ($x$ and $y$) simultaneously.</p>
+    </header>
+
+    <section>
+        <h2>1. Introduction</h2>
+        <p>Simultaneous equations find the <strong>point of intersection</strong> between two graphs. In Grade 12, we typically solve one linear equation and one quadratic equation.</p>
+    </section>
+
+    <section>
+        <h2>2. Rules: The Substitution Method</h2>
+        <ol>
+            <li>Make one variable the <strong>subject</strong> of the linear equation (e.g., $y = \dots$).</li>
+            <li><strong>Substitute</strong> this expression into the quadratic equation.</li>
+            <li>Solve the resulting quadratic equation for the first variable.</li>
+            <li>Substitute your answers back to find the second variable.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>3. Examples</h2>
+        <p>Solve for $x$ and $y$ simultaneously:</p>
+        \[ y + 2x = 2 \quad \text{and} \quad x^2 - y = 1 \]
+        <p><strong>Step 1:</strong> $y = 2 - 2x$</p>
+        <p><strong>Step 2:</strong> $x^2 - (2 - 2x) = 1 \implies x^2 + 2x - 3 = 0$</p>
+        <p><strong>Step 3:</strong> $(x + 3)(x - 1) = 0 \implies x = -3 \text{ or } x = 1$</p>
+    </section>
+
+    <section>
+        <h2>4. Illustration: The Intersection</h2>
+        <div id="box2" class="jxgbox"></div>
+        <p><em>Memory Anchor: The points where the line and curve cross are the solutions. Drag the line to see the solutions change.</em></p>
+        <script>
+            var b = JXG.JSXGraph.initBoard('box2', {boundingbox: [-5, 5, 5, -5], axis:true, showCopyright:false});
+            var p1 = b.create('point', [-2, 4], {name:'A'});
+            var p2 = b.create('point', [2, -2], {name:'B'});
+            var line = b.create('line', [p1, p2], {strokeColor:'#3498db'});
+            var parabola = b.create('functiongraph', [function(x){ return x*x - 1; }], {strokeColor:'#e67e22'});
+            b.create('intersection', [line, parabola, 0], {name:'Sol 1', color:'red'});
+            b.create('intersection', [line, parabola, 1], {name:'Sol 2', color:'red'});
+        </script>
+    </section>
+
+    <section>
+        <h2>5. Chapter Exercise</h2>
+        <p>Solve for $x$ and $y$:</p>
+        <ol>
+            <li>$x - y = 3$ and $x^2 + xy - y^2 = 7$</li>
+            <li>$2x + y = 1$ and $x^2 + y^2 = 25$</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>6. Summary & Real-Life Principles</h2>
+        <p><strong>Finding:</strong> Simultaneous equations represent a "meeting point."</p>
+        <p><strong>Perception:</strong> In economics, this is used to find the <strong>Equilibrium Point</strong> where Supply meets Demand.</p>
+    </section>
+
+    <footer class="nav-footer">
+        <a href="chapter1_algebra.html" class="btn btn-secondary">← Back: Algebra</a>
+        <a href="chapter3_roots.html" class="btn">Next: Nature of Roots →</a>
+    </footer>
+</main>
+
+</body>
+</html>
