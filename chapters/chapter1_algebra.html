@@ -2,52 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ch 1: Algebra | Grade 12 CAPS Professional</title>
-    <!-- PROFESSIONAL MATH ENGINE: MathJax 3 -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 1: Algebra | Grade 12 CAPS Professional</title>
+    
+    <!-- 1. CORRECTED MATH ENGINE (MathJax 3) -->
+    <script src="https://cdn.jsdelivr.net"></script>
+    
+    <!-- 2. CORRECTED GRAPHING ENGINE (JSXGraph) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+
     <style>
-        :root { --main-bg: #f8fafc; --text: #1e293b; --math-blue: #2563eb; --sidebar: #0f172a; }
-        body { font-family: 'Inter', system-ui, sans-serif; display: flex; margin: 0; background: var(--main-bg); color: var(--text); }
-        nav#sidebar { width: 260px; background: var(--sidebar); color: white; height: 100vh; position: fixed; padding: 25px; overflow-y: auto; }
-        main { margin-left: 260px; padding: 50px; width: 100%; max-width: 1000px; }
-        .math-block { background: white; padding: 25px; border-radius: 12px; border-left: 6px solid var(--math-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin: 30px 0; }
-        .progress-indicator { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 10px; background: #22c55e; } /* GREEN */
+        :root { --primary: #0f172a; --accent: #e67e22; --success: #22c55e; --warning: #eab308; --danger: #ef4444; --sidebar-width: 260px; }
+        body { font-family: 'Inter', sans-serif; display: flex; margin: 0; background: #f8fafc; color: #1e293b; }
+        
+        /* SIDEBAR */
+        #sidebar { width: var(--sidebar-width); background: var(--primary); color: white; height: 100vh; position: fixed; padding: 25px; box-sizing: border-box; }
+        .progress-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 0.9em; }
+        .light { width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; border: 1px solid rgba(255,255,255,0.3); }
+        .light.green { background: var(--success); box-shadow: 0 0 8px var(--success); }
+        .light.yellow { background: var(--warning); }
+        .light.red { background: var(--danger); }
+
+        /* CONTENT */
+        main { margin-left: var(--sidebar-width); padding: 40px; width: 100%; max-width: 900px; }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 30px; border-top: 4px solid var(--accent); }
+        .jxgbox { width: 100%; height: 350px; border-radius: 8px; margin: 20px 0; border: 1px solid #e2e8f0; }
+        
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 25px; background: white; border-radius: 12px; margin-top: 50px; }
+        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; }
     </style>
 </head>
 <body>
+
 <nav id="sidebar">
-    <h3>Grade 12 Portal</h3>
-    <div style="font-size: 0.9em; margin-bottom: 20px;"><span class="progress-indicator"></span> <strong>Unit 1: Algebra</strong></div>
-    <div style="font-size: 0.8em; opacity: 0.6;">Unit 2: Simultaneous</div>
-    <!-- Add other 18 units here -->
+    <h3>CAPS Progress</h3>
+    <div class="progress-item"><span class="light green"></span> Unit 1: Algebra</div>
+    <div class="progress-item"><span class="light yellow"></span> Unit 2: Simultaneous</div>
+    <div class="progress-item"><span class="light red"></span> Unit 3: Nature of Roots</div>
+    <hr style="opacity: 0.1; margin: 20px 0;">
+    <p style="font-size: 0.75em; color: #94a3b8;">Instructor View: Unit 1 Verified.</p>
 </nav>
+
 <main>
-    <header>
-        <h1 style="color: var(--sidebar);">Chapter 1: Algebra</h1>
-        <hr>
+    <header style="margin-bottom: 40px;">
+        <h1 style="font-size: 2.5em; margin: 0;">Chapter 1: Algebra</h1>
+        <p style="color: #64748b;">Equations, Inequalities & Nature of Roots</p>
     </header>
 
+    <!-- 1. INTRODUCTION -->
     <section>
         <h2>1. Introduction</h2>
-        <p>This unit covers the algebraic skills required to solve Paper 1 equations, focusing on quadratic forms and advanced factorisation.</p>
+        <p>Algebra is the foundation of Grade 12 Paper 1. This chapter masters the manipulation of <strong>quadratic equations</strong>, <strong>inequalities</strong>, and the <strong>Nature of Roots</strong> to prepare for complex Functions and Calculus.</p>
     </section>
 
-    <div class="math-block">
-        <h2>2. Fundamental Rules</h2>
-        <p>The standard form of a quadratic equation is \( ax^2 + bx + c = 0 \). If it cannot be factorised, use the <strong>Quadratic Formula</strong>:</p>
-        \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
-    </div>
-
+    <!-- 2. RULES -->
     <section>
-        <h2>3. Examples</h2>
-        <p><strong>Example 1:</strong> Solve for \( x \) in \( 2x^2 - x - 3 = 0 \).</p>
-        <p><em>Solution:</em> Using factorisation \((2x - 3)(x + 1) = 0\), therefore \( x = \frac{3}{2} \) or \( x = -1 \).</p>
+        <h2>2. Rules & Formulae</h2>
+        <p>For any quadratic equation in the form \( ax^2 + bx + c = 0 \):</p>
+        <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0;">
+            \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+        </div>
+        <p><strong>The Discriminant (\(\Delta\)):</strong> Determines the "Nature" of roots.</p>
+        <ul>
+            <li>If \(\Delta > 0\): Roots are Real and Unequal.</li>
+            <li>If \(\Delta = 0\): Roots are Real and Equal.</li>
+            <li>If \(\Delta < 0\): Roots are Non-Real (Imaginary).</li>
+        </ul>
     </section>
 
-    <footer style="margin-top: 100px; display: flex; justify-content: space-between;">
-        <a href="../README.md">Table of Contents</a>
-        <a href="ch2_simultaneous.html" style="background: var(--math-blue); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Next: Simultaneous Equations →</a>
+    <!-- 3. EXAMPLES (5 Core) -->
+    <section>
+        <h2>3. Worked Examples</h2>
+        <ol>
+            <li><strong>Quadratic:</strong> Solve \(x^2 - 5x + 6 = 0 \implies (x-2)(x-3)=0 \).</li>
+            <li><strong>Formula:</strong> Solve \(2x^2 + 4x - 1 = 0\) (to 2 decimal places).</li>
+            <li><strong>Inequality:</strong> Solve \(x^2 - 9 \geq 0 \implies x \leq -3\) or \(x \geq 3\).</li>
+            <li><strong>Simultaneous:</strong> Solve \(y=x+2\) and \(x^2+y^2=10\).</li>
+            <li><strong>Surds:</strong> Solve \(\sqrt{x+2} = x\). (Always test for extraneous roots!)</li>
+        </ol>
+    </section>
+
+    <!-- 4. ILLUSTRATIONS -->
+    <section>
+        <h2>4. Visual Illustrations</h2>
+        <div id="box1" class="jxgbox"></div>
+        <p><em>Anchor: Observe how the parabola interacts with the x-axis as you change the 'q' value. This determines the Nature of Roots.</em></p>
+        <script>
+            var b1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-5, 8, 5, -4], axis:true, showCopyright:false});
+            var q = b1.create('slider', [[-4,-3], [-1,-3], [-3,0,5]], {name:'q'});
+            b1.create('functiongraph', [function(x){ return (x*x) + q.Value(); }], {strokeWidth:3, strokeColor:'#e67e22'});
+        </script>
+    </section>
+
+    <!-- 5. EXERCISES -->
+    <section>
+        <h2>5. Chapter Exercises</h2>
+        <ol>
+            <li>Solve for \(x\): \(3x^2 - 11x - 4 = 0\)</li>
+            <li>Solve for \(x\): \(x^2 < 16\)</li>
+            <li>Determine the values of \(k\) for which \(x^2 + kx + 4 = 0\) has equal roots.</li>
+        </ol>
+    </section>
+
+    <!-- 6. SUMMARY & PERCEPTION -->
+    <section>
+        <h2>6. Summary & Real-Life Principles</h2>
+        <p><strong>Summary:</strong> The discriminant (\(\Delta\)) allows us to predict a system's outcome without fully solving it.</p>
+        <p><strong>Perception:</strong> In engineering, "Nature of Roots" determines if a structure is stable (\(\Delta \geq 0\)) or will vibrate into failure (\(\Delta < 0\)).</p>
+    </section>
+
+    <footer class="nav-footer">
+        <a href="../README.md" class="btn" style="background: #64748b;">🏠 Table of Contents</a>
+        <a href="ch2_simultaneous.html" class="btn">Next: Simultaneous →</a>
     </footer>
 </main>
+
 </body>
 </html>
