@@ -2,184 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 1: Algebra | Grade 12 CAPS Professional</title>
+    <title>Ch 1: Algebra | CAPS Professional Edition</title>
     
-    <!-- 1. MathJax & JSXGraph Engines (Standardized CDNs) -->
-<script>
-    window.MathJax = {
-        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-        svg: { fontCache: 'global' }
-    };
-</script>
-<script async src="https://cdn.jsdelivr.net"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
-<script src="https://cdn.jsdelivr.net"></script>
-
-<script>
-window.onload = function() {
-    // Check if the div exists to prevent errors
-    var boardContainer = document.getElementById('box1');
-    if (boardContainer) {
-        // Standardized Board for Grade 12 CAPS
-        var board = JXG.JSXGraph.initBoard('box1', {
-            boundingbox: [-5, 8, 5, -4], 
-            axis: true, 
-            showCopyright: false,
-            grid: true
-        });
-
-        // The 'q' Slider (Vertical Shift)
-        var q = board.create('slider', [[-4, -3], [-1, -3], [-3, 0, 5]], {name: 'q', strokeColor: '#e67e22'});
-
-        // The Quadratic Function: f(x) = x^2 + q
-        board.create('functiongraph', [function(x) { 
-            return (x * x) + q.Value(); 
-        }], {strokeWidth: 4, strokeColor: '#2563eb'});
-
-        // Real-time Discriminant Label
-        board.create('text', [-4.5, 7, function() {
-            var delta = -4 * q.Value();
-            return "Δ = " + delta.toFixed(2);
-        }], {fontSize: 18, fontWeight: 'bold'});
-    }
-};
-</script>
-    
-    <!-- 2. INTERACTIVE GRAPHING (JSXGraph) -->
+    <!-- 1. HIGH-STABILITY MATH & GRAPH ENGINES -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
+    <script src="https://cdn.jsdelivr.net"></script>
 
     <style>
-        :root { --primary: #1a202c; --accent: #d97706; --success: #059669; --warning: #d97706; --danger: #dc2626; --sidebar-width: 260px; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; margin: 0; background: #f8fafc; color: var(--primary); }
-        
+        :root { --primary: #0f172a; --accent: #e67e22; --success: #22c55e; --sidebar-width: 250px; }
+        body { font-family: 'Segoe UI', sans-serif; display: flex; margin: 0; background: #f8fafc; }
         #sidebar { width: var(--sidebar-width); background: var(--primary); color: white; height: 100vh; position: fixed; padding: 25px; box-sizing: border-box; }
-        .progress-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 0.9rem; }
-        .light { width: 12px; height: 12px; border-radius: 50%; margin-right: 12px; border: 1px solid rgba(255,255,255,0.2); }
-        .light.green { background: var(--success); box-shadow: 0 0 10px var(--success); }
-        .light.yellow { background: var(--warning); }
-        .light.red { background: var(--danger); }
-
-        main { margin-left: var(--sidebar-width); padding: 50px; width: 100%; max-width: 900px; box-sizing: border-box; }
-        header { border-bottom: 2px solid #e2e8f0; margin-bottom: 40px; padding-bottom: 20px; }
-        section { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 35px; border-left: 5px solid var(--accent); }
-        .jxgbox { width: 100%; height: 350px; border-radius: 10px; margin: 25px 0; border: 1px solid #cbd5e1; }
-        
-        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 30px; background: white; border-radius: 12px; margin-top: 50px; }
-        .btn { background: var(--primary); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; }
-        h2 { color: var(--accent); margin-top: 0; }
+        main { margin-left: var(--sidebar-width); padding: 40px; width: 100%; max-width: 900px; }
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 4px solid var(--accent); }
+        .jxgbox { width: 100%; height: 400px; border-radius: 10px; margin: 20px 0; border: 1px solid #e2e8f0; }
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: white; border-radius: 10px; }
+        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <nav id="sidebar">
-    <h3>CAPS Portal</h3>
-    <div class="progress-item"><span class="light green"></span> Unit 1: Algebra</div>
-    <div class="progress-item"><span class="light yellow"></span> Unit 2: Simultaneous</div>
-    <div class="progress-item"><span class="light red"></span> Unit 3: Nature of Roots</div>
-    <hr style="opacity: 0.2; margin: 20px 0;">
-    <p style="font-size: 0.75rem; color: #94a3b8;">Status: Unit 1 Verified Professionally.</p>
+    <h3>CAPS Progress</h3>
+    <div style="display:flex; align-items:center; margin-bottom:15px;"><span style="width:10px; height:10px; border-radius:50%; background:var(--success); margin-right:10px;"></span> Ch 1: Algebra</div>
+    <div style="opacity:0.5;">Ch 2: Simultaneous</div>
 </nav>
 
 <main>
-    <header>
-        <h1 style="font-size: 2.5rem; margin: 0;">Chapter 1: Algebra</h1>
-        <p style="color: #64748b;">Equations, Inequalities & Nature of Roots (Paper 1)</p>
-    </header>
+    <header><h1>Chapter 1: Algebra</h1></header>
 
     <!-- 1. INTRODUCTION -->
     <section>
         <h2>1. Introduction</h2>
-        <p>Algebra is the fundamental building block of Grade 12 Mathematics. This unit focuses on mastering <strong>quadratic equations</strong>, <strong>inequalities</strong>, and <strong>Nature of Roots</strong> to prepare for complex Functions and Calculus. It accounts for approximately 25 marks in Paper 1.</p>
+        <p>Algebra is the core of Grade 12 Paper 1. We solve for unknowns and determine the behaviour of quadratic graphs.</p>
     </section>
 
     <!-- 2. RULES -->
     <section>
         <h2>2. Rules & Formulae</h2>
-        <p>The standard quadratic equation is \( ax^2 + bx + c = 0 \). When factorisation is not possible, apply the <strong>Quadratic Formula</strong>:</p>
-        <div style="background: #f1f5f9; padding: 25px; border-radius: 10px; text-align: center; margin: 25px 0;">
-            \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
-        </div>
-        <p><strong>The Discriminant (\(\Delta\)):</strong></p>
-        <ul>
-            <li>If \(\Delta > 0\): Two Real, Unequal Roots.</li>
-            <li>If \(\Delta = 0\): Two Real, Equal Roots.</li>
-            <li>If \(\Delta < 0\): Non-Real / Imaginary Roots.</li>
-        </ul>
+        <p>The Quadratic Formula:</p>
+        \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
     </section>
 
     <!-- 3. EXAMPLES -->
     <section>
-        <h2>3. Core Examples</h2>
+        <h2>3. 4 Worked Examples</h2>
         <ol>
-            <li><strong>Quadratic:</strong> Solve \( x^2 - 5x + 6 = 0 \implies (x-2)(x-3)=0 \).</li>
-            <li><strong>Formula:</strong> Solve \( 3x^2 - 2x - 4 = 0 \) to two decimal places.</li>
-            <li><strong>Inequality:</strong> Solve \( x^2 - 9 \geq 0 \).</li>
-            <li><strong>Simultaneous:</strong> Solve \( y = 2x + 1 \) and \( x^2 + y^2 = 25 \).</li>
-            <li><strong>Surds:</strong> Solve \( \sqrt{x+2} = x \).</li>
+            <li>Solve \(x^2 - 5x + 6 = 0\) (Factorisation)</li>
+            <li>Solve \(3x^2 - 2x - 4 = 0\) (Formula)</li>
+            <li>Inequality: \(x^2 - 9 \geq 0\)</li>
+            <li>Surds: \(\sqrt{x+2} = x\)</li>
         </ol>
     </section>
 
     <!-- 4. ILLUSTRATIONS -->
-<section>
-    <h2>4. Visual Illustrations: The Discriminant ($\Delta$) in Action</h2>
-    <!-- This is the actual Graph Container -->
-    <div id="jxgbox_algebra" class="jxgbox" style="width:100%; height:400px; background-color: #ffffff; border: 2px solid #e2e8f0; border-radius: 10px;"></div>
-    
-    <div style="background: #fff9db; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.9em; border-left: 4px solid #fcc419;">
-        <strong>Interactive Logic:</strong> Drag the <strong>Vertical Slider (q)</strong>. 
-        <br>• When the curve crosses the x-axis twice: $\Delta > 0$ (2 Real Roots).
-        <br>• When the curve touches once: $\Delta = 0$ (Equal Roots).
-        <br>• When the curve floats above: $\Delta < 0$ (Non-real Roots).
-    </div>
+    <section>
+        <h2>4. Interactive Illustration: The Discriminant ($\Delta$)</h2>
+        <div id="jxgbox" class="jxgbox"></div>
+        <script>
+            // This ensures the graph only builds AFTER the page is ready
+            function initGraph() {
+                var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 8, 5, -4], axis: true, showCopyright: false});
+                var q = board.create('slider', [[-4, -3], [-1, -3], [-3, 0, 5]], {name: 'q', strokeColor: '#e67e22'});
+                board.create('functiongraph', [function(x){ return (x*x) + q.Value(); }], {strokeWidth: 3, strokeColor: '#2563eb'});
+                board.create('text', [-4, 7, function(){ 
+                    var d = -4 * q.Value(); 
+                    return "Δ = " + d.toFixed(2);
+                }], {fontSize: 18, fontWeight: 'bold'});
+            }
+            // Execute the function
+            document.addEventListener('DOMContentLoaded', initGraph);
+        </script>
+    </section>
 
-    <script type="text/javascript">
-        // Standardized Board Setup for Grade 12
-        var board = JXG.JSXGraph.initBoard('jxgbox_algebra', {
-            boundingbox: [-6, 10, 6, -4], 
-            axis: true, 
-            grid: true,
-            showCopyright: false,
-            keepaspectratio: false
-        });
-
-        // 1. The Controller (Slider) - Adjusts the 'q' value (vertical shift)
-        var q = board.create('slider', [[-5, -2], [-2, -2], [-3, 0, 6]], {name:'q', strokeColor:'#d97706'});
-
-        // 2. The Function: f(x) = x^2 + q
-        var f = board.create('functiongraph', [function(x){ 
-            return (x*x) + q.Value(); 
-        }], {strokeWidth:4, strokeColor:'#2563eb'});
-
-        // 3. Dynamic Delta Label
-        board.create('text', [-5.5, 9, function(){ 
-            var delta = -4 * q.Value(); 
-            return "Current Discriminant (Δ) = " + delta.toFixed(2);
-        }], {fontSize: 18, color: '#1e293b', fontWeight: 'bold'});
-    </script>
-</section>
-
-    <!-- 5. CHAPTER EXERCISES -->
+    <!-- 5. EXERCISES -->
     <section>
         <h2>5. Chapter Exercises</h2>
         <ol>
-            <li>Solve for \( x \): \( (2x - 1)(x + 4) = 0 \).</li>
-            <li>Solve for \( x \) and \( y \): \( x + y = 3 \) and \( x^2 + y^2 = 5 \).</li>
-            <li>Determine the values of \( k \) for which \( x^2 + kx + 9 = 0 \) has equal roots.</li>
+            <li>Solve for $x$: $(2x-1)(x+4)=0$</li>
+            <li>Solve for $x$: $x^2 - 4 \leq 0$</li>
         </ol>
     </section>
 
-    <!-- 6. SUMMARY & PERCEPTION -->
+    <!-- 6. SUMMARY -->
     <section>
         <h2>6. Summary & Perception</h2>
-        <p><strong>Summary:</strong> The discriminant (\(\Delta\)) provides the "Nature" of a system's outcome without the need for full calculation.</p>
-        <p><strong>Real-Life Principle:</strong> In economics, "Nature of Roots" can determine the stability of market equilibrium models.</p>
+        <p><strong>Finding:</strong> $\Delta$ predicts the nature of roots without solving.</p>
     </section>
 
     <footer class="nav-footer">
-        <a href="../README.md" class="btn">🏠 Table of Contents</a>
-        <a href="chapter2_simultaneous.html" class="btn" style="background: var(--accent);">Next: Simultaneous →</a>
+        <a href="../README.md" class="btn" style="background:#64748b;">🏠 Menu</a>
+        <a href="chapter2_simultaneous.html" class="btn">Next Chapter →</a>
     </footer>
 </main>
 
