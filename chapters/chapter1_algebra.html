@@ -96,16 +96,43 @@
     </section>
 
     <!-- 4. ILLUSTRATIONS -->
-    <section>
-        <h2>4. Visual Illustrations</h2>
-        <div id="box1" class="jxgbox"></div>
-        <p><em>Interaction: Drag the 'q' slider to shift the parabola. When the curve does not touch the x-axis, the roots are Non-Real (\(\Delta < 0\)).</em></p>
-        <script>
-            var b1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-5, 8, 5, -4], axis:true, showCopyright:false});
-            var q = b1.create('slider', [[-4,-3], [-1,-3], [-3,0,5]], {name:'q'});
-            b1.create('functiongraph', [function(x){ return (x*x) + q.Value(); }], {strokeWidth:3, strokeColor:'#d97706'});
-        </script>
-    </section>
+<section>
+    <h2>4. Visual Illustrations: The Discriminant ($\Delta$) in Action</h2>
+    <!-- This is the actual Graph Container -->
+    <div id="jxgbox_algebra" class="jxgbox" style="width:100%; height:400px; background-color: #ffffff; border: 2px solid #e2e8f0; border-radius: 10px;"></div>
+    
+    <div style="background: #fff9db; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.9em; border-left: 4px solid #fcc419;">
+        <strong>Interactive Logic:</strong> Drag the <strong>Vertical Slider (q)</strong>. 
+        <br>• When the curve crosses the x-axis twice: $\Delta > 0$ (2 Real Roots).
+        <br>• When the curve touches once: $\Delta = 0$ (Equal Roots).
+        <br>• When the curve floats above: $\Delta < 0$ (Non-real Roots).
+    </div>
+
+    <script type="text/javascript">
+        // Standardized Board Setup for Grade 12
+        var board = JXG.JSXGraph.initBoard('jxgbox_algebra', {
+            boundingbox: [-6, 10, 6, -4], 
+            axis: true, 
+            grid: true,
+            showCopyright: false,
+            keepaspectratio: false
+        });
+
+        // 1. The Controller (Slider) - Adjusts the 'q' value (vertical shift)
+        var q = board.create('slider', [[-5, -2], [-2, -2], [-3, 0, 6]], {name:'q', strokeColor:'#d97706'});
+
+        // 2. The Function: f(x) = x^2 + q
+        var f = board.create('functiongraph', [function(x){ 
+            return (x*x) + q.Value(); 
+        }], {strokeWidth:4, strokeColor:'#2563eb'});
+
+        // 3. Dynamic Delta Label
+        board.create('text', [-5.5, 9, function(){ 
+            var delta = -4 * q.Value(); 
+            return "Current Discriminant (Δ) = " + delta.toFixed(2);
+        }], {fontSize: 18, color: '#1e293b', fontWeight: 'bold'});
+    </script>
+</section>
 
     <!-- 5. CHAPTER EXERCISES -->
     <section>
