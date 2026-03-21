@@ -2,116 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 1: Algebra | Grade 12 CAPS</title>
     
-    <!-- 1. ENGINES (Standardized Professional CDNs) -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net"></script>
+    <!-- 1. HIGH-PERFORMANCE ENGINES -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.11.1/jsxgraph.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.11.1/jsxgraphcore.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net" async></script>
 
     <style>
-        :root { --primary: #0f172a; --accent: #e67e22; --success: #22c55e; --sidebar-width: 260px; }
-        body { font-family: 'Segoe UI', sans-serif; display: flex; margin: 0; background: #f8fafc; }
+        :root { --primary: #1e293b; --accent: #f59e0b; --success: #10b981; --sidebar-width: 250px; }
+        body { font-family: 'Inter', system-ui, sans-serif; display: flex; margin: 0; background: #f8fafc; color: var(--primary); }
+        
         #sidebar { width: var(--sidebar-width); background: var(--primary); color: white; height: 100vh; position: fixed; padding: 25px; box-sizing: border-box; }
-        main { margin-left: var(--sidebar-width); padding: 40px; width: 100%; max-width: 900px; }
-        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 4px solid var(--accent); }
+        .progress-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 0.9rem; }
+        .light { width: 12px; height: 12px; border-radius: 50%; margin-right: 12px; border: 1px solid rgba(255,255,255,0.2); }
+        .light.green { background: var(--success); box-shadow: 0 0 10px var(--success); }
+
+        main { margin-left: var(--sidebar-width); padding: 50px; width: 100%; max-width: 900px; box-sizing: border-box; }
+        section { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 35px; border-left: 5px solid var(--accent); }
         
-        /* FIXED HEIGHT CONTAINER - CRITICAL FOR JSXGRAPH */
-        .jxgbox { width: 100%; height: 400px; border-radius: 10px; margin: 20px 0; border: 1px solid #e2e8f0; background: white; }
+        /* THE CRITICAL FIX: FIXED MIN-HEIGHT FOR THE GRAPH */
+        .jxgbox { width: 100%; height: 400px; border-radius: 10px; margin: 25px 0; border: 1px solid #e2e8f0; background: white; }
         
-        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; }
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 50px; }
+        .btn { background: var(--primary); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; }
     </style>
 </head>
 <body>
 
 <nav id="sidebar">
-    <h3>Grade 12 CAPS</h3>
-    <div style="display:flex; align-items:center; margin-bottom:15px;">
-        <span style="width:10px; height:10px; border-radius:50%; background:var(--success); margin-right:10px; box-shadow: 0 0 8px var(--success);"></span> 
-        Unit 1: Algebra
-    </div>
-    <div style="opacity:0.4;">Unit 2: Simultaneous</div>
+    <h3>CAPS Grade 12</h3>
+    <div class="progress-item"><span class="light green"></span> Ch 1: Algebra</div>
+    <div style="opacity: 0.4; font-size: 0.8rem;">Ch 2: Simultaneous</div>
 </nav>
 
 <main>
-    <header><h1>Chapter 1: Algebra</h1></header>
+    <header>
+        <h1>Chapter 1: Algebra</h1>
+        <p style="color: #64748b;">Equations, Inequalities & Nature of Roots</p>
+    </header>
 
     <section>
         <h2>1. Introduction</h2>
-        <p>This unit covers <strong>Quadratic Equations</strong>, <strong>Inequalities</strong>, and the <strong>Nature of Roots</strong> ($\Delta$). These are the analytical tools used to solve Paper 1 problem situations.</p>
+        <p>Algebra is the 25-mark anchor of Paper 1. We solve for unknowns and predict graphical behaviour using $\Delta$.</p>
     </section>
 
     <section>
         <h2>2. Rules & Formulae</h2>
-        <p>Standard Form: $ax^2 + b^2 + c = 0$. The roots depend on the value of the <strong>Discriminant ($\Delta$)</strong>:</p>
-        <div style="text-align:center; padding:15px; background:#f1f5f9; border-radius:8px;">
-            \[ \Delta = b^2 - 4ac \]
+        <p>The standard quadratic formula for $ax^2 + bx + c = 0$ is:</p>
+        <div style="font-size: 1.2rem; margin: 20px 0; text-align: center;">
+            \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
         </div>
-        <ul>
-            <li>$\Delta > 0$: Real, Unequal Roots (2 x-intercepts).</li>
-            <li>$\Delta = 0$: Real, Equal Roots (1 x-intercept).</li>
-            <li>$\Delta < 0$: Non-Real Roots (No x-intercepts).</li>
-        </ul>
     </section>
 
     <section>
-        <h2>3. Core Examples</h2>
+        <h2>3. Five Core Examples</h2>
         <ol>
-            <li><strong>Quadratic:</strong> Solve $x^2 - 5x + 6 = 0 \implies (x-2)(x-3)=0$.</li>
-            <li><strong>Inequality:</strong> Solve $x^2 - 9 \leq 0 \implies -3 \leq x \leq 3$.</li>
-            <li><strong>Nature:</strong> For $x^2 + 4x + 10 = 0$, $\Delta = (4)^2 - 4(1)(10) = -24$ (Non-real).</li>
+            <li>Solve for $x$: $x^2 - 5x + 6 = 0$</li>
+            <li>Use the formula: $3x^2 - 2x - 4 = 0$ (2 decimals)</li>
+            <li>Inequality: $x^2 - 9 \geq 0$</li>
+            <li>Simultaneous: $y + 2x = 2$ and $x^2 + y = 8$</li>
+            <li>Surds: $\sqrt{x-1} + 3 = x$ (Test roots!)</li>
         </ol>
     </section>
 
     <section>
         <h2>4. Illustration: The Nature of Roots</h2>
-        <!-- The container ID must match the JavaScript call below -->
-        <div id="jxgbox_algebra" class="jxgbox"></div>
-        <p><em>Interaction: Drag the orange slider <strong>q</strong> to lift the parabola. Observe how $\Delta$ changes when the curve stops touching the x-axis.</em></p>
+        <div id="jxgbox_final" class="jxgbox"></div>
+        <p><em>Interaction: Drag the orange <strong>q</strong> slider. Observe the <strong>Delta ($\Delta$)</strong> value as the parabola lifts off the x-axis.</em></p>
         
         <script type="text/javascript">
-            // This listener waits until EVERYTHING is loaded before drawing
+            // This waits for EVERYTHING (Scripts + Layout) to finish
             window.addEventListener('load', function() {
-                var board = JXG.JSXGraph.initBoard('jxgbox_algebra', {
-                    boundingbox: [-5, 8, 5, -4], 
-                    axis: true, 
-                    showCopyright: false,
-                    grid: true
+                var board = JXG.JSXGraph.initBoard('jxgbox_final', {
+                    boundingbox: [-5, 8, 5, -4], axis: true, showCopyright: false, grid: true
                 });
 
-                // The Slider (Vertical Shift)
-                var q = board.create('slider', [[-4, -3], [-1, -3], [-3, 0, 5]], {name: 'q', strokeColor: '#e67e22'});
-
-                // The Parabola: f(x) = x^2 + q
+                var q = board.create('slider', [[-4, -3], [-1, -3], [-3, 0, 5]], {name: 'q', strokeColor: '#f59e0b'});
+                
                 board.create('functiongraph', [function(x){ return (x*x) + q.Value(); }], {strokeWidth: 4, strokeColor: '#2563eb'});
 
-                // Real-time Label
                 board.create('text', [-4.5, 7, function(){ 
                     var d = -4 * q.Value(); 
-                    return "Discriminant (Δ) = " + d.toFixed(2);
+                    return "Discriminant (\u0394) = " + d.toFixed(2);
                 }], {fontSize: 18, fontWeight: 'bold'});
             });
         </script>
     </section>
 
     <section>
-        <h2>5. Chapter Exercises</h2>
-        <ol>
-            <li>Solve for $x$: $(2x - 1)(x + 4) = 0$.</li>
-            <li>Show that the roots of $x^2 + kx + 9 = 0$ are equal if $k = \pm 6$.</li>
-        </ol>
+        <h2>5. Chapter Exercise</h2>
+        <p>1. Solve for $x$: $(2x-1)(x+4) = 0$ <br> 2. Determine $k$ if $x^2 + kx + 9 = 0$ has equal roots.</p>
     </section>
 
     <section>
         <h2>6. Summary & Perception</h2>
-        <p><strong>Summary:</strong> The Discriminant is the "DNA" of a quadratic equation, predicting outcomes before solving.</p>
+        <p><strong>Summary:</strong> $\Delta$ is the system's "DNA". In physics, it determines if an object will ever reach its target.</p>
     </section>
 
-    <footer style="display:flex; justify-content:space-between; margin-top:50px;">
-        <a href="../README.md" class="btn" style="background:#64748b;">🏠 Menu</a>
-        <a href="chapter2_simultaneous.html" class="btn">Next: Simultaneous →</a>
+    <footer class="nav-footer">
+        <a href="../README.md" class="btn" style="background: #64748b;">🏠 Menu</a>
+        <a href="chapter2_simultaneous.html" class="btn" style="background: #f59e0b;">Next Chapter →</a>
     </footer>
 </main>
-
 </body>
 </html>
