@@ -5,20 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 1: Algebra | Grade 12 CAPS Professional</title>
     
-    <!-- 1. PROFESSIONAL MATH ENGINE (MathJax 3) -->
-    <script>
+    <!-- 1. MathJax & JSXGraph Engines (Standardized CDNs) -->
+<script>
     window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true
-      },
-      options: {
-        enableMenu: false
-      }
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        svg: { fontCache: 'global' }
     };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</script>
+<script async src="https://cdn.jsdelivr.net"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
+<script src="https://cdn.jsdelivr.net"></script>
+
+<script>
+window.onload = function() {
+    // Check if the div exists to prevent errors
+    var boardContainer = document.getElementById('box1');
+    if (boardContainer) {
+        // Standardized Board for Grade 12 CAPS
+        var board = JXG.JSXGraph.initBoard('box1', {
+            boundingbox: [-5, 8, 5, -4], 
+            axis: true, 
+            showCopyright: false,
+            grid: true
+        });
+
+        // The 'q' Slider (Vertical Shift)
+        var q = board.create('slider', [[-4, -3], [-1, -3], [-3, 0, 5]], {name: 'q', strokeColor: '#e67e22'});
+
+        // The Quadratic Function: f(x) = x^2 + q
+        board.create('functiongraph', [function(x) { 
+            return (x * x) + q.Value(); 
+        }], {strokeWidth: 4, strokeColor: '#2563eb'});
+
+        // Real-time Discriminant Label
+        board.create('text', [-4.5, 7, function() {
+            var delta = -4 * q.Value();
+            return "Δ = " + delta.toFixed(2);
+        }], {fontSize: 18, fontWeight: 'bold'});
+    }
+};
+</script>
     
     <!-- 2. INTERACTIVE GRAPHING (JSXGraph) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
