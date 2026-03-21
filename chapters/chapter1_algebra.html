@@ -3,83 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 1: Algebra | Grade 12 CAPS Professional</title>
+    <title>Chapter 1: Algebra | Grade 12 CAPS Professional</title>
     
-    <!-- 1. CORRECTED MATH ENGINE (MathJax 3) -->
-    <script src="https://cdn.jsdelivr.net"></script>
+    <!-- 1. PROFESSIONAL MATH ENGINE (MathJax 3) -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        enableMenu: false
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- 2. CORRECTED GRAPHING ENGINE (JSXGraph) -->
+    <!-- 2. INTERACTIVE GRAPHING (JSXGraph) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net"></script>
 
     <style>
-        :root { --primary: #0f172a; --accent: #e67e22; --success: #22c55e; --warning: #eab308; --danger: #ef4444; --sidebar-width: 260px; }
-        body { font-family: 'Inter', sans-serif; display: flex; margin: 0; background: #f8fafc; color: #1e293b; }
+        :root { --primary: #1a202c; --accent: #d97706; --success: #059669; --warning: #d97706; --danger: #dc2626; --sidebar-width: 260px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; margin: 0; background: #f8fafc; color: var(--primary); }
         
-        /* SIDEBAR */
         #sidebar { width: var(--sidebar-width); background: var(--primary); color: white; height: 100vh; position: fixed; padding: 25px; box-sizing: border-box; }
-        .progress-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 0.9em; }
-        .light { width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; border: 1px solid rgba(255,255,255,0.3); }
-        .light.green { background: var(--success); box-shadow: 0 0 8px var(--success); }
+        .progress-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 0.9rem; }
+        .light { width: 12px; height: 12px; border-radius: 50%; margin-right: 12px; border: 1px solid rgba(255,255,255,0.2); }
+        .light.green { background: var(--success); box-shadow: 0 0 10px var(--success); }
         .light.yellow { background: var(--warning); }
         .light.red { background: var(--danger); }
 
-        /* CONTENT */
-        main { margin-left: var(--sidebar-width); padding: 40px; width: 100%; max-width: 900px; }
-        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 30px; border-top: 4px solid var(--accent); }
-        .jxgbox { width: 100%; height: 350px; border-radius: 8px; margin: 20px 0; border: 1px solid #e2e8f0; }
+        main { margin-left: var(--sidebar-width); padding: 50px; width: 100%; max-width: 900px; box-sizing: border-box; }
+        header { border-bottom: 2px solid #e2e8f0; margin-bottom: 40px; padding-bottom: 20px; }
+        section { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 35px; border-left: 5px solid var(--accent); }
+        .jxgbox { width: 100%; height: 350px; border-radius: 10px; margin: 25px 0; border: 1px solid #cbd5e1; }
         
-        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 25px; background: white; border-radius: 12px; margin-top: 50px; }
-        .btn { background: var(--accent); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; }
+        .nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 30px; background: white; border-radius: 12px; margin-top: 50px; }
+        .btn { background: var(--primary); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; }
+        h2 { color: var(--accent); margin-top: 0; }
     </style>
 </head>
 <body>
 
 <nav id="sidebar">
-    <h3>CAPS Progress</h3>
+    <h3>CAPS Portal</h3>
     <div class="progress-item"><span class="light green"></span> Unit 1: Algebra</div>
     <div class="progress-item"><span class="light yellow"></span> Unit 2: Simultaneous</div>
     <div class="progress-item"><span class="light red"></span> Unit 3: Nature of Roots</div>
-    <hr style="opacity: 0.1; margin: 20px 0;">
-    <p style="font-size: 0.75em; color: #94a3b8;">Instructor View: Unit 1 Verified.</p>
+    <hr style="opacity: 0.2; margin: 20px 0;">
+    <p style="font-size: 0.75rem; color: #94a3b8;">Status: Unit 1 Verified Professionally.</p>
 </nav>
 
 <main>
-    <header style="margin-bottom: 40px;">
-        <h1 style="font-size: 2.5em; margin: 0;">Chapter 1: Algebra</h1>
-        <p style="color: #64748b;">Equations, Inequalities & Nature of Roots</p>
+    <header>
+        <h1 style="font-size: 2.5rem; margin: 0;">Chapter 1: Algebra</h1>
+        <p style="color: #64748b;">Equations, Inequalities & Nature of Roots (Paper 1)</p>
     </header>
 
     <!-- 1. INTRODUCTION -->
     <section>
         <h2>1. Introduction</h2>
-        <p>Algebra is the foundation of Grade 12 Paper 1. This chapter masters the manipulation of <strong>quadratic equations</strong>, <strong>inequalities</strong>, and the <strong>Nature of Roots</strong> to prepare for complex Functions and Calculus.</p>
+        <p>Algebra is the fundamental building block of Grade 12 Mathematics. This unit focuses on mastering <strong>quadratic equations</strong>, <strong>inequalities</strong>, and <strong>Nature of Roots</strong> to prepare for complex Functions and Calculus. It accounts for approximately 25 marks in Paper 1.</p>
     </section>
 
     <!-- 2. RULES -->
     <section>
         <h2>2. Rules & Formulae</h2>
-        <p>For any quadratic equation in the form \( ax^2 + bx + c = 0 \):</p>
-        <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0;">
+        <p>The standard quadratic equation is \( ax^2 + bx + c = 0 \). When factorisation is not possible, apply the <strong>Quadratic Formula</strong>:</p>
+        <div style="background: #f1f5f9; padding: 25px; border-radius: 10px; text-align: center; margin: 25px 0;">
             \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
         </div>
-        <p><strong>The Discriminant (\(\Delta\)):</strong> Determines the "Nature" of roots.</p>
+        <p><strong>The Discriminant (\(\Delta\)):</strong></p>
         <ul>
-            <li>If \(\Delta > 0\): Roots are Real and Unequal.</li>
-            <li>If \(\Delta = 0\): Roots are Real and Equal.</li>
-            <li>If \(\Delta < 0\): Roots are Non-Real (Imaginary).</li>
+            <li>If \(\Delta > 0\): Two Real, Unequal Roots.</li>
+            <li>If \(\Delta = 0\): Two Real, Equal Roots.</li>
+            <li>If \(\Delta < 0\): Non-Real / Imaginary Roots.</li>
         </ul>
     </section>
 
-    <!-- 3. EXAMPLES (5 Core) -->
+    <!-- 3. EXAMPLES -->
     <section>
-        <h2>3. Worked Examples</h2>
+        <h2>3. Core Examples</h2>
         <ol>
-            <li><strong>Quadratic:</strong> Solve \(x^2 - 5x + 6 = 0 \implies (x-2)(x-3)=0 \).</li>
-            <li><strong>Formula:</strong> Solve \(2x^2 + 4x - 1 = 0\) (to 2 decimal places).</li>
-            <li><strong>Inequality:</strong> Solve \(x^2 - 9 \geq 0 \implies x \leq -3\) or \(x \geq 3\).</li>
-            <li><strong>Simultaneous:</strong> Solve \(y=x+2\) and \(x^2+y^2=10\).</li>
-            <li><strong>Surds:</strong> Solve \(\sqrt{x+2} = x\). (Always test for extraneous roots!)</li>
+            <li><strong>Quadratic:</strong> Solve \( x^2 - 5x + 6 = 0 \implies (x-2)(x-3)=0 \).</li>
+            <li><strong>Formula:</strong> Solve \( 3x^2 - 2x - 4 = 0 \) to two decimal places.</li>
+            <li><strong>Inequality:</strong> Solve \( x^2 - 9 \geq 0 \).</li>
+            <li><strong>Simultaneous:</strong> Solve \( y = 2x + 1 \) and \( x^2 + y^2 = 25 \).</li>
+            <li><strong>Surds:</strong> Solve \( \sqrt{x+2} = x \).</li>
         </ol>
     </section>
 
@@ -87,34 +99,34 @@
     <section>
         <h2>4. Visual Illustrations</h2>
         <div id="box1" class="jxgbox"></div>
-        <p><em>Anchor: Observe how the parabola interacts with the x-axis as you change the 'q' value. This determines the Nature of Roots.</em></p>
+        <p><em>Interaction: Drag the 'q' slider to shift the parabola. When the curve does not touch the x-axis, the roots are Non-Real (\(\Delta < 0\)).</em></p>
         <script>
             var b1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-5, 8, 5, -4], axis:true, showCopyright:false});
             var q = b1.create('slider', [[-4,-3], [-1,-3], [-3,0,5]], {name:'q'});
-            b1.create('functiongraph', [function(x){ return (x*x) + q.Value(); }], {strokeWidth:3, strokeColor:'#e67e22'});
+            b1.create('functiongraph', [function(x){ return (x*x) + q.Value(); }], {strokeWidth:3, strokeColor:'#d97706'});
         </script>
     </section>
 
-    <!-- 5. EXERCISES -->
+    <!-- 5. CHAPTER EXERCISES -->
     <section>
         <h2>5. Chapter Exercises</h2>
         <ol>
-            <li>Solve for \(x\): \(3x^2 - 11x - 4 = 0\)</li>
-            <li>Solve for \(x\): \(x^2 < 16\)</li>
-            <li>Determine the values of \(k\) for which \(x^2 + kx + 4 = 0\) has equal roots.</li>
+            <li>Solve for \( x \): \( (2x - 1)(x + 4) = 0 \).</li>
+            <li>Solve for \( x \) and \( y \): \( x + y = 3 \) and \( x^2 + y^2 = 5 \).</li>
+            <li>Determine the values of \( k \) for which \( x^2 + kx + 9 = 0 \) has equal roots.</li>
         </ol>
     </section>
 
     <!-- 6. SUMMARY & PERCEPTION -->
     <section>
-        <h2>6. Summary & Real-Life Principles</h2>
-        <p><strong>Summary:</strong> The discriminant (\(\Delta\)) allows us to predict a system's outcome without fully solving it.</p>
-        <p><strong>Perception:</strong> In engineering, "Nature of Roots" determines if a structure is stable (\(\Delta \geq 0\)) or will vibrate into failure (\(\Delta < 0\)).</p>
+        <h2>6. Summary & Perception</h2>
+        <p><strong>Summary:</strong> The discriminant (\(\Delta\)) provides the "Nature" of a system's outcome without the need for full calculation.</p>
+        <p><strong>Real-Life Principle:</strong> In economics, "Nature of Roots" can determine the stability of market equilibrium models.</p>
     </section>
 
     <footer class="nav-footer">
-        <a href="../README.md" class="btn" style="background: #64748b;">🏠 Table of Contents</a>
-        <a href="ch2_simultaneous.html" class="btn">Next: Simultaneous →</a>
+        <a href="../README.md" class="btn">🏠 Table of Contents</a>
+        <a href="chapter2_simultaneous.html" class="btn" style="background: var(--accent);">Next: Simultaneous →</a>
     </footer>
 </main>
 
